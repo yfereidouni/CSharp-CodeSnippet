@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iExtensionMethod", "iExtens
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iLambdaExpressions", "iLambdaExpressions\iLambdaExpressions.csproj", "{5173BD64-D71A-41E2-8A0F-D2052FFB25A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iStructures", "iStructures\iStructures.csproj", "{0E5C0487-6538-4743-A695-D8C1D8120718}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{5173BD64-D71A-41E2-8A0F-D2052FFB25A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5173BD64-D71A-41E2-8A0F-D2052FFB25A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5173BD64-D71A-41E2-8A0F-D2052FFB25A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E5C0487-6538-4743-A695-D8C1D8120718}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E5C0487-6538-4743-A695-D8C1D8120718}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E5C0487-6538-4743-A695-D8C1D8120718}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E5C0487-6538-4743-A695-D8C1D8120718}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
