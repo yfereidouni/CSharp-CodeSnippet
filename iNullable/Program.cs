@@ -28,10 +28,15 @@ namespace iNullable
                 Console.WriteLine("No gender chosen");
             }
             Console.WriteLine("----------------------------------------------------");
-            double? num5 = null;
-            double num6;
-            num6 = num5 ?? 8.4;
-            Console.WriteLine(num6);
+            // THE NULL COALESCING OPERATOR ??
+
+            double? num5 = 13.1;
+            double? num6 = null;
+            double num7;
+            num7 = num5 ?? 8.4;
+            Console.WriteLine($"Num7: {0}", num7);
+            num7 = num6 ?? 8.4;
+            Console.WriteLine($"Num7: {0}", num7);
         }
     }
 }
