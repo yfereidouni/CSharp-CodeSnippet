@@ -33,6 +33,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iDateTime", "iDateTime\iDat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iNullable", "iNullable\iNullable.csproj", "{62768C96-51DC-4766-92FA-37A3CED6FFA2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iGarbageCollection", "iGarbageCollection\iGarbageCollection.csproj", "{CD2D758F-AA5D-4786-937D-8D64CEB2A5F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{62768C96-51DC-4766-92FA-37A3CED6FFA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62768C96-51DC-4766-92FA-37A3CED6FFA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62768C96-51DC-4766-92FA-37A3CED6FFA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD2D758F-AA5D-4786-937D-8D64CEB2A5F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD2D758F-AA5D-4786-937D-8D64CEB2A5F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD2D758F-AA5D-4786-937D-8D64CEB2A5F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD2D758F-AA5D-4786-937D-8D64CEB2A5F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
