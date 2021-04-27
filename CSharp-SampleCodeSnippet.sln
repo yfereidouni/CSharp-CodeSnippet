@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iRandom", "iRandom\iRandom.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iRegularExpression", "iRegularExpression\iRegularExpression.csproj", "{75C2B46A-62E4-4CE6-B0C5-C0B9B8A1D393}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iDateTime", "iDateTime\iDateTime.csproj", "{61C3B423-5FB4-4434-A587-01CD3037EB09}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{75C2B46A-62E4-4CE6-B0C5-C0B9B8A1D393}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75C2B46A-62E4-4CE6-B0C5-C0B9B8A1D393}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75C2B46A-62E4-4CE6-B0C5-C0B9B8A1D393}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61C3B423-5FB4-4434-A587-01CD3037EB09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61C3B423-5FB4-4434-A587-01CD3037EB09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61C3B423-5FB4-4434-A587-01CD3037EB09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61C3B423-5FB4-4434-A587-01CD3037EB09}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
