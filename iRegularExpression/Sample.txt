@@ -1,0 +1,41 @@
+﻿1234567890
+			
+202-555-0102
+202-555-0196
+202.555.0196
+202#555#0196
+
+0175/12345678
++49165/12312347
+0049165/12312347
+
+regex : (\+49)|0049|0?1(6|7)\d\/\d{8}
+
+abcdefghijklmnopqurtuvwxyz
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+
+LaLa La La LaLa
+
+Mr. Panjuta
+Mr Muller
+Mr Robertson
+Mr. G
+Ms Smith
+Ms Jackson
+
+regex : (Mr|Ms)\.*\s\w*
+
+// Challenge - find website links
+https://www.tutorials.eu
+https://tutorials.eu
+http://www.tutorials.eu
+http://tutorials.eu
+
+regex : https?://(www.)?tutorials.eu
+regex : https?://(www.)?(\w+)(\.\w+)
+
+test@test.com
+
+mac
+MetaCharacters (Need to be escaped):
+.[{()\^$|?*+

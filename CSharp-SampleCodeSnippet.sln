@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iEnums", "iEnums\iEnums.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iMath", "iMath\iMath.csproj", "{947D8865-796B-41BF-8AD0-78C3FA8DD990}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iRandom", "iRandom\iRandom.csproj", "{B056BE10-A9E0-4587-88D1-623DF80B664E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iRegularExpression", "iRegularExpression\iRegularExpression.csproj", "{75C2B46A-62E4-4CE6-B0C5-C0B9B8A1D393}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +79,14 @@ Global
 		{947D8865-796B-41BF-8AD0-78C3FA8DD990}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{947D8865-796B-41BF-8AD0-78C3FA8DD990}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{947D8865-796B-41BF-8AD0-78C3FA8DD990}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B056BE10-A9E0-4587-88D1-623DF80B664E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B056BE10-A9E0-4587-88D1-623DF80B664E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B056BE10-A9E0-4587-88D1-623DF80B664E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B056BE10-A9E0-4587-88D1-623DF80B664E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75C2B46A-62E4-4CE6-B0C5-C0B9B8A1D393}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75C2B46A-62E4-4CE6-B0C5-C0B9B8A1D393}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75C2B46A-62E4-4CE6-B0C5-C0B9B8A1D393}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75C2B46A-62E4-4CE6-B0C5-C0B9B8A1D393}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
