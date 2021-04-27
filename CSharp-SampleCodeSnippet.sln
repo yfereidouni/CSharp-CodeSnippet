@@ -19,17 +19,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iExtensionMethod", "iExtens
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iLambdaExpressions", "iLambdaExpressions\iLambdaExpressions.csproj", "{5173BD64-D71A-41E2-8A0F-D2052FFB25A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iStructures", "iStructures\iStructures.csproj", "{0E5C0487-6538-4743-A695-D8C1D8120718}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iStructures", "iStructures\iStructures.csproj", "{0E5C0487-6538-4743-A695-D8C1D8120718}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iEnums", "iEnums\iEnums.csproj", "{FAF886A1-19EB-460F-A335-5E8EE90351EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iEnums", "iEnums\iEnums.csproj", "{FAF886A1-19EB-460F-A335-5E8EE90351EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iMath", "iMath\iMath.csproj", "{947D8865-796B-41BF-8AD0-78C3FA8DD990}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iMath", "iMath\iMath.csproj", "{947D8865-796B-41BF-8AD0-78C3FA8DD990}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iRandom", "iRandom\iRandom.csproj", "{B056BE10-A9E0-4587-88D1-623DF80B664E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iRandom", "iRandom\iRandom.csproj", "{B056BE10-A9E0-4587-88D1-623DF80B664E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iRegularExpression", "iRegularExpression\iRegularExpression.csproj", "{75C2B46A-62E4-4CE6-B0C5-C0B9B8A1D393}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iRegularExpression", "iRegularExpression\iRegularExpression.csproj", "{75C2B46A-62E4-4CE6-B0C5-C0B9B8A1D393}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iDateTime", "iDateTime\iDateTime.csproj", "{61C3B423-5FB4-4434-A587-01CD3037EB09}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iDateTime", "iDateTime\iDateTime.csproj", "{61C3B423-5FB4-4434-A587-01CD3037EB09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iNullable", "iNullable\iNullable.csproj", "{62768C96-51DC-4766-92FA-37A3CED6FFA2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,10 @@ Global
 		{61C3B423-5FB4-4434-A587-01CD3037EB09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61C3B423-5FB4-4434-A587-01CD3037EB09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61C3B423-5FB4-4434-A587-01CD3037EB09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62768C96-51DC-4766-92FA-37A3CED6FFA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62768C96-51DC-4766-92FA-37A3CED6FFA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62768C96-51DC-4766-92FA-37A3CED6FFA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62768C96-51DC-4766-92FA-37A3CED6FFA2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
