@@ -11,8 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iFiles", "iFiles\iFiles.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iADO.NET", "iADO.NET\iADO.NET.csproj", "{133733AC-CF1C-45A8-947D-6FB0AAC5E39F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iDelegates", "iDelegates\iDelegates.csproj", "{D2CFAE18-0933-429E-8805-DE4F0B6151B3}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iEntityFramework", "iEntityFramework\iEntityFramework.csproj", "{41D6044B-DA5C-42E2-9553-6EE1202F4392}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iExtensionMethod", "iExtensionMethod\iExtensionMethod.csproj", "{68E54FC0-0F28-42CA-89F5-7F6985D87E3A}"
@@ -31,9 +29,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iRegularExpression", "iRegu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iDateTime", "iDateTime\iDateTime.csproj", "{61C3B423-5FB4-4434-A587-01CD3037EB09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iNullable", "iNullable\iNullable.csproj", "{62768C96-51DC-4766-92FA-37A3CED6FFA2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iNullable", "iNullable\iNullable.csproj", "{62768C96-51DC-4766-92FA-37A3CED6FFA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iGarbageCollection", "iGarbageCollection\iGarbageCollection.csproj", "{CD2D758F-AA5D-4786-937D-8D64CEB2A5F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iGarbageCollection", "iGarbageCollection\iGarbageCollection.csproj", "{CD2D758F-AA5D-4786-937D-8D64CEB2A5F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,10 +55,6 @@ Global
 		{133733AC-CF1C-45A8-947D-6FB0AAC5E39F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{133733AC-CF1C-45A8-947D-6FB0AAC5E39F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{133733AC-CF1C-45A8-947D-6FB0AAC5E39F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D2CFAE18-0933-429E-8805-DE4F0B6151B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D2CFAE18-0933-429E-8805-DE4F0B6151B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D2CFAE18-0933-429E-8805-DE4F0B6151B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D2CFAE18-0933-429E-8805-DE4F0B6151B3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{41D6044B-DA5C-42E2-9553-6EE1202F4392}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{41D6044B-DA5C-42E2-9553-6EE1202F4392}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{41D6044B-DA5C-42E2-9553-6EE1202F4392}.Release|Any CPU.ActiveCfg = Release|Any CPU

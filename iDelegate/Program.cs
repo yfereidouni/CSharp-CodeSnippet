@@ -8,10 +8,12 @@ namespace iDelegate
         public delegate string GetTextDelegate(string name);
         static void Main(string[] args)
         {
-            iDelegate myTask = SayHello;
-
-            myTask("Hi, Yasser");
-
+            //----------------------------------------------------------
+            //Simple Delegate
+            //----------------------------------------------------------
+            iDelegate sayHelloDelegate = SayHello;
+            sayHelloDelegate("Yasser");
+            
             //----------------------------------------------------------
             //Creating anonymous method
             //----------------------------------------------------------
@@ -20,11 +22,19 @@ namespace iDelegate
                 return string.Format("Hello, {0}",name);
             };
             Console.WriteLine(getTextDelegate("Yasser"));
+            Display(getTextDelegate);
             //----------------------------------------------------------
+
+
         }
-        public static void SayHello(string value)
+
+        static void Display(GetTextDelegate getTextDelegate)
         {
-            Console.WriteLine(value);
+            Console.WriteLine(getTextDelegate("World"));
+        }
+        static void SayHello(string name)
+        {
+            Console.WriteLine($"Hi, {name}");
         }
 
     }
