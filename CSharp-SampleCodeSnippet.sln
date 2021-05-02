@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iWPF_ListBox", "iWPF_ListBo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iWPF_ComboBox", "iWPF_ComboBox\iWPF_ComboBox.csproj", "{ED8C6DB3-D8A4-4C14-9362-551F8E3D3892}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iWPF_CheckBox", "iWPF_CheckBox\iWPF_CheckBox.csproj", "{6B74F6B5-49DD-43F3-9A39-D528DBB7066B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,10 @@ Global
 		{ED8C6DB3-D8A4-4C14-9362-551F8E3D3892}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED8C6DB3-D8A4-4C14-9362-551F8E3D3892}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED8C6DB3-D8A4-4C14-9362-551F8E3D3892}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B74F6B5-49DD-43F3-9A39-D528DBB7066B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B74F6B5-49DD-43F3-9A39-D528DBB7066B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B74F6B5-49DD-43F3-9A39-D528DBB7066B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B74F6B5-49DD-43F3-9A39-D528DBB7066B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
