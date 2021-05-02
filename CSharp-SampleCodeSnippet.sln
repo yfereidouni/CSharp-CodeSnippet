@@ -35,7 +35,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iGarbageCollection", "iGarb
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iEvents_and_Delegates", "iEvents_and_Delegates\iEvents_and_Delegates.csproj", "{C906BB6C-39AC-470D-8694-C1EAA8F61510}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iWPF", "iWPF\iWPF.csproj", "{E990F74F-166B-4C13-A046-ADDDCBBFB171}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF", "iWPF\iWPF.csproj", "{E990F74F-166B-4C13-A046-ADDDCBBFB171}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iWPF_ListBox", "iWPF_ListBox\iWPF_ListBox.csproj", "{2EFBA925-1E3D-425B-BE93-2370E7D6D195}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iWPF_ComboBox", "iWPF_ComboBox\iWPF_ComboBox.csproj", "{ED8C6DB3-D8A4-4C14-9362-551F8E3D3892}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,6 +115,14 @@ Global
 		{E990F74F-166B-4C13-A046-ADDDCBBFB171}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E990F74F-166B-4C13-A046-ADDDCBBFB171}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E990F74F-166B-4C13-A046-ADDDCBBFB171}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EFBA925-1E3D-425B-BE93-2370E7D6D195}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EFBA925-1E3D-425B-BE93-2370E7D6D195}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EFBA925-1E3D-425B-BE93-2370E7D6D195}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EFBA925-1E3D-425B-BE93-2370E7D6D195}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED8C6DB3-D8A4-4C14-9362-551F8E3D3892}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED8C6DB3-D8A4-4C14-9362-551F8E3D3892}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED8C6DB3-D8A4-4C14-9362-551F8E3D3892}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED8C6DB3-D8A4-4C14-9362-551F8E3D3892}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
