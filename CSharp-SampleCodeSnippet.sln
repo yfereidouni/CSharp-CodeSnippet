@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iWPF_Property_Data_and_Even
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iWPF_LoginForm", "iWPF_LoginForm\iWPF_LoginForm.csproj", "{F21295BA-7A46-434C-B0CB-6A4450EF6F02}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iWPF_S01", "iWPF_S01\iWPF_S01.csproj", "{F2961F87-29E5-48E8-83A4-B6EA4561A6C7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +155,10 @@ Global
 		{F21295BA-7A46-434C-B0CB-6A4450EF6F02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F21295BA-7A46-434C-B0CB-6A4450EF6F02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F21295BA-7A46-434C-B0CB-6A4450EF6F02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2961F87-29E5-48E8-83A4-B6EA4561A6C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2961F87-29E5-48E8-83A4-B6EA4561A6C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2961F87-29E5-48E8-83A4-B6EA4561A6C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2961F87-29E5-48E8-83A4-B6EA4561A6C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
