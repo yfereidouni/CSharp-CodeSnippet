@@ -7,20 +7,26 @@ using System.Threading.Tasks;
 
 namespace iEvents_and_Delegates
 {
+    public class FileEventArgs : EventArgs
+    {
+        public File File { get; set; }
+    }
+
     public class DownloadHelper
     {
         // Step 1 - Create Delegate
-        public delegate void FileDownloadedEventHandler(object source, EventArgs args);
-        
+        //public delegate void FileDownloadedEventHandler(object source, FileEventArgs args);
+
         // Step 2 - Create an Evenet based on that Delegate
-        public event FileDownloadedEventHandler FileDownloaded;
+        //public event FileDownloadedEventHandler FileDownloaded;
+        public event EventHandler<FileEventArgs> FileDownloaded;
 
         // Step 3 - Raise the Event
-        protected virtual void OnFileDownloaded()
+        protected virtual void OnFileDownloaded(File file)
         {
-            if (FileDownloaded!=null)
+            if (FileDownloaded != null)
             {
-                FileDownloaded(this, EventArgs.Empty);
+                FileDownloaded(this, new FileEventArgs() { File = file });
             }
         }
 
@@ -30,7 +36,7 @@ namespace iEvents_and_Delegates
             Thread.Sleep(4000);
 
             // Step 3.1 call the method to raise the evenet
-            OnFileDownloaded();
+            OnFileDownloaded(file);
         }
 
     }

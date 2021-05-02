@@ -10,7 +10,7 @@ namespace iEvents_and_Delegates
     {
         static void Main(string[] args)
         {
-            var file = new File() { Title = "File1.txt" };
+            var file = new File() { Title = "ReadMe.txt" };
             var downloadHelper = new DownloadHelper();       //Publisher
 
             var unpackService = new UnpackService();         //Receiver
@@ -25,9 +25,9 @@ namespace iEvents_and_Delegates
 
     public class UnpackService
     {
-        public void OnFileDownloaded(object source, EventArgs e)
+        public void OnFileDownloaded(object source, FileEventArgs e)
         {
-            Console.WriteLine("Service 1: Unpacking the file...");
+            Console.WriteLine("Service 1: Unpacking the file... --> " + e.File.Title);
         }
     }
     public class NotificationService

@@ -1,0 +1,23 @@
+﻿<Window x:Class="iWPF.DependencyProperties"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:iWPF"
+        mc:Ignorable="d"
+        Title="Dependency Properties" Height="auto" Width="auto" WindowStyle="ThreeDBorderWindow">
+    <Grid>
+        <Button Content="خروج" Height="80" Width="200" FontFamily="b nazanin" FontSize="16" Margin="302,177,298,177">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="FontSize" Value="24"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+    </Grid>
+</Window>
