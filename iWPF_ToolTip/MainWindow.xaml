@@ -1,0 +1,13 @@
+﻿<Window x:Class="iWPF_ToolTip.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:iWPF_ToolTip"
+        mc:Ignorable="d"
+        Title="ToolTip" Height="450" Width="800">
+    <Grid>
+        <Button ToolTip="Hi, I am a tool tip" Width="200" Height="50" FontWeight="Bold" FontSize="24">Hover me</Button>
+        <TextBlock ToolTip="Please enter name below" Height="auto" Margin="175,192,540,192" FontWeight="Bold" >Age</TextBlock>
+    </Grid>
+</Window>
