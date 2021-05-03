@@ -20,15 +20,48 @@ namespace iWPF_S03
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Category> categories = new List<Category>();
         public MainWindow()
         {
             InitializeComponent();
+            categories.Add(new Category { Id = 1, Title = "C#" });
+            categories.Add(new Category { Id = 2, Title = "ASP.NET" });
+            categories.Add(new Category { Id = 3, Title = "EF Core" });
+            categories.Add(new Category { Id = 4, Title = "WPF" });
         }
 
         private void btnShow_Click(object sender, RoutedEventArgs e)
         {
             TextRange tr = new TextRange(rtbDescription.Document.ContentStart, rtbDescription.Document.ContentEnd);
             MessageBox.Show(tr.Text);
+        }
+
+        private void btnComboItemDisplay_Click(object sender, RoutedEventArgs e)
+        {
+            ComboBoxItem cbitem = cmbCategories.SelectedItem as ComboBoxItem;
+            if (cmbCategories.SelectedItem != null)
+            {
+                MessageBox.Show(cbitem.Tag + " - " + cbitem.Content.ToString());
+            }
+        }
+
+        private void btnComboItemGet_Click(object sender, RoutedEventArgs e)
+        {
+            if (cmbCategories.Items.Count <= 0)
+            {
+                foreach (var item in categories)
+                {
+                    ComboBoxItem cbitem = new ComboBoxItem();
+                    cbitem.Tag = item.Id;
+                    cbitem.Content = item.Title;
+                    cmbCategories.Items.Add(cbitem);
+                }
+            }
+        }
+
+        private void btnExit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
