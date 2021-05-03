@@ -1,0 +1,19 @@
+﻿<Window x:Class="iWPF.InotifyPropertyChangedInterface"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:iWPF"
+        mc:Ignorable="d"
+        Title="InotifyPropertyChangedInterface" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <Label Content="Num1"/>
+            <TextBox Width="100" Height="30" Text="{Binding Path=Num1, Mode=TwoWay}"></TextBox>
+            <Label Content="Num2"/>
+            <TextBox Width="100" Height="30" Text="{Binding Path=Num2, Mode=TwoWay}"></TextBox>
+            <Label Content="Sum"/>
+            <TextBox Width="100" Height="30" Text="{Binding Path=Result, Mode=TwoWay}"></TextBox>
+        </StackPanel>
+    </Grid>
+</Window>

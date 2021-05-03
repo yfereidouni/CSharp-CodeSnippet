@@ -1,0 +1,34 @@
+﻿<Window x:Class="iWPF_RadioButtons_and_Images.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:iWPF_RadioButtons_and_Images"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel Margin="10">
+            <Label FontWeight="Bold" FontSize="20">Do you like me?</Label>
+            <RadioButton GroupName="aaa" Margin="5" Checked="Yes_Checked">
+                <WrapPanel>
+                    <Rectangle Fill="Green" Width="16" Height="16" />
+                    <TextBlock Text="Yes" Foreground="Green" Margin="5,0,0,0"/>
+                </WrapPanel>
+            </RadioButton>
+
+            <RadioButton GroupName="aaa" Margin="5" Checked="No_Checked">
+                <WrapPanel>
+                    <Rectangle Fill="Red" Width="16" Height="16" />
+                    <TextBlock Text="No" Foreground="red" Margin="5,0,0,0"/>
+                </WrapPanel>
+            </RadioButton>
+
+            <RadioButton GroupName="aaa" IsChecked="True" Margin="5" Checked="Maybe_Checked">
+                <WrapPanel>
+                    <Image Source="C:\\Users\\Fereidouni\\Pictures\\plus.png" Width="16" Height="16"/>
+                    <TextBlock Text="Maybe" Foreground="Black" Margin="5,0,0,0"/>
+                </WrapPanel>
+            </RadioButton>
+        </StackPanel>
+    </Grid>
+</Window>
