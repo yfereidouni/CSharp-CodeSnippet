@@ -73,7 +73,8 @@ namespace iWPF_S03
 
         private void ButtonDelete_Click(object sender, RoutedEventArgs e)
         {
-            lstMyList.Items.Remove(lstMyList.Items[lstMyList.SelectedIndex]);
+            if (lstMyList.SelectedIndex >= 0)
+                lstMyList.Items.Remove(lstMyList.Items[lstMyList.SelectedIndex]);
         }
 
         public int GetID()
