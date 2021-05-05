@@ -71,6 +71,11 @@ namespace iWPF_S03
             lstMyList.Items.Add(new Button() { Content = GetID() });
         }
 
+        private void ButtonDelete_Click(object sender, RoutedEventArgs e)
+        {
+            lstMyList.Items.Remove(lstMyList.Items[lstMyList.SelectedIndex]);
+        }
+
         public int GetID()
         {
             Id = ++Id;
