@@ -68,7 +68,7 @@ namespace iWPF_S03
 
         private void ButtonAdd_Click(object sender, RoutedEventArgs e)
         {
-            lstMyList.Items.Add(new Button() { Content = GetID(), Padding = 10 });
+            lstMyList.Items.Add(new Button() { Content = GetID() });
         }
 
         public int GetID()
