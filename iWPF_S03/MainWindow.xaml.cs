@@ -20,10 +20,12 @@ namespace iWPF_S03
     /// </summary>
     public partial class MainWindow : Window
     {
+        public int Id { get; set; }
         List<Category> categories = new List<Category>();
         public MainWindow()
         {
             InitializeComponent();
+            Id = 0;
             categories.Add(new Category { Id = 1, Title = "C#" });
             categories.Add(new Category { Id = 2, Title = "ASP.NET" });
             categories.Add(new Category { Id = 3, Title = "EF Core" });
@@ -63,5 +65,17 @@ namespace iWPF_S03
         {
             this.Close();
         }
+
+        private void ButtonAdd_Click(object sender, RoutedEventArgs e)
+        {
+            lstMyList.Items.Add(new Button() { Content = GetID(), Padding = 10 });
+        }
+
+        public int GetID()
+        {
+            Id = ++Id;
+            return Id;
+        }
+
     }
 }
