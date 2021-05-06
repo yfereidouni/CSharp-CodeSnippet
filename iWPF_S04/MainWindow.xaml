@@ -7,7 +7,26 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid FlowDirection="RightToLeft">
-        <TabControl x:Name="tcStages">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0" x:Name="mnuMain">
+            <MenuItem Header="ثبت" Icon="Treetog-I-Documents.ico">
+                <MenuItem Header="دانشجو">
+                    <MenuItem Header="مهندسی برق"/>
+                    <MenuItem Header="مهندسی کامپیوتر"/>
+                    <MenuItem Header="مهندسی پلیمر"/>
+                </MenuItem>
+                <MenuItem Header="استاد"/>
+                <MenuItem Header="درس">
+                    <MenuItem Header="زبان"/>
+                    <MenuItem Header="کامپیوتر"/>
+                    <MenuItem Header="علوم انسانی"/>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        <TabControl Grid.Row="1" x:Name="tcStages">
             <TabItem Header="مرحله 1">
                 <Grid x:Name="grdMain">
                     <Grid.RowDefinitions>
@@ -35,6 +54,18 @@
                         <RowDefinition />
                         <RowDefinition Height="auto" />
                     </Grid.RowDefinitions>
+                    <ListView x:Name="lvPersons">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="کد" DisplayMemberBinding="{Binding Path=Id}"/>
+                                <GridViewColumn Header="نام" DisplayMemberBinding="{Binding Path=FirstName}"/>
+                                <GridViewColumn Header="نام خانوادگی" DisplayMemberBinding="{Binding Path=LastName}"/>
+                                <GridViewColumn Header="سن" DisplayMemberBinding="{Binding Path=Age}"/>
+                                <GridViewColumn Header="تاریخ تولد" DisplayMemberBinding="{Binding Path=BirthDate}"/>
+                                <GridViewColumn Header="آدرس" DisplayMemberBinding="{Binding Path=Address}"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
                     <Button Content="برو به مرحله 3" Grid.Row="1" Click="ButtonStep3_Click" Margin="2,0,2,2"/>
                 </Grid>
             </TabItem>
