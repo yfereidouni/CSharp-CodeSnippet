@@ -12,7 +12,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Menu Grid.Row="0" x:Name="mnuMain">
-            <MenuItem Header="ثبت" Icon="Treetog-I-Documents.ico">
+            <MenuItem Header="ثبت">
                 <MenuItem Header="دانشجو">
                     <MenuItem Header="مهندسی برق"/>
                     <MenuItem Header="مهندسی کامپیوتر"/>
