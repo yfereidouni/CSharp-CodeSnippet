@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>ico.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Background.png" />
+    <None Remove="Background2.png" />
+    <None Remove="Background3.png" />
+    <None Remove="bigHand.png" />
+    <None Remove="circle.png" />
+    <None Remove="ico.ico" />
+    <None Remove="littleHand.png" />
+    <None Remove="secondHand.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Background.png" />
+    <Resource Include="Background2.png" />
+    <Resource Include="Background3.png" />
+    <Resource Include="bigHand.png" />
+    <Resource Include="circle.png" />
+    <Resource Include="ico.ico" />
+    <Resource Include="littleHand.png" />
+    <Resource Include="secondHand.png" />
+  </ItemGroup>
+
+</Project>
