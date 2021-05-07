@@ -22,6 +22,10 @@ namespace iWPF_S05_AnalogClock
     /// </summary>
     public partial class MainWindow : Window
     {
+        public enum dayofweek{
+
+        };
+
         Timer timer = new Timer(1000);
 
         public MainWindow()
@@ -30,7 +34,12 @@ namespace iWPF_S05_AnalogClock
 
             PersianCalendar pc = new PersianCalendar();
             DateTime dt = new DateTime(pc.GetYear(DateTime.Now), pc.GetMonth(DateTime.Now), pc.GetDayOfMonth(DateTime.Now));
+            var dayofweek = pc.GetDayOfWeek(DateTime.Now).ToString();
+            txtbPersianDayOfWeek.Text = dayofweek;
             txtbPersianDate.Text = dt.ToString(string.Format("yyyy/MM/dd", dt));
+            DateTime dt1 = new DateTime();
+            dt1 = DateTime.Now;
+            txtbMiladiDate.Text = dt1.ToString(string.Format("yyyy/MM/dd", dt1));
 
             timer.Elapsed += Timer_Elapsed;
             timer.Start();

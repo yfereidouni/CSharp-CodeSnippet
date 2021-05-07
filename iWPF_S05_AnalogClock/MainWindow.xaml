@@ -33,7 +33,9 @@
                 <RotateTransform x:Name="hours" CenterX="0" CenterY="49" Angle="90"/>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <TextBlock Text="PersianDate" Foreground="LightGray" FontSize="9" x:Name="txtbPersianDate" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,84"/>
+        <TextBlock Text="PersianDate" Foreground="LightGray" FontSize="9" x:Name="txtbPersianDate" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,80" FontFamily="consolas" FontWeight="ExtraLight"/>
+        <TextBlock Text="MiladiDate" Foreground="LightGray" FontSize="9" x:Name="txtbMiladiDate" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,70" FontFamily="consolas" FontWeight="ExtraLight"/>
+        <TextBlock Text="Wednesday" Foreground="LightGray" FontSize="9" x:Name="txtbPersianDayOfWeek" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,58,0" FontFamily="consolas" FontWeight="ExtraLight"/>
         <Image Source="circle.png" HorizontalAlignment="Center" Height="15" VerticalAlignment="Center" Width="15"/>
         <TextBlock Text="Yasser Fereidouni" Foreground="LightGray" FontSize="16" x:Name="txtbBrand" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,70,0,0" FontFamily="Mistral"/>
         <TextBlock Text="quartz" Foreground="LightGray" FontSize="12" x:Name="txtbBranddetail" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,86,0,0" FontFamily="Mistral"/>
