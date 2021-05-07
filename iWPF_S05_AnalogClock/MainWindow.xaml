@@ -17,7 +17,7 @@
             </ContextMenu>
         </Grid.ContextMenu>
         <Grid.Background>
-            <ImageBrush ImageSource="Background3.PNG" />
+            <ImageBrush ImageSource="Background5.PNG" />
         </Grid.Background>
 
         <Rectangle VerticalAlignment="Top" Stroke="DarkRed" Fill="DarkRed" Height="87" Margin="123,38,125,0" RadiusX="1" RadiusY="1" Grid.RowSpan="2" >
@@ -26,23 +26,23 @@
             </Rectangle.RenderTransform>
         </Rectangle>
 
-        <Rectangle VerticalAlignment="Top" Stroke="Gray" Fill="Black" Height="64" Margin="123,61,125,0" RadiusX="1" RadiusY="1" Grid.RowSpan="2" >
+        <Rectangle VerticalAlignment="Top" Stroke="WhiteSmoke" Fill="Black" Height="64" Margin="123,61,125,0" RadiusX="1" RadiusY="1" Grid.RowSpan="2" >
             <Rectangle.RenderTransform>
                 <RotateTransform x:Name="minutes" CenterX="0" CenterY="64" Angle="40"/>
             </Rectangle.RenderTransform>
         </Rectangle>
 
-        <Rectangle VerticalAlignment="Top" Stroke="Gray" Fill="Black" Height="49" Margin="123,76,125,0" RadiusX="1" RadiusY="1" Grid.RowSpan="2" >
+        <Rectangle VerticalAlignment="Top" Stroke="WhiteSmoke" Fill="Black" Height="49" Margin="123,76,125,0" RadiusX="1" RadiusY="1" Grid.RowSpan="2" >
             <Rectangle.RenderTransform>
                 <RotateTransform x:Name="hours" CenterX="0" CenterY="49" Angle="90"/>
             </Rectangle.RenderTransform>
         </Rectangle>
-        <TextBlock Text="PersianDate" Foreground="LightGray" FontSize="9" x:Name="txtbPersianDate" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,159,0,0" FontFamily="consolas" FontWeight="ExtraLight" Grid.RowSpan="2"/>
-        <TextBlock Text="MiladiDate" Foreground="LightGray" FontSize="9" x:Name="txtbMiladiDate" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,169,0,0" FontFamily="consolas" FontWeight="ExtraLight" Grid.RowSpan="2"/>
-        <TextBlock Text="Wednesday" Foreground="LightGray" FontSize="9" x:Name="txtbPersianDayOfWeek" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="147,0,0,0" FontFamily="consolas" FontWeight="ExtraLight" Grid.Row="1"/>
-        <Image Source="circle.png" HorizontalAlignment="Center" Height="14" VerticalAlignment="Center" Width="14" Grid.Row="1"/>
-        <TextBlock Text="Yasser Fereidouni" Foreground="LightGray" FontSize="16" x:Name="txtbBrand" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,70,0,0" FontFamily="Mistral" Grid.RowSpan="2"/>
-        <TextBlock Text="quartz" Foreground="LightGray" FontSize="12" x:Name="txtbBranddetail" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,86,0,0" FontFamily="Mistral" Grid.RowSpan="2"/>
+        <TextBlock Text="PersianDate" Foreground="WhiteSmoke" FontSize="9" x:Name="txtbPersianDate" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,159,0,0" FontFamily="consolas" FontWeight="ExtraLight" Grid.RowSpan="2"/>
+        <TextBlock Text="MiladiDate" Foreground="WhiteSmoke" FontSize="9" x:Name="txtbMiladiDate" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,169,0,0" FontFamily="consolas" FontWeight="ExtraLight" Grid.RowSpan="2"/>
+        <TextBlock Text="Wednesday" Foreground="WhiteSmoke" FontSize="9" x:Name="txtbPersianDayOfWeek" VerticalAlignment="Center" HorizontalAlignment="right" Margin="0,0,58,0" FontFamily="consolas" FontWeight="ExtraLight" Grid.Row="1"/>
+        <Image Source="circle.png" HorizontalAlignment="Center" Height="14" VerticalAlignment="Center" Width="14" Grid.Row="1" OpacityMask="#FFA38F8F"/>
+        <TextBlock Text="Yasser Fereidouni" Foreground="WhiteSmoke" FontSize="16" x:Name="txtbBrand" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,70,0,0" FontFamily="Mistral" Grid.RowSpan="2"/>
+        <TextBlock Text="quartz" Foreground="WhiteSmoke" FontSize="12" x:Name="txtbBranddetail" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,86,0,0" FontFamily="Mistral" Grid.RowSpan="2"/>
 
     </Grid>
 </Window>
