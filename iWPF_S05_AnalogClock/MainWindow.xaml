@@ -34,9 +34,9 @@
             </Rectangle.RenderTransform>
         </Rectangle>
         <TextBlock Text="PersianDate" Foreground="LightGray" FontSize="9" x:Name="txtbPersianDate" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,84"/>
-
         <Image Source="circle.png" HorizontalAlignment="Center" Height="15" VerticalAlignment="Center" Width="15"/>
-
+        <TextBlock Text="Yasser Fereidouni" Foreground="LightGray" FontSize="16" x:Name="txtbBrand" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,70,0,0" FontFamily="Mistral"/>
+        <TextBlock Text="quartz" Foreground="LightGray" FontSize="12" x:Name="txtbBranddetail" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,86,0,0" FontFamily="Mistral"/>
 
     </Grid>
 </Window>

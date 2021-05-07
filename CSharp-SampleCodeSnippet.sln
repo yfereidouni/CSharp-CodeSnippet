@@ -61,6 +61,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF_S05_AnalogClock", "iWP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iWPF_S02_TreeView", "iWPF_S02_TreeView\iWPF_S02_TreeView.csproj", "{3A01D46F-98DA-4F35-A4ED-3187C2F5AC8D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iWPF_S06_LINQ_To_SQL", "iWPF_S06_LINQ_To_SQL\iWPF_S06_LINQ_To_SQL.csproj", "{1C54CD00-B6AA-4B09-A262-0E1FDA9A51FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -183,6 +185,10 @@ Global
 		{3A01D46F-98DA-4F35-A4ED-3187C2F5AC8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A01D46F-98DA-4F35-A4ED-3187C2F5AC8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A01D46F-98DA-4F35-A4ED-3187C2F5AC8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C54CD00-B6AA-4B09-A262-0E1FDA9A51FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C54CD00-B6AA-4B09-A262-0E1FDA9A51FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C54CD00-B6AA-4B09-A262-0E1FDA9A51FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C54CD00-B6AA-4B09-A262-0E1FDA9A51FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
