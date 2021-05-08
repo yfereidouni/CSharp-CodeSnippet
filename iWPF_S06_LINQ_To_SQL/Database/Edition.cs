@@ -8,6 +8,6 @@ namespace iWPF_S06_LINQ_To_SQL.Database
 {
     public class Edition
     {
-        
+        LinqToSQLDataContext dbContext = new LinqToSQLDataContext();
     }
 }
