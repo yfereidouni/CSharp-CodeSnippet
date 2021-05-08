@@ -5,8 +5,27 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:iWPF_S06_LINQ_To_SQL"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="600" Width="900">
+    <Grid FlowDirection="RightToLeft">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
 
+        <Menu Grid.Row="0" Margin="10">
+            <MenuItem Header="ثبت" Margin="5">
+                <MenuItem Header="اشخاص">
+                    <MenuItem Header="ثبت" Click="MenuItemSave_Click"/>
+                    <MenuItem Header="اصلاح"/>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="گزارشات">
+                <MenuItem Header="گزارش همه مشتریان" Click="MenuItemReportAllCustomers_Click"/>
+            </MenuItem>
+        </Menu>
+        <DockPanel Grid.Row="1" x:Name="dkpMain" Margin="10">
+
+        </DockPanel>
     </Grid>
 </Window>
