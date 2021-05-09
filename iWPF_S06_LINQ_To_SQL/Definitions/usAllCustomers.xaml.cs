@@ -99,11 +99,25 @@ namespace iWPF_S06_LINQ_To_SQL.Definitions
                                 };
                 lsvCustomer.ItemsSource = lstCustomer;
             }
+            
         }
 
         private void TextSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
             Search();
         }
+
+        private void lsvCustomer_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            if (lsvCustomer.SelectedItem!=null)
+            {
+                int customerId = (lsvCustomer.SelectedItem as Customer).Id;
+                winCustomer winCustomer = new winCustomer(customerId);
+                winCustomer.ShowDialog();
+                Search();
+            }
+        }
+
+
     }
 }

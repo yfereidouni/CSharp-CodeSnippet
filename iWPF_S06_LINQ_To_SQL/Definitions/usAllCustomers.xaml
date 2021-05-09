@@ -24,7 +24,7 @@
         <TextBlock Text="لیست اشخاص" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10" Grid.ColumnSpan="2"/>
         <TextBlock Text="جستجو" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"/>
         <TextBox x:Name="txtSearch" Grid.Row="2" Grid.Column="1" Margin="10" TextChanged="TextSearch_TextChanged" />
-        <ListView x:Name="lsvCustomer" Grid.Row="3"  Margin="10" Grid.ColumnSpan="2">
+        <ListView x:Name="lsvCustomer" Grid.Row="3"  Margin="10" Grid.ColumnSpan="2" MouseDoubleClick="lsvCustomer_MouseDoubleClick" >
             <ListView.View>
                 <GridView>
                     <GridViewColumn Header="ردیف" DisplayMemberBinding="{Binding Path=Row}"  Width="auto"/>

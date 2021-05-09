@@ -30,5 +30,28 @@ namespace iWPF_S06_LINQ_To_SQL.Database
                 MessageBox.Show(ex.Message);
             }
         }
+        public void EditCustomer(int customerId, string name, string tel, string email, string address, string ncode, DateTime? birthdate, string description)
+        {
+            try
+            {
+                var customer = Database.ClassStatic.dbContext.Customers.Where(q => q.Id == customerId).FirstOrDefault();
+                if (customer != null)
+                {
+                    customer.Name = name;
+                    customer.Tel = tel;
+                    customer.Email = email;
+                    customer.Address = address;
+                    customer.BirthDate = birthdate;
+                    customer.Description = description;
+                    customer.NationalCode = ncode;
+                    ClassStatic.dbContext.SubmitChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
     }
 }
