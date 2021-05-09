@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="iWPF_S06_LINQ_To_SQL.Definitions.ucCustomer"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:iWPF_S06_LINQ_To_SQL.Definitions"
+             xmlns:hc="https://handyorg.github.io/handycontrol"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <ScrollViewer>
+        <Grid x:Name="gridMain" FlowDirection="RightToLeft" Background="Beige">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Text="نام " Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            <TextBlock Text="تلفن:" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            <TextBlock Text="ایمیل:" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            <TextBlock Text="کدملی:" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            <TextBlock Text="تاریخ تولد:" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            <TextBlock Text="آدرس:" Grid.Row="6" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            <TextBlock Text="توضیحات:" Grid.Row="7" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+
+            <TextBox x:Name="txtName" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtTel" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtEmail" Grid.Row="3" Grid.Column="2" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtNCode" Grid.Row="4" Grid.Column="2" VerticalAlignment="Center"/>
+            <DatePicker  x:Name="dpBirthDate" Grid.Row="5" Grid.Column="2" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtAddress" Grid.Row="6" Grid.Column="2" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtDescription" Grid.Row="7" Grid.Column="2" VerticalAlignment="Center"/>
+
+            <StackPanel x:Name="spButtons"  Grid.Row="8" Grid.Column="2" Orientation="Horizontal" >
+                <Button x:Name="btnSave" Content="ذخیره" VerticalAlignment="Center" HorizontalAlignment="Left" Width="70" Margin="3,10,3,11" Click="btnSaveCustomer_Click" />
+                <Button x:Name="btnCancel" Content="انصراف" VerticalAlignment="Center" HorizontalAlignment="Left" Width="70" Margin="10,0" Click="btnCancel_Click"/>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</UserControl>
