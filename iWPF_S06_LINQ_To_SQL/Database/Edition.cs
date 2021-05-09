@@ -53,5 +53,22 @@ namespace iWPF_S06_LINQ_To_SQL.Database
             }
         }
 
+        public void DeleteCustomer(int customerId)
+        {
+            try
+            {
+                var customer = Database.ClassStatic.dbContext.Customers.Where(q => q.Id == customerId).FirstOrDefault();
+                if (customer != null)
+                {
+                    Database.ClassStatic.dbContext.Customers.DeleteOnSubmit(customer);
+                    Database.ClassStatic.dbContext.SubmitChanges();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
     }
 }

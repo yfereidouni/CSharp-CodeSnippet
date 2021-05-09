@@ -114,6 +114,7 @@ namespace iWPF_S06_LINQ_To_SQL.Definitions
                 int customerId = (lsvCustomer.SelectedItem as Customer).Id;
                 winCustomer winCustomer = new winCustomer(customerId);
                 winCustomer.ShowDialog();
+                LoadCustomer();
                 Search();
             }
         }

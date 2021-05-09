@@ -45,7 +45,12 @@ namespace iWPF_S06_LINQ_To_SQL.Definitions
 
         private void btnDelete_Click(object sender, RoutedEventArgs e)
         {
-
+            if (MessageBox.Show("آیا از حذف اطمینان دارید؟", "هشدار", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+            {
+                new Database.Edition().DeleteCustomer(CustomerID);
+                MessageBox.Show("حذف انجام شد");
+                this.Close();
+            }
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
