@@ -2,11 +2,24 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="LinqToSQL">
   <DataContextMoniker Name="/LinqToSQLDataContext" />
   <nestedChildShapes>
-    <classShape Id="2f71dbf8-117f-4a73-9a90-9c028de2cc24" absoluteBounds="3.75, 1.625, 2, 2.3478011067708335">
+    <classShape Id="88343fce-9e4a-406a-ab25-e95491abd701" absoluteBounds="0.75, 1, 2, 2.3478011067708335">
       <DataClassMoniker Name="/LinqToSQLDataContext/Customer" />
       <nestedChildShapes>
-        <elementListCompartment Id="db0584b0-cc92-4eca-99cc-4cf7fee87946" absoluteBounds="3.765, 2.085, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="47200c32-80aa-4e22-b55e-0bc767d4a3a1" absoluteBounds="0.765, 1.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
+    <classShape Id="398b8e7c-0d47-4ff5-b586-d142ac7caac4" absoluteBounds="3.5, 1.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/LinqToSQLDataContext/Phone" />
+      <nestedChildShapes>
+        <elementListCompartment Id="31a4bc8e-dc41-4a46-ad45-de415d28af21" absoluteBounds="3.515, 1.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 2.16429768880208); (3.5 : 2.16429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/LinqToSQLDataContext/Customer/Customer_Phone" />
+      <nodes>
+        <classShapeMoniker Id="88343fce-9e4a-406a-ab25-e95491abd701" />
+        <classShapeMoniker Id="398b8e7c-0d47-4ff5-b586-d142ac7caac4" />
+      </nodes>
+    </associationConnector>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

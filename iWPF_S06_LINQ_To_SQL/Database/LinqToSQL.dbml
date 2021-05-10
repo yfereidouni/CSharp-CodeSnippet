@@ -10,6 +10,16 @@
       <Column Name="BirthDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="NationalCode" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Association Name="Customer_Phone" Member="Phones" ThisKey="Id" OtherKey="CustomerID" Type="Phone" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Phone" Member="Phones">
+    <Type Name="Phone">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Tel" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CustomerID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Customer_Phone" Member="Customer" ThisKey="CustomerID" OtherKey="Id" Type="Customer" IsForeignKey="true" />
     </Type>
   </Table>
 </Database>
