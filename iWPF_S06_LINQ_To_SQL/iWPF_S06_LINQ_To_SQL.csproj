@@ -79,6 +79,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Database\Validation.cs" />
     <Compile Include="Definitions\Customer.cs" />
     <Compile Include="Database\ClassStatic.cs" />
     <Compile Include="Database\Edition.cs" />

@@ -39,7 +39,7 @@ namespace iWPF_S06_LINQ_To_SQL.Database
     #endregion
 		
 		public LinqToSQLDataContext() : 
-				base(global::iWPF_S06_LINQ_To_SQL.Properties.Settings.Default.LinqToSQLConnectionString, mappingSource)
+				base(global::iWPF_S06_LINQ_To_SQL.Properties.Settings.Default.LinqToSQLConnectionString1, mappingSource)
 		{
 			OnCreated();
 		}
@@ -351,7 +351,7 @@ namespace iWPF_S06_LINQ_To_SQL.Database
 		
 		private int _Id;
 		
-		private string _Tel;
+		private string _PhoneNumber;
 		
 		private string _Title;
 		
@@ -365,8 +365,8 @@ namespace iWPF_S06_LINQ_To_SQL.Database
     partial void OnCreated();
     partial void OnIdChanging(int value);
     partial void OnIdChanged();
-    partial void OnTelChanging(string value);
-    partial void OnTelChanged();
+    partial void OnPhoneNumberChanging(string value);
+    partial void OnPhoneNumberChanged();
     partial void OnTitleChanging(string value);
     partial void OnTitleChanged();
     partial void OnCustomerIDChanging(System.Nullable<int> value);
@@ -399,22 +399,22 @@ namespace iWPF_S06_LINQ_To_SQL.Database
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Tel", DbType="NVarChar(MAX)")]
-		public string Tel
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PhoneNumber", DbType="NVarChar(MAX)")]
+		public string PhoneNumber
 		{
 			get
 			{
-				return this._Tel;
+				return this._PhoneNumber;
 			}
 			set
 			{
-				if ((this._Tel != value))
+				if ((this._PhoneNumber != value))
 				{
-					this.OnTelChanging(value);
+					this.OnPhoneNumberChanging(value);
 					this.SendPropertyChanging();
-					this._Tel = value;
-					this.SendPropertyChanged("Tel");
-					this.OnTelChanged();
+					this._PhoneNumber = value;
+					this.SendPropertyChanged("PhoneNumber");
+					this.OnPhoneNumberChanged();
 				}
 			}
 		}

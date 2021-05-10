@@ -9,7 +9,9 @@ namespace iWPF_S06_LINQ_To_SQL.Database
 {
     public class Edition
     {
-        public void SaveCustomer(string name, string tel, string email, string address, string ncode, DateTime? birthdate, string description)
+        public void SaveCustomer(string name, string tel, string email,
+                                 string address, string ncode, DateTime? birthdate,
+                                 string description, List<Database.Phone> lstPhones)
         {
             try
             {
@@ -21,6 +23,15 @@ namespace iWPF_S06_LINQ_To_SQL.Database
                 customer.BirthDate = birthdate;
                 customer.Description = description;
                 customer.NationalCode = ncode;
+
+                foreach (var item in lstPhones)
+                {
+                    Phone phone = new Phone();
+                    phone.Title = item.Title;
+                    phone.PhoneNumber = item.PhoneNumber;
+                    phone.Customer = customer;
+                    ClassStatic.dbContext.Phones.InsertOnSubmit(phone);
+                }
 
                 ClassStatic.dbContext.Customers.InsertOnSubmit(customer);
                 ClassStatic.dbContext.SubmitChanges();
@@ -44,6 +55,7 @@ namespace iWPF_S06_LINQ_To_SQL.Database
                     customer.BirthDate = birthdate;
                     customer.Description = description;
                     customer.NationalCode = ncode;
+
                     ClassStatic.dbContext.SubmitChanges();
                 }
             }

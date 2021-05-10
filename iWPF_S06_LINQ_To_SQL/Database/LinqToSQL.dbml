@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LinqToSQL" Class="LinqToSQLDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.1.106;Initial Catalog=LinqToSQL;Persist Security Info=True;User ID=sa" SettingsObjectName="iWPF_S06_LINQ_To_SQL.Properties.Settings" SettingsPropertyName="LinqToSQLConnectionString" Provider="System.Data.SqlClient" />
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=LinqToSQL;Integrated Security=True" SettingsObjectName="iWPF_S06_LINQ_To_SQL.Properties.Settings" SettingsPropertyName="LinqToSQLConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Customer" Member="Customers">
     <Type Name="Customer">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -16,7 +16,7 @@
   <Table Name="dbo.Phone" Member="Phones">
     <Type Name="Phone">
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="Tel" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PhoneNumber" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="Title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="CustomerID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="Customer_Phone" Member="Customer" ThisKey="CustomerID" OtherKey="Id" Type="Customer" IsForeignKey="true" />

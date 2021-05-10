@@ -5,12 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:iWPF_S06_LINQ_To_SQL.Definitions"
         mc:Ignorable="d"
-        Title="winCustomer" Height="400" Width="400" WindowStartupLocation="CenterScreen">
+        Title="winCustomer" Height="380" Width="675" WindowStartupLocation="CenterScreen">
     <ScrollViewer>
         <Grid x:Name="gridMain" FlowDirection="RightToLeft" Background="Beige">
             <Grid.RowDefinitions>
                 <RowDefinition Height="20"/>
-                <RowDefinition Height="40"/>
                 <RowDefinition Height="40"/>
                 <RowDefinition Height="40"/>
                 <RowDefinition Height="40"/>
@@ -25,31 +24,60 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="20"/>
                 <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="238"/>
+                <ColumnDefinition Width="240"/>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="300"/>
                 <ColumnDefinition Width="20"/>
             </Grid.ColumnDefinitions>
 
-            <TextBlock Text="نام " Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right"/>
-            <TextBlock Text="تلفن:" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right"/>
-            <TextBlock Text="ایمیل:" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right"/>
-            <TextBlock Text="کدملی:" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right"/>
-            <TextBlock Text="تاریخ تولد:" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right"/>
-            <TextBlock Text="آدرس:" Grid.Row="6" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right"/>
-            <TextBlock Text="توضیحات:" Grid.Row="7" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right"/>
+            <TextBlock Text="نام" Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,5,0"/>
+            <TextBlock Text="تلفن" Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,5,0"/>
+            <TextBlock Text="ایمیل" Grid.Row="3" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,5,0"/>
+            <TextBlock Text="کدملی" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,5,0"/>
+            <TextBlock Text="تاریخ تولد" Grid.Row="5" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,5,0"/>
+            <TextBlock Text="آدرس" Grid.Row="6" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,5,0"/>
+            <TextBlock Text="توضیحات" Grid.Row="7" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,5,0"/>
 
-            <TextBox x:Name="txtName" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center" Margin="5,0"/>
-            <TextBox x:Name="txtTel" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center" Margin="5,0"/>
-            <TextBox x:Name="txtEmail" Grid.Row="3" Grid.Column="2" VerticalAlignment="Center" Margin="5,0"/>
-            <TextBox x:Name="txtNCode" Grid.Row="4" Grid.Column="2" VerticalAlignment="Center" Margin="5,0"/>
-            <DatePicker  x:Name="dpBirthDate" Grid.Row="5" Grid.Column="2" VerticalAlignment="Center" Margin="5,0"/>
-            <TextBox x:Name="txtAddress" Grid.Row="6" Grid.Column="2" VerticalAlignment="Center" Margin="5,0"/>
-            <TextBox x:Name="txtDescription" Grid.Row="7" Grid.Column="2" VerticalAlignment="Center" Margin="5,0"/>
+            <TextBox x:Name="txtName" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center">
+            </TextBox>
+            <TextBox x:Name="txtTel" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtEmail" Grid.Row="3" Grid.Column="2" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtNCode" Grid.Row="4" Grid.Column="2" VerticalAlignment="Center"/>
+            <DatePicker  x:Name="dpBirthDate" Grid.Row="5" Grid.Column="2" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtAddress" Grid.Row="6" Grid.Column="2" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtDescription" Grid.Row="7" Grid.Column="2" VerticalAlignment="Center"/>
 
             <StackPanel x:Name="spButtons"  Grid.Row="8" Grid.Column="2" Orientation="Horizontal" Grid.ColumnSpan="2" >
                 <Button x:Name="btnEdit" Content="ویرایش" VerticalAlignment="Center" HorizontalAlignment="Left" Width="70" Margin="5,0" Click="btnEdit_Click" />
                 <Button x:Name="btnDelete" Content="حذف" VerticalAlignment="Center" HorizontalAlignment="Left" Width="70" Margin="5,0" Click="btnDelete_Click" />
                 <Button x:Name="btnCancel" Content="انصراف" VerticalAlignment="Center" HorizontalAlignment="Left" Width="70" Margin="5,0" Click="btnCancel_Click"/>
             </StackPanel>
+
+            <Grid Grid.Row="1" Grid.Column="4">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+            </Grid>
+            <TextBlock Text="عنوان" Grid.Row="1" Grid.Column="4" VerticalAlignment="Center" Margin="5,0,10,0"/>
+            <TextBox x:Name="txtTitle" Grid.Row="1" Grid.Column="4" VerticalAlignment="Center" Margin="50,0,10,0" />
+            <TextBlock Text="تلفن" Grid.Row="2" Grid.Column="4" VerticalAlignment="Center" Margin="5,0,5,0"/>
+            <TextBox x:Name="txtphoneNumber" Grid.Row="2" Grid.Column="4" VerticalAlignment="Center" Margin="50,0,10,0" />
+            <Button x:Name="btnAdd" Content="اضافه کردن" Grid.Row="3" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="10,5" Click="btnAdd_Click" />
+            <ListView x:Name="lsvPhones" Grid.Row="4" Grid.Column="4" Grid.RowSpan="4" Margin="10">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="عنوان" Width="auto" DisplayMemberBinding="{Binding Path=Title}"/>
+                        <GridViewColumn Header="شماره" Width="auto" DisplayMemberBinding="{Binding Path=PhoneNumber}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+
+            
         </Grid>
     </ScrollViewer>
+    
 </Window>

@@ -34,6 +34,9 @@ namespace iWPF_S06_LINQ_To_SQL.Definitions
             txtNCode.Text = customer.NationalCode;
             txtTel.Text = customer.Tel;
             dpBirthDate.SelectedDate = customer.BirthDate;
+
+            var customerPhones = customer.Phones.ToList();
+            lsvPhones.ItemsSource = customerPhones;
         }
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
@@ -56,6 +59,11 @@ namespace iWPF_S06_LINQ_To_SQL.Definitions
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }

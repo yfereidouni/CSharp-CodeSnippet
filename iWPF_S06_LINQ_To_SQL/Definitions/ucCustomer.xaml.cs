@@ -21,6 +21,9 @@ namespace iWPF_S06_LINQ_To_SQL.Definitions
     public partial class ucCustomer : UserControl
     {
         DockPanel dkp = new DockPanel();
+
+        List<Database.Phone> lstPhones = new List<Database.Phone>();
+
         public ucCustomer(DockPanel _dkp)
         {
             InitializeComponent();
@@ -29,7 +32,7 @@ namespace iWPF_S06_LINQ_To_SQL.Definitions
 
         private void btnSaveCustomer_Click(object sender, RoutedEventArgs e)
         {
-            new Database.Edition().SaveCustomer(txtName.Text, txtTel.Text, txtEmail.Text, txtAddress.Text, txtNCode.Text, dpBirthDate.SelectedDate, txtDescription.Text);
+            new Database.Edition().SaveCustomer(txtName.Text, txtTel.Text, txtEmail.Text, txtAddress.Text, txtNCode.Text, dpBirthDate.SelectedDate, txtDescription.Text, lstPhones);
             MessageBox.Show("ثبت شد");
             txtName.Text = "";
             txtTel.Text = "";
@@ -38,11 +41,22 @@ namespace iWPF_S06_LINQ_To_SQL.Definitions
             txtNCode.Text = "";
             dpBirthDate.Text = "";
             txtDescription.Text = "";
+            
+            txtTitle.Text = "";
+            txtphoneNumber.Text = "";
+            lsvPhones.ItemsSource = null;
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
         {
             dkp.Children.Remove(this);
+        }
+
+        private void btnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            lstPhones.Add(new Database.Phone() { Title = txtTitle.Text, PhoneNumber = txtphoneNumber.Text });
+            lsvPhones.ItemsSource = null;
+            lsvPhones.ItemsSource = lstPhones;
         }
     }
 }

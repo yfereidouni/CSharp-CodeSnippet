@@ -69,7 +69,7 @@ namespace iWPF_S06_LINQ_To_SQL.Definitions
                 var lstCustomer = from c in InnerList
                                   where c.Name.Contains(txtSearch.Text) || c.NationalCode.Contains(txtSearch.Text) ||
                                          c.Tel.Contains(txtSearch.Text) || c.Address.Contains(txtSearch.Text) ||
-                                         c.Email.Contains(txtSearch.Text)
+                                         c.Email.Contains(txtSearch.Text) || c.Description.Contains(txtSearch.Text)
                                   select new Customer()
                                   {
                                       Id = c.Id,
