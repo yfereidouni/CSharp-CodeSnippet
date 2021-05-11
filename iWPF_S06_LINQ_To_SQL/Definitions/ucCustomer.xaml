@@ -49,12 +49,20 @@
                 <TextBox.Text>
                     <Binding Path="Name" UpdateSourceTrigger="PropertyChanged" Mode="OneWayToSource">
                         <Binding.ValidationRules>
-                            <validation:Validation></validation:Validation>
+                            <validation:RequiredStrings></validation:RequiredStrings>
                         </Binding.ValidationRules>
                     </Binding>
                 </TextBox.Text>
             </TextBox>
-            <TextBox x:Name="txtTel" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtTel" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center">
+                <TextBox.Text>
+                    <Binding Path="Name" UpdateSourceTrigger="PropertyChanged" Mode="OneWayToSource">
+                        <Binding.ValidationRules>
+                            <validation:MobileValidation></validation:MobileValidation>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
             <TextBox x:Name="txtEmail" Grid.Row="3" Grid.Column="2" VerticalAlignment="Center"/>
             <TextBox x:Name="txtNCode" Grid.Row="4" Grid.Column="2" VerticalAlignment="Center"/>
             <DatePicker  x:Name="dpBirthDate" Grid.Row="5" Grid.Column="2" VerticalAlignment="Center"/>
