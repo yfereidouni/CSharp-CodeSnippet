@@ -45,7 +45,7 @@
             <TextBlock Text="آدرس" Grid.Row="6" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,5,0"/>
             <TextBlock Text="توضیحات" Grid.Row="7" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,5,0"/>
 
-            <TextBox x:Name="txtName" Grid.Row="1" Grid.Column="2" VerticalAlignment="Center">
+            <TextBox x:Name="txtName" Grid.Row="1" Grid.Column="2" VerticalAlignment="top">
                 <TextBox.Text>
                     <Binding Path="Name" UpdateSourceTrigger="PropertyChanged" Mode="OneWayToSource">
                         <Binding.ValidationRules>
@@ -54,7 +54,7 @@
                     </Binding>
                 </TextBox.Text>
             </TextBox>
-            <TextBox x:Name="txtTel" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center">
+            <TextBox x:Name="txtTel" Grid.Row="2" Grid.Column="2" VerticalAlignment="Top">
                 <TextBox.Text>
                     <Binding Path="Tel" UpdateSourceTrigger="PropertyChanged" Mode="OneWayToSource">
                         <Binding.ValidationRules>
@@ -63,7 +63,7 @@
                     </Binding>
                 </TextBox.Text>
             </TextBox>
-            <TextBox x:Name="txtEmail" Grid.Row="3" Grid.Column="2" VerticalAlignment="Center">
+            <TextBox x:Name="txtEmail" Grid.Row="3" Grid.Column="2" VerticalAlignment="Top">
                 <TextBox.Text>
                     <Binding Path="Email" UpdateSourceTrigger="PropertyChanged" Mode="OneWayToSource">
                         <Binding.ValidationRules>
@@ -72,7 +72,7 @@
                     </Binding>
                 </TextBox.Text>                
             </TextBox>
-            <TextBox x:Name="txtNCode" Grid.Row="4" Grid.Column="2" VerticalAlignment="Center" PreviewTextInput="txtNCode_PreviewTextInput" >
+            <TextBox x:Name="txtNCode" Grid.Row="4" Grid.Column="2" VerticalAlignment="top" PreviewTextInput="txtNCode_PreviewTextInput" >
                 <TextBox.Text>
                     <Binding Path="NCode" UpdateSourceTrigger="PropertyChanged" Mode="OneWayToSource">
                         <Binding.ValidationRules>
@@ -90,6 +90,11 @@
                 <Button x:Name="btnSave" Content="ذخیره" VerticalAlignment="Center" HorizontalAlignment="Left" Width="70" Margin="3,10,3,11" Click="btnSaveCustomer_Click" />
                 <Button x:Name="btnCancel" Content="انصراف" VerticalAlignment="Center" HorizontalAlignment="Left" Width="70" Margin="10,0" Click="btnCancel_Click"/>
             </StackPanel>
+
+            <TextBlock Foreground="Red" Grid.Row="1" Grid.Column="2" VerticalAlignment="Bottom" Margin="5" Text="{Binding ElementName=txtName, Path=(Validation.Errors)[0].ErrorContent}"/>
+            <TextBlock Foreground="Red" Grid.Row="2" Grid.Column="2" VerticalAlignment="Bottom" Margin="5" Text="{Binding ElementName=txtTel, Path=(Validation.Errors)[0].ErrorContent}"/>
+            <TextBlock Foreground="Red" Grid.Row="3" Grid.Column="2" VerticalAlignment="Bottom" Margin="5" Text="{Binding ElementName=txtEmail, Path=(Validation.Errors)[0].ErrorContent}"/>
+            <TextBlock Foreground="Red" Grid.Row="4" Grid.Column="2" VerticalAlignment="Bottom" Margin="5" Text="{Binding ElementName=txtNCode, Path=(Validation.Errors)[0].ErrorContent}"/>
 
             <Grid Grid.Row="1" Grid.Column="4">
                 <Grid.RowDefinitions>
