@@ -72,7 +72,7 @@
                     </Binding>
                 </TextBox.Text>                
             </TextBox>
-            <TextBox x:Name="txtNCode" Grid.Row="4" Grid.Column="2" VerticalAlignment="Center">
+            <TextBox x:Name="txtNCode" Grid.Row="4" Grid.Column="2" VerticalAlignment="Center" PreviewTextInput="txtNCode_PreviewTextInput" >
                 <TextBox.Text>
                     <Binding Path="NCode" UpdateSourceTrigger="PropertyChanged" Mode="OneWayToSource">
                         <Binding.ValidationRules>

@@ -58,5 +58,14 @@ namespace iWPF_S06_LINQ_To_SQL.Definitions
             lsvPhones.ItemsSource = null;
             lsvPhones.ItemsSource = lstPhones;
         }
+
+        private void txtNCode_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            int dd;
+            if (int.TryParse(e.Text, out dd) == false)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
