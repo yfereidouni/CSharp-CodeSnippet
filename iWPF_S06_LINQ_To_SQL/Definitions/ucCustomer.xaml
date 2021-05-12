@@ -10,7 +10,7 @@
              d:DesignHeight="380" d:DesignWidth="675">
 
     <UserControl.DataContext>
-        <validation:Person/>
+        <validation:ValidationClassProperties/>
     </UserControl.DataContext>
 
     <ScrollViewer>
@@ -49,22 +49,39 @@
                 <TextBox.Text>
                     <Binding Path="Name" UpdateSourceTrigger="PropertyChanged" Mode="OneWayToSource">
                         <Binding.ValidationRules>
-                            <validation:RequiredStrings></validation:RequiredStrings>
+                            <validation:RequiredStrings/>
                         </Binding.ValidationRules>
                     </Binding>
                 </TextBox.Text>
             </TextBox>
             <TextBox x:Name="txtTel" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center">
                 <TextBox.Text>
-                    <Binding Path="Name" UpdateSourceTrigger="PropertyChanged" Mode="OneWayToSource">
+                    <Binding Path="Tel" UpdateSourceTrigger="PropertyChanged" Mode="OneWayToSource">
                         <Binding.ValidationRules>
-                            <validation:MobileValidation></validation:MobileValidation>
+                            <validation:MobileValidation/>
                         </Binding.ValidationRules>
                     </Binding>
                 </TextBox.Text>
             </TextBox>
-            <TextBox x:Name="txtEmail" Grid.Row="3" Grid.Column="2" VerticalAlignment="Center"/>
-            <TextBox x:Name="txtNCode" Grid.Row="4" Grid.Column="2" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtEmail" Grid.Row="3" Grid.Column="2" VerticalAlignment="Center">
+                <TextBox.Text>
+                    <Binding Path="Email" UpdateSourceTrigger="PropertyChanged" Mode="OneWayToSource">
+                        <Binding.ValidationRules>
+                            <validation:EmailValidation/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>                
+            </TextBox>
+            <TextBox x:Name="txtNCode" Grid.Row="4" Grid.Column="2" VerticalAlignment="Center">
+                <TextBox.Text>
+                    <Binding Path="NCode" UpdateSourceTrigger="PropertyChanged" Mode="OneWayToSource">
+                        <Binding.ValidationRules>
+                            <validation:NCodeValidation/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+            
             <DatePicker  x:Name="dpBirthDate" Grid.Row="5" Grid.Column="2" VerticalAlignment="Center"/>
             <TextBox x:Name="txtAddress" Grid.Row="6" Grid.Column="2" VerticalAlignment="Center"/>
             <TextBox x:Name="txtDescription" Grid.Row="7" Grid.Column="2" VerticalAlignment="Center"/>
