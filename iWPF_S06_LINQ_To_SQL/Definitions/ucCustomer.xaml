@@ -13,7 +13,7 @@
         <validation:ValidationClassProperties/>
     </UserControl.DataContext>
 
-    <UserControl.Resources>
+    <!--<UserControl.Resources>
         <Style TargetType="{x:Type Button}">
             <Setter Property="Background" Value="LightBlue"/>
             <Setter Property="FontSize" Value="14" />
@@ -26,8 +26,15 @@
             <Setter Property="FontWeight" Value="Bold" />
         </Style>
 
+    </UserControl.Resources>-->
+
+    <UserControl.Resources>
+        <!--<ResourceDictionary Source="../Theme/Dictionary1.xaml"/>-->
+        <ResourceDictionary Source="../Theme/Dictionary2.xaml"/>
     </UserControl.Resources>
 
+   
+    
     <ScrollViewer>
         <Grid x:Name="gridMain" FlowDirection="RightToLeft" Background="Beige">
             <Grid.RowDefinitions>
@@ -99,16 +106,24 @@
 
             <DatePicker  x:Name="dpBirthDate" Grid.Row="5" Grid.Column="2" VerticalAlignment="Center"/>
             <TextBox x:Name="txtAddress" Grid.Row="6" Grid.Column="2" VerticalAlignment="Center"/>
-            <TextBox x:Name="txtDescription" Grid.Row="7" Grid.Column="2" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtDescription" Grid.Row="7" Grid.Column="2" VerticalAlignment="Center">
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="4"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
 
             <StackPanel x:Name="spButtons"  Grid.Row="8" Grid.Column="2" Orientation="Horizontal" >
-                <Button x:Name="btnSave" Style="{DynamicResource iSave}" Content="ذخیره" VerticalAlignment="Center" HorizontalAlignment="Left" Width="70" Margin="3,10,3,11" Click="btnSaveCustomer_Click" />
+                <Button x:Name="btnSave" Style="{DynamicResource mySaveButton}"  VerticalAlignment="Center" HorizontalAlignment="Left" Width="70" Margin="3,10,3,11" Click="btnSaveCustomer_Click" >
+                    <!--<Button.Content>ذخیره</Button.Content>-->
+                </Button>
                 <Button x:Name="btnCancel" Content="انصراف" VerticalAlignment="Center" HorizontalAlignment="Left" Width="70" Margin="10,0" Click="btnCancel_Click">
-                    <Button.Style>
+                    <!--<Button.Style>
                         <Style TargetType="{x:Type Button}">
                             <Setter Property="Background" Value="red"/>
                         </Style>
-                    </Button.Style>
+                    </Button.Style>-->
                 </Button>
             </StackPanel>
 
