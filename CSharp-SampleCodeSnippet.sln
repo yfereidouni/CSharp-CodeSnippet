@@ -67,6 +67,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iWPF_S06_LINQ_To_SQL", "iWP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iWPF_S11_StringFormats", "iWPF_S11_StringFormats\iWPF_S11_StringFormats.csproj", "{26ABA21C-71A9-4BDC-9BEB-BF901E7578EF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iWPF_S11_Components_and_Toolkits", "iWPF_S11_Components_and_Toolkits\iWPF_S11_Components_and_Toolkits.csproj", "{65C35540-0E74-4525-A08A-AC86D00FB9F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -201,6 +203,10 @@ Global
 		{26ABA21C-71A9-4BDC-9BEB-BF901E7578EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26ABA21C-71A9-4BDC-9BEB-BF901E7578EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26ABA21C-71A9-4BDC-9BEB-BF901E7578EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65C35540-0E74-4525-A08A-AC86D00FB9F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65C35540-0E74-4525-A08A-AC86D00FB9F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65C35540-0E74-4525-A08A-AC86D00FB9F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65C35540-0E74-4525-A08A-AC86D00FB9F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
