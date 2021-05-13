@@ -48,6 +48,7 @@ namespace iWPF_S12_Stimulsoft_Report
             Stimulsoft.Report.StiReport sti = new Stimulsoft.Report.StiReport();
             sti.Load(Environment.CurrentDirectory + "\\Report.mrt");
             sti.RegBusinessObject("Person", lstperson);
+            sti.Compile();
             sti.Show();
         }
     }
