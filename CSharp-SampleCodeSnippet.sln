@@ -65,9 +65,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF_S06_HandyControls", "i
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iWPF_S06_LINQ_To_SQL", "iWPF_S06_LINQ_To_SQL\iWPF_S06_LINQ_To_SQL.csproj", "{C945F0EF-364C-4B75-A02E-4BAB11121FFE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iWPF_S11_StringFormats", "iWPF_S11_StringFormats\iWPF_S11_StringFormats.csproj", "{26ABA21C-71A9-4BDC-9BEB-BF901E7578EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF_S11_StringFormats", "iWPF_S11_StringFormats\iWPF_S11_StringFormats.csproj", "{26ABA21C-71A9-4BDC-9BEB-BF901E7578EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iWPF_S11_Components_and_Toolkits", "iWPF_S11_Components_and_Toolkits\iWPF_S11_Components_and_Toolkits.csproj", "{65C35540-0E74-4525-A08A-AC86D00FB9F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF_S11_Components_and_Toolkits", "iWPF_S11_Components_and_Toolkits\iWPF_S11_Components_and_Toolkits.csproj", "{65C35540-0E74-4525-A08A-AC86D00FB9F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iWPF_S12_Stimulsoft_Report", "iWPF_S12_Stimulsoft_Report\iWPF_S12_Stimulsoft_Report.csproj", "{7E2229DC-17E3-4470-A2CA-9EC6C216DDC5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -207,6 +209,10 @@ Global
 		{65C35540-0E74-4525-A08A-AC86D00FB9F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65C35540-0E74-4525-A08A-AC86D00FB9F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65C35540-0E74-4525-A08A-AC86D00FB9F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E2229DC-17E3-4470-A2CA-9EC6C216DDC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E2229DC-17E3-4470-A2CA-9EC6C216DDC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E2229DC-17E3-4470-A2CA-9EC6C216DDC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E2229DC-17E3-4470-A2CA-9EC6C216DDC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
