@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace iWPF_S12_Stimulsoft_Reports
+namespace iWPF_S06_LINQ_To_SQL
 {
     /// <summary>
     /// Interaction logic for App.xaml

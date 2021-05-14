@@ -71,6 +71,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF_S11_Components_and_Too
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iWPF_S12_Stimulsoft_Report", "iWPF_S12_Stimulsoft_Report\iWPF_S12_Stimulsoft_Report.csproj", "{7E2229DC-17E3-4470-A2CA-9EC6C216DDC5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iWPF_ZooManager", "iWPF_ZooManager\iWPF_ZooManager.csproj", "{07BA89DD-4855-4026-9FAE-646BC7649AF9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -213,6 +215,10 @@ Global
 		{7E2229DC-17E3-4470-A2CA-9EC6C216DDC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E2229DC-17E3-4470-A2CA-9EC6C216DDC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E2229DC-17E3-4470-A2CA-9EC6C216DDC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07BA89DD-4855-4026-9FAE-646BC7649AF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07BA89DD-4855-4026-9FAE-646BC7649AF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07BA89DD-4855-4026-9FAE-646BC7649AF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07BA89DD-4855-4026-9FAE-646BC7649AF9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
