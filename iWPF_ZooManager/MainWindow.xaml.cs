@@ -34,6 +34,7 @@ namespace iWPF_ZooManager
             //sqlConnection = new SqlConnection("Data Source=192.168.1.106;Initial Catalog=WWDB;Persist Security Info=True;User ID=sa;Password=Develop2011~");
 
             ShowZoos();
+            ShowAllAnimals();
         }
 
         private void ShowZoos()
@@ -51,10 +52,36 @@ namespace iWPF_ZooManager
                     listZoos.SelectedValuePath = "Id";
                     listZoos.ItemsSource = zooTable.DefaultView;
                 }
+                //Automatically select first item of zoo list -------------------
+                if (listZoos.Items.Count >= 0) listZoos.SelectedIndex = 0;
+                //---------------------------------------------------------------
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message);
+                //MessageBox.Show(e.Message);
+            }
+
+        }
+
+        private void ShowAllAnimals()
+        {
+            try
+            {
+                string query = "SELECT * FROM Animal";
+                SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(query, sqlConnection);
+
+                using (sqlDataAdapter)
+                {
+                    DataTable animalTable = new DataTable();
+                    sqlDataAdapter.Fill(animalTable);
+                    listAllAnimals.DisplayMemberPath = "Name";
+                    listAllAnimals.SelectedValuePath = "Id";
+                    listAllAnimals.ItemsSource = animalTable.DefaultView;
+                }
+            }
+            catch (Exception e)
+            {
+                //MessageBox.Show(e.Message);
             }
         }
 
@@ -82,8 +109,8 @@ namespace iWPF_ZooManager
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message.ToString());
-                
+                //MessageBox.Show(e.Message.ToString());
+
             }
         }
 
@@ -92,6 +119,27 @@ namespace iWPF_ZooManager
             ShowAssociatedAnimals();
         }
 
-
+        private void DeleteZoo_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                string query = "Delete from Zoo where Id = @Id";
+                SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+                sqlConnection.Open();
+                sqlCommand.Parameters.AddWithValue("@Id", listZoos.SelectedValue);
+                sqlCommand.ExecuteScalar();
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                sqlConnection.Close();
+                ShowZoos();
+            }
+           
+            
+        }
     }
 }
