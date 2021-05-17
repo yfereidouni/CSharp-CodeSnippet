@@ -75,6 +75,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iWPF_ZooManager", "iWPF_Zoo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iLinq", "iLinq\iLinq.csproj", "{0B7E7FB3-9CC7-4328-BC9C-EF9BC4FCC703}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iLinq_LinqToObjectsAndQueryOperators", "iLinq_LinqToObjectsAndQueryOperators\iLinq_LinqToObjectsAndQueryOperators.csproj", "{7B9E93A2-D3D0-4708-8F60-5DD5DD6CB3C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -225,6 +227,10 @@ Global
 		{0B7E7FB3-9CC7-4328-BC9C-EF9BC4FCC703}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B7E7FB3-9CC7-4328-BC9C-EF9BC4FCC703}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B7E7FB3-9CC7-4328-BC9C-EF9BC4FCC703}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B9E93A2-D3D0-4708-8F60-5DD5DD6CB3C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B9E93A2-D3D0-4708-8F60-5DD5DD6CB3C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B9E93A2-D3D0-4708-8F60-5DD5DD6CB3C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B9E93A2-D3D0-4708-8F60-5DD5DD6CB3C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
