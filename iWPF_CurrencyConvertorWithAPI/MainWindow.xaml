@@ -1,0 +1,43 @@
+﻿<Window x:Class="iWPF_CurrencyConvertorWithAPI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:iWPF_CurrencyConvertorWithAPI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <ComboBox x:Name="cmbFromCurrency" Grid.Row="0" Grid.Column="0" Margin="20" />
+        <TextBox  Grid.Row="0" Grid.Column="1" x:Name="txtFirstCurrency" Margin=" 20"/>
+        <Separator  Grid.Row="1" Margin="0 15" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="cmbToCurrency" Grid.Row="2" Grid.Column="0" Margin="20" />
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="txtTargetCurrency" Margin="20"/>
+        <Separator  Grid.Row="3" Margin="0 15" Grid.ColumnSpan="2"/>
+        <Button Grid.Row="4" Grid.ColumnSpan="2" Content="Convert" Height="23" Name="button1" HorizontalAlignment="Left" Padding="50 0" Margin="321,0,0,31" Grid.RowSpan="2" VerticalAlignment="Bottom" Click="Convert_Click">
+            <Button.Background>
+                <LinearGradientBrush  StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#FFD9EDFF" Offset="0"/>
+                    <GradientStop Color="#FFC0DEFF" Offset="0.445"/>
+                    <GradientStop Color="#FFAFD1F8" Offset="0.53"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Separator  Grid.Row="5" Margin="0 15" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="txtConverted" Grid.Row="6" Grid.ColumnSpan="2"/>
+
+    </Grid>
+</Window>
