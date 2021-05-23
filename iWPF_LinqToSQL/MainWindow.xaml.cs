@@ -33,7 +33,14 @@ namespace iWPF_LinqToSQL
             //InsertUniversityies();
             //InsertStudents();
             //InsertLectures();
-            InsertStudentLectureAssociations();
+            //InsertStudentLectureAssociations();
+            //GetUniversityOfToni();
+            //GetLecturesOfToni();
+            //GetAllStudentsFromYale();
+            //GetAllUniversitiesWithTransGenders();
+            //GetAllLecturesFromBeijingTech();
+            //UpdateToni();
+            DeleteJame();
 
         }
 
@@ -90,7 +97,7 @@ namespace iWPF_LinqToSQL
                dataContext.ExecuteCommand("Delete from lecture");
 
                 dataContext.Lectures.InsertOnSubmit(new Lecture { Name = "C#" });
-                dataContext.Lectures.InsertOnSubmit(new Lecture { Name = "JavaScrip" });
+                dataContext.Lectures.InsertOnSubmit(new Lecture { Name = "JavaScript" });
                 dataContext.Lectures.InsertOnSubmit(new Lecture { Name = "HTML" });
                 dataContext.Lectures.InsertOnSubmit(new Lecture { Name = "CSS" });
 
@@ -106,31 +113,110 @@ namespace iWPF_LinqToSQL
 
         public void InsertStudentLectureAssociations()
         {
-            //dataContext.ExecuteCommand("Delete from StudentLecture");
+            dataContext.ExecuteCommand("Delete from StudentLecture");
 
-            Student carla = dataContext.Students.First(st1 => st1.Name.Equals("Carla"));
-            //Student toni = dataContext.Students.First(st2 => st2.Name.Equals("Toni"));
-            //Student leyla = dataContext.Students.First(st3 => st3.Name.Equals("Leyla"));
-            //Student jame = dataContext.Students.First(st4 => st4.Name.Equals("Jame"));
+            Student carla = dataContext.Students.First(st => st.Name.Equals("Carla"));
+            Student toni = dataContext.Students.First(st => st.Name.Equals("Toni"));
+            Student leyla = dataContext.Students.First(st => st.Name.Equals("Leyla"));
+            Student jame = dataContext.Students.First(st => st.Name.Equals("Jame"));
 
-            Lecture csharp = dataContext.Lectures.First(l => l.Name.Equals("C#"));
-            //Lecture javascript = dataContext.Lectures.First(l => l.Name.Equals("JavaScript"));
-            //Lecture html = dataContext.Lectures.First(l => l.Name.Equals("HTML"));
-            //Lecture css = dataContext.Lectures.First(l => l.Name.Equals("CSS"));
+            Lecture csharp = dataContext.Lectures.First(lc => lc.Name.Equals("C#"));
+            Lecture javascript = dataContext.Lectures.First(lc => lc.Name.Equals("JavaScript"));
+            Lecture html = dataContext.Lectures.First(lc => lc.Name.Equals("HTML"));
+            Lecture css = dataContext.Lectures.First(lc => lc.Name.Equals("CSS"));
 
 
-            List<StudentLecture> studentsLectures = new List<StudentLecture>();
+            dataContext.StudentLectures.InsertOnSubmit(new StudentLecture { Student = carla, Lecture = csharp });
+            dataContext.StudentLectures.InsertOnSubmit(new StudentLecture { Student = carla, Lecture = javascript });
+            dataContext.StudentLectures.InsertOnSubmit(new StudentLecture { Student = toni, Lecture = css });
+            dataContext.StudentLectures.InsertOnSubmit(new StudentLecture { Student = jame, Lecture = html });
+            dataContext.StudentLectures.InsertOnSubmit(new StudentLecture { Student = leyla, Lecture = javascript });
 
-            studentsLectures.Add(new StudentLecture { Student = carla, Lecture = csharp });
+            //------- OR ---------------------------------------------------------------------------
+            //List<StudentLecture> studentsLectures = new List<StudentLecture>();
+            //studentsLectures.Add(new StudentLecture { Student = carla, Lecture = csharp });
             //studentsLectures.Add(new StudentLecture { Student = carla, Lecture = javascript });
             //studentsLectures.Add(new StudentLecture { Student = toni, Lecture = css });
             //studentsLectures.Add(new StudentLecture { Student = jame, Lecture = html });
             //studentsLectures.Add(new StudentLecture { Student = leyla, Lecture = javascript });
+            //dataContext.StudentLectures.InsertAllOnSubmit(studentsLectures);
+            //-------------------------------------------------------------------------------------
 
-            dataContext.StudentLectures.InsertAllOnSubmit(studentsLectures);
+
             dataContext.SubmitChanges();
             
             MainDataGrid.ItemsSource = dataContext.StudentLectures;
+        }
+
+        public void GetUniversityOfToni()
+        {
+            Student Toni = dataContext.Students.First(st => st.Name.Contains("Toni"));
+            University toniUniversity = Toni.University;
+
+            List<University> universities = new List<University>();
+            universities.Add(toniUniversity);
+
+            MainDataGrid.ItemsSource = universities;
+        }
+
+        public void GetLecturesOfToni()
+        {
+            Student Toni = dataContext.Students.First(st => st.Name.Contains("Toni"));
+
+            //var studentLectures = dataContext.StudentLectures.Where(lc => lc.Student == Toni);
+            //Or-----------------------------------------------------------------------------------
+            var studentLectures = from sl in Toni.StudentLectures select sl.Lecture;
+
+            MainDataGrid.ItemsSource = studentLectures;
+        }
+
+        public void GetAllStudentsFromYale()
+        {
+            var studentsFromYale = from students in dataContext.Students
+                                   where students.University.Name == "Yale"
+                                   select students;
+
+            MainDataGrid.ItemsSource = studentsFromYale;
+        }
+
+        public void GetAllUniversitiesWithTransGenders()
+        {
+            var transGenderUniversities = from students in dataContext.Students
+                                          join university in dataContext.Universities
+                                          on students.University equals university
+                                          where students.Gender == "trans-gender"
+                                          select university;
+
+            MainDataGrid.ItemsSource = transGenderUniversities;
+
+        }
+
+        public void GetAllLecturesFromBeijingTech()
+        {
+            var lecturesFromBeijingTech = from sl in dataContext.StudentLectures
+                                          join students in dataContext.Students
+                                          on sl.StudentId equals students.Srl
+                                          where students.University.Name == "Beijing Tech"
+                                          select sl.Lecture;
+
+            MainDataGrid.ItemsSource = lecturesFromBeijingTech;
+
+        }
+
+        public void UpdateToni()
+        {
+            Student Toni = dataContext.Students.FirstOrDefault(st => st.Name == "Toni");
+            Toni.Name = "Toni";
+            dataContext.SubmitChanges();
+            MainDataGrid.ItemsSource = dataContext.Students;
+        }
+
+        public void DeleteJame()
+        {
+            Student jame = dataContext.Students.FirstOrDefault(st => st.Name == "Jame");
+            dataContext.Students.DeleteOnSubmit(jame);
+            dataContext.SubmitChanges();
+            MainDataGrid.ItemsSource = dataContext.Students;
         }
     }
 }

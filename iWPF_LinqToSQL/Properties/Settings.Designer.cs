@@ -26,7 +26,7 @@ namespace iWPF_LinqToSQL.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.1.106;Initial Catalog=WWDB;User ID=sa;Password=Develop2011~")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=WWDB;User ID=sa;Password=Develop2011~")]
         public string WWDBConnectionString {
             get {
                 return ((string)(this["WWDBConnectionString"]));
