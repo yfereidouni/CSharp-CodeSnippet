@@ -135,7 +135,7 @@ namespace iWPF_LinqToSQL
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int NOT NULL", IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
 		public int Id
 		{
 			get
@@ -544,7 +544,7 @@ namespace iWPF_LinqToSQL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="University_Student", Storage="_University", ThisKey="UniversityId", OtherKey="Id", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="University_Student", Storage="_University", ThisKey="UniversityId", OtherKey="Id", IsForeignKey=true, DeleteRule="CASCADE")]
 		public University University
 		{
 			get
@@ -714,7 +714,7 @@ namespace iWPF_LinqToSQL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Student_StudentLecture", Storage="_Student", ThisKey="StudentId", OtherKey="Srl", IsForeignKey=true)]
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Student_StudentLecture", Storage="_Student", ThisKey="StudentId", OtherKey="Srl", IsForeignKey=true, DeleteOnNull=true, DeleteRule="CASCADE")]
 		public Student Student
 		{
 			get

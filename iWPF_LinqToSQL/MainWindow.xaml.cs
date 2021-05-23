@@ -31,7 +31,9 @@ namespace iWPF_LinqToSQL
             dataContext = new LinqToSqlDataClassesDataContext(connectionString);
 
             //InsertUniversityies();
-            InsertStudents();
+            //InsertStudents();
+            //InsertLectures();
+            InsertStudentLectureAssociations();
 
         }
 
@@ -39,10 +41,10 @@ namespace iWPF_LinqToSQL
         {
             dataContext.ExecuteCommand("Delete from university");
 
-            University yale = new University { Id = 1, Name = "Yale" };
+            University yale = new University { Name = "Yale" };
             dataContext.Universities.InsertOnSubmit(yale);
 
-            University beijingTech = new University { Id = 2, Name = "Beijing Tech" };
+            University beijingTech = new University { Name = "Beijing Tech" };
             dataContext.Universities.InsertOnSubmit(beijingTech);
 
             dataContext.SubmitChanges();
@@ -79,6 +81,56 @@ namespace iWPF_LinqToSQL
 
 
 
+        }
+
+        public void InsertLectures()
+        {
+            try
+            {
+               dataContext.ExecuteCommand("Delete from lecture");
+
+                dataContext.Lectures.InsertOnSubmit(new Lecture { Name = "C#" });
+                dataContext.Lectures.InsertOnSubmit(new Lecture { Name = "JavaScrip" });
+                dataContext.Lectures.InsertOnSubmit(new Lecture { Name = "HTML" });
+                dataContext.Lectures.InsertOnSubmit(new Lecture { Name = "CSS" });
+
+                dataContext.SubmitChanges();
+
+                MainDataGrid.ItemsSource = dataContext.Lectures;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void InsertStudentLectureAssociations()
+        {
+            //dataContext.ExecuteCommand("Delete from StudentLecture");
+
+            Student carla = dataContext.Students.First(st1 => st1.Name.Equals("Carla"));
+            //Student toni = dataContext.Students.First(st2 => st2.Name.Equals("Toni"));
+            //Student leyla = dataContext.Students.First(st3 => st3.Name.Equals("Leyla"));
+            //Student jame = dataContext.Students.First(st4 => st4.Name.Equals("Jame"));
+
+            Lecture csharp = dataContext.Lectures.First(l => l.Name.Equals("C#"));
+            //Lecture javascript = dataContext.Lectures.First(l => l.Name.Equals("JavaScript"));
+            //Lecture html = dataContext.Lectures.First(l => l.Name.Equals("HTML"));
+            //Lecture css = dataContext.Lectures.First(l => l.Name.Equals("CSS"));
+
+
+            List<StudentLecture> studentsLectures = new List<StudentLecture>();
+
+            studentsLectures.Add(new StudentLecture { Student = carla, Lecture = csharp });
+            //studentsLectures.Add(new StudentLecture { Student = carla, Lecture = javascript });
+            //studentsLectures.Add(new StudentLecture { Student = toni, Lecture = css });
+            //studentsLectures.Add(new StudentLecture { Student = jame, Lecture = html });
+            //studentsLectures.Add(new StudentLecture { Student = leyla, Lecture = javascript });
+
+            dataContext.StudentLectures.InsertAllOnSubmit(studentsLectures);
+            dataContext.SubmitChanges();
+            
+            MainDataGrid.ItemsSource = dataContext.StudentLectures;
         }
     }
 }

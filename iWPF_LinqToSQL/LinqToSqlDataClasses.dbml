@@ -2,7 +2,7 @@
   <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.1.106;Initial Catalog=WWDB;User ID=sa" SettingsObjectName="iWPF_LinqToSQL.Properties.Settings" SettingsPropertyName="WWDBConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.Lecture" Member="Lectures">
     <Type Name="Lecture">
-      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="Name" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Association Name="Lecture_StudentLecture" Member="StudentLectures" ThisKey="Id" OtherKey="LectureId" Type="StudentLecture" />
     </Type>
@@ -23,7 +23,7 @@
       <Column Name="Gender" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="UniversityId" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="Student_StudentLecture" Member="StudentLectures" ThisKey="Srl" OtherKey="StudentId" Type="StudentLecture" />
-      <Association Name="University_Student" Member="University" ThisKey="UniversityId" OtherKey="Id" Type="University" IsForeignKey="true" />
+      <Association Name="University_Student" Member="University" ThisKey="UniversityId" OtherKey="Id" Type="University" IsForeignKey="true" DeleteRule="CASCADE" />
     </Type>
   </Table>
   <Table Name="dbo.StudentLecture" Member="StudentLectures">
@@ -31,7 +31,7 @@
       <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="StudentId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="LectureId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Association Name="Student_StudentLecture" Member="Student" ThisKey="StudentId" OtherKey="Srl" Type="Student" IsForeignKey="true" />
+      <Association Name="Student_StudentLecture" Member="Student" ThisKey="StudentId" OtherKey="Srl" Type="Student" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
       <Association Name="Lecture_StudentLecture" Member="Lecture" ThisKey="LectureId" OtherKey="Id" Type="Lecture" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
     </Type>
   </Table>
