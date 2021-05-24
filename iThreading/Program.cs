@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -38,10 +39,8 @@ namespace iThreading
             }).Start();
             */
 
-
+            /*
             var taskCompletationSource = new TaskCompletionSource<bool>();
-
-
             var thread = new Thread(() =>
             {
                 Console.WriteLine($"Thread number: {Thread.CurrentThread.ManagedThreadId} Started.");
@@ -53,8 +52,27 @@ namespace iThreading
             thread.Start();
             var test = taskCompletationSource.Task.Result;
             Console.WriteLine("Task was done: {0}", test);
+            */
 
+            new Thread(() =>
+            {
+                Thread.Sleep(1000);
+                Console.WriteLine("Thread 4");
+            })
+            { IsBackground = true }.Start();
 
+            Enumerable.Range(0, 100).ToList().ForEach(f =>
+            {
+                //new Thread(() =>
+                ThreadPool.QueueUserWorkItem((o) =>
+                {
+                    Console.WriteLine($"Thread number: {Thread.CurrentThread.ManagedThreadId} Started.");
+                    Thread.Sleep(1000);
+                    Console.WriteLine($"Thread number: {Thread.CurrentThread.ManagedThreadId} Ended.");
+                });
+            });
+
+            Console.ReadLine();
         }
     }
 }
