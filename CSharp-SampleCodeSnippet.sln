@@ -83,6 +83,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iWPF_LinqToSQL", "iWPF_Linq
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iWPF_CurrencyConvertorWithAPI", "iWPF_CurrencyConvertorWithAPI\iWPF_CurrencyConvertorWithAPI.csproj", "{877BE09C-D669-4D47-9082-7B73FE624513}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iThreading", "iThreading\iThreading.csproj", "{3758D2B7-7984-4695-9F9C-3330E7EACAA9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -249,6 +251,10 @@ Global
 		{877BE09C-D669-4D47-9082-7B73FE624513}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{877BE09C-D669-4D47-9082-7B73FE624513}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{877BE09C-D669-4D47-9082-7B73FE624513}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3758D2B7-7984-4695-9F9C-3330E7EACAA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3758D2B7-7984-4695-9F9C-3330E7EACAA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3758D2B7-7984-4695-9F9C-3330E7EACAA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3758D2B7-7984-4695-9F9C-3330E7EACAA9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
