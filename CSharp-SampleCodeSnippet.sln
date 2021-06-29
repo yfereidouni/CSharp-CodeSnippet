@@ -85,9 +85,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF_CurrencyConvertorWithA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iThreading", "iThreading\iThreading.csproj", "{3758D2B7-7984-4695-9F9C-3330E7EACAA9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iThread_Join_and_IsAlive", "iThread_Join_and_IsAlive\iThread_Join_and_IsAlive.csproj", "{2C646BDA-0CB8-4DE7-A4FA-AC4E00376102}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iThread_Join_and_IsAlive", "iThread_Join_and_IsAlive\iThread_Join_and_IsAlive.csproj", "{2C646BDA-0CB8-4DE7-A4FA-AC4E00376102}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iWPF_Tasks", "iWPF_Tasks\iWPF_Tasks.csproj", "{DA954CBE-307A-4D8D-AFBF-CFDE721B004F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF_Tasks", "iWPF_Tasks\iWPF_Tasks.csproj", "{DA954CBE-307A-4D8D-AFBF-CFDE721B004F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iTType", "iTType\iTType.csproj", "{4AA9D48D-AAB8-478D-8ECB-5968ADA123D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -267,6 +269,10 @@ Global
 		{DA954CBE-307A-4D8D-AFBF-CFDE721B004F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA954CBE-307A-4D8D-AFBF-CFDE721B004F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA954CBE-307A-4D8D-AFBF-CFDE721B004F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AA9D48D-AAB8-478D-8ECB-5968ADA123D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AA9D48D-AAB8-478D-8ECB-5968ADA123D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AA9D48D-AAB8-478D-8ECB-5968ADA123D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AA9D48D-AAB8-478D-8ECB-5968ADA123D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
