@@ -20,13 +20,11 @@ namespace iTType
                 Name = "Iran Daily", No = 101 
             };
 
-
             PrintService<IDocument> ps = new PrintService<IDocument>();
 
             ps.Print(jamejam);
             ps.Print(harryPotter);
             ps.Print(IranDaily);
-
         }
     }
 
