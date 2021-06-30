@@ -89,11 +89,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iThread_Join_and_IsAlive", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF_Tasks", "iWPF_Tasks\iWPF_Tasks.csproj", "{DA954CBE-307A-4D8D-AFBF-CFDE721B004F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iTType", "iTType\iTType.csproj", "{4AA9D48D-AAB8-478D-8ECB-5968ADA123D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iTType", "iTType\iTType.csproj", "{4AA9D48D-AAB8-478D-8ECB-5968ADA123D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iOperatorOverloading", "iOperatorOverloading\iOperatorOverloading.csproj", "{0BFA06CA-4154-46F0-929D-6EC6AE90B5E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iOperatorOverloading", "iOperatorOverloading\iOperatorOverloading.csproj", "{0BFA06CA-4154-46F0-929D-6EC6AE90B5E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iImplicit_Explicit_TypeCasting", "iImplicit_Explicit_TypeCasting\iImplicit_Explicit_TypeCasting.csproj", "{B4054FC1-0DDF-4044-81F8-4CBB2CAE5882}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iImplicit_Explicit_TypeCasting", "iImplicit_Explicit_TypeCasting\iImplicit_Explicit_TypeCasting.csproj", "{B4054FC1-0DDF-4044-81F8-4CBB2CAE5882}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iLinkedList", "iLinkedList\iLinkedList.csproj", "{FA171D39-7673-4473-A1B4-386736B5A893}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -285,6 +287,10 @@ Global
 		{B4054FC1-0DDF-4044-81F8-4CBB2CAE5882}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4054FC1-0DDF-4044-81F8-4CBB2CAE5882}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4054FC1-0DDF-4044-81F8-4CBB2CAE5882}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA171D39-7673-4473-A1B4-386736B5A893}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA171D39-7673-4473-A1B4-386736B5A893}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA171D39-7673-4473-A1B4-386736B5A893}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA171D39-7673-4473-A1B4-386736B5A893}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
