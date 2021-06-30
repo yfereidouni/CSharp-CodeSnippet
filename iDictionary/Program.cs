@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace iLinkedList
+namespace iDictionary
 {
     class Program
     {
