@@ -26,6 +26,9 @@ namespace iGenerics_and_TTypes
             childIsGeneric.PrintDocs(TehranTimes);
             childIsGeneric.PrintDocs(HarryPotter);
 
+            
+
+
             Console.ReadLine();
         }
     }
@@ -79,4 +82,5 @@ namespace iGenerics_and_TTypes
             Console.WriteLine(document.DisplayDetails());
         }
     }
+
 }
