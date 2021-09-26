@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace iWPF_MVVM.Model
+namespace iWPF_MVVM.Models
 {
     public class User : INotifyPropertyChanged
     {

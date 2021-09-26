@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using System.Windows.Input;
 using System.ComponentModel;
-using iWPF_MVVM.Model;
+using iWPF_MVVM.Models;
 
-namespace iWPF_MVVM.ViewModel
+namespace iWPF_MVVM.ViewModels
 {
-    public class UserViewModel
+    public class UserViewModels
     {
         private IList<User> _UsersList;
 
-        public UserViewModel()
+        public UserViewModels()
         {
             _UsersList = new List<User>
             {

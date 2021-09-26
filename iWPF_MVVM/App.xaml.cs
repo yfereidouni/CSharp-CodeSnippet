@@ -1,5 +1,5 @@
-﻿using iWPF_MVVM.View;
-using iWPF_MVVM.ViewModel;
+﻿using iWPF_MVVM.Views;
+using iWPF_MVVM.ViewModels;
 using System.Windows;
 
 namespace iWPF_MVVM
@@ -14,9 +14,9 @@ namespace iWPF_MVVM
         {
             base.OnStartup(e);
             //View
-            MainPage window = new View.MainPage();
+            MainPage window = new Views.MainPage();
             //ViewModel
-            UserViewModel VM = new UserViewModel();
+            UserViewModels VM = new UserViewModels();
 
             window.DataContext = VM;
             window.Show();

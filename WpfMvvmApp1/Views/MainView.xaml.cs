@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace iWPF_MVVM.View
+namespace WpfMvvmApp1.Views
 {
     /// <summary>
-    /// Interaction logic for MainPage.xaml
+    /// Interaction logic for MainView.xaml
     /// </summary>
-    public partial class MainPage : Window
+    public partial class MainView : Window
     {
-        public MainPage()
+        public MainView()
         {
             InitializeComponent();
         }
