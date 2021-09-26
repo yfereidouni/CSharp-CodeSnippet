@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using iWPF_MVVM.View;
+using iWPF_MVVM.ViewModel;
 using System.Windows;
 
 namespace iWPF_MVVM
@@ -16,8 +12,11 @@ namespace iWPF_MVVM
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-            iWPF_MVVM.MainWindow window = new MainWindow();
+            //View
+            MainPage window = new View.MainPage();
+            //ViewModel
             UserViewModel VM = new UserViewModel();
+
             window.DataContext = VM;
             window.Show();
         }

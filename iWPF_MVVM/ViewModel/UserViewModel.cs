@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Windows.Input;
 using System.ComponentModel;
+using iWPF_MVVM.Model;
 
-namespace iWPF_MVVM
+namespace iWPF_MVVM.ViewModel
 {
     public class UserViewModel
     {
