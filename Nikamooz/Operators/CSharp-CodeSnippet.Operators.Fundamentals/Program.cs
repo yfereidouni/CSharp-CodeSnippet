@@ -1,6 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using CSharp_CodeSnippet.Operators.Fundamentals;
+using CSharp_CodeSnippet.Operators;
 
 //Operator : CompoundOperators --------------------------------------------------------------
 Console.WriteLine("\r\nOperator (Compound): ".PadRight(60, '-'));
@@ -22,6 +22,11 @@ checked01.CheckedTypesOverflow();
 Console.WriteLine("\r\nOperator (SizeOF): ".PadRight(60, '-'));
 SizeOF sizeOF = new SizeOF();
 sizeOF.SizeOfTypes();
+
+//Operator : SizeOF -------------------------------------------------------------------------
+Console.WriteLine("\r\nOperator (TypeOF): ".PadRight(60, '-'));
+TypeOF typeOF = new TypeOF();
+typeOF.Typeof();
 
 //Operator : IS or AS -----------------------------------------------------------------------
 Console.WriteLine("\r\nOperator (IS or AS): ".PadRight(60,'-'));
