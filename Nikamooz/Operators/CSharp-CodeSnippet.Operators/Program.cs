@@ -23,10 +23,15 @@ Console.WriteLine("\r\nOperator (SizeOF): ".PadRight(60, '-'));
 SizeOF sizeOF = new SizeOF();
 sizeOF.SizeOfTypes();
 
-//Operator : SizeOF -------------------------------------------------------------------------
+//Operator : TypeOF -------------------------------------------------------------------------
 Console.WriteLine("\r\nOperator (TypeOF): ".PadRight(60, '-'));
 TypeOF typeOF = new TypeOF();
 typeOF.Typeof();
+
+//Operator : NameOF -------------------------------------------------------------------------
+Console.WriteLine("\r\nOperator (NameOF): ".PadRight(60, '-'));
+NameOF nameOF = new NameOF();
+nameOF.Nameof();
 
 //Operator : IS or AS -----------------------------------------------------------------------
 Console.WriteLine("\r\nOperator (IS or AS): ".PadRight(60,'-'));

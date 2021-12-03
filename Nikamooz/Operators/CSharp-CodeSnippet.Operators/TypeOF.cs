@@ -25,6 +25,8 @@ namespace CSharp_CodeSnippet.Operators
 
     public class Car
     {
-        public string Name { get; set; }
+        public string CarName { get; set; }
+        public string Model { get; set; }
+        public string BodyType { get; set; }
     }
 }
