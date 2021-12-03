@@ -6,21 +6,9 @@ using System.Threading.Tasks;
 
 namespace CSharp_CodeSnippet.Operators.Fundamentals
 {
-    public class OperatorsFundamentals
+    public class Checked
     {
-        public void CompoundOperators()
-        {
-            int a = 0;
-            Console.WriteLine(a++);
-            Console.WriteLine(++a);
-        }
-
-        public string ConditionalExpression(int input)
-        {
-            return input == 0 ? "Zero" : "Not Zero";
-        }
-
-        public void Checked()
+        public void CheckedTypesOverflow()
         {
             //checked
             //{

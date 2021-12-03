@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CSharp_CodeSnippet.Operators.IsOrAs
+namespace CSharp_CodeSnippet.Operators.Fundamentals
 {
     public class IsOrAs
     {
