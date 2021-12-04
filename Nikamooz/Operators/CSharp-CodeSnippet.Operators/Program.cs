@@ -84,3 +84,16 @@ OperatorsOverloading operatorsOverloading03 = operatorsOverloading01 + operators
 Console.WriteLine(operatorsOverloading03);
 Console.WriteLine(operatorsOverloading01 == operatorsOverloading02);
 Console.WriteLine(operatorsOverloading01 != operatorsOverloading02);
+
+//TypeCasting : ImplicitAndExplicit Casting --------------------------------------------------
+Console.WriteLine("\r\nTypeCasting (ImplicitAndExplicit Casting): ".PadRight(60, '-'));
+Person personTest = new Person(10);
+Console.WriteLine(personTest.Age);
+personTest.Age = 50;
+Console.WriteLine(personTest.Age);
+int moneyValue = personTest;         //Implicit Cast
+byte byteValye = (byte)personTest;   //Explicit Casting
+double a = 100;
+personTest = (int)a;
+Console.WriteLine(moneyValue);
+
