@@ -47,3 +47,7 @@ isOrAs.CheckIsPerson(teacher); //Output: false , because not inherited from pers
 isOrAs.CheckAsPerson(person);  //Output: IS Person
 isOrAs.CheckAsPerson(student); //Output: IS Person , because inherited from person
 isOrAs.CheckAsPerson(teacher); //Output: IS NOT a Person , because not inherited from person
+
+//Operator : Null ----------------------------------------------------------------------------
+Nulls nulls = new Nulls();
+nulls.NullOperators02(null);
