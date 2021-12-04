@@ -49,5 +49,21 @@ isOrAs.CheckAsPerson(student); //Output: IS Person , because inherited from pers
 isOrAs.CheckAsPerson(teacher); //Output: IS NOT a Person , because not inherited from person
 
 //Operator : Null ----------------------------------------------------------------------------
+Console.WriteLine("\r\nOperator (Null): ".PadRight(60, '-'));
 Nulls nulls = new Nulls();
 nulls.NullOperators02(null);
+
+//Operator : BinaryOperators -----------------------------------------------------------------
+Console.WriteLine("\r\nOperator (Binary): ".PadRight(60, '-'));
+BinaryOperators binaryOperators = new BinaryOperators();
+binaryOperators.And();
+binaryOperators.Or();
+binaryOperators.XOr();
+binaryOperators.NOT();
+binaryOperators.ShiftLeft();
+binaryOperators.ShiftRight();
+
+//TypeCasting : TypeSafe -----------------------------------------------------------------
+Console.WriteLine("\r\nTypeCasting (TypeSafe): ".PadRight(60, '-'));
+TypeCasting typeCasting = new TypeCasting();
+typeCasting.TypeSafe();
