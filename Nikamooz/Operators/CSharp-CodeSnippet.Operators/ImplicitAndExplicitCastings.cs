@@ -6,28 +6,28 @@ using System.Threading.Tasks;
 
 namespace CSharp_CodeSnippet.Operators
 {
-    public class Person
+    public class Human
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int Age { get; set; }
-        public Person() { }
-        public Person(int age)
+        public Human() { }
+        public Human(int age)
         {
             this.Age = age;
         }
 
-        public static implicit operator int(Person person)
-            => person.Age;
+        public static implicit operator int(Human human)
+            => human.Age;
 
-        public static implicit operator Person(int age)
-            => new Person(age);
+        public static implicit operator Human(int age)
+            => new Human(age);
 
-        public static explicit operator byte(Person person)
-            => (byte)person.Age;
+        public static explicit operator byte(Human human)
+            => (byte)human.Age;
 
-        public static explicit operator Person(double age)
-            => new Person((int)age);
+        public static explicit operator Human(double age)
+            => new Human((int)age);
     }
 
 }

@@ -87,13 +87,17 @@ Console.WriteLine(operatorsOverloading01 != operatorsOverloading02);
 
 //TypeCasting : ImplicitAndExplicit Casting --------------------------------------------------
 Console.WriteLine("\r\nTypeCasting (ImplicitAndExplicit Casting): ".PadRight(60, '-'));
-Person personTest = new Person(10);
-Console.WriteLine(personTest.Age);
-personTest.Age = 50;
-Console.WriteLine(personTest.Age);
-int moneyValue = personTest;         //Implicit Cast
-byte byteValye = (byte)personTest;   //Explicit Casting
-double a = 100;
-personTest = (int)a;
-Console.WriteLine(moneyValue);
+Human human = new Human(10);
+
+int intValue = human;           // Implicit
+Console.WriteLine($"Implicit: {intValue}");
+
+human = 20;                     // Implicit
+Console.WriteLine($"Implocit: {human.Age}");
+
+byte byteValue = (byte)human;   // Explicit
+Console.WriteLine($"Explicit: {byteValue}");
+
+human = (int)3.30;              // Explicit
+Console.WriteLine($"Explicit: {byteValue}");
 
