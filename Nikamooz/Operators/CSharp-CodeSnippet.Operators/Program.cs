@@ -63,7 +63,24 @@ binaryOperators.NOT();
 binaryOperators.ShiftLeft();
 binaryOperators.ShiftRight();
 
-//TypeCasting : TypeSafe -----------------------------------------------------------------
+//TypeCasting : TypeSafe ---------------------------------------------------------------------
 Console.WriteLine("\r\nTypeCasting (TypeSafe): ".PadRight(60, '-'));
 TypeCasting typeCasting = new TypeCasting();
 typeCasting.TypeSafe();
+typeCasting.ImplicitTypeCast();
+typeCasting.ExplicitTypeCast();
+
+//TypeCasting : Boxing and Unboxing ----------------------------------------------------------
+Console.WriteLine("\r\nTypeCasting (BoxingAndUnboxing): ".PadRight(60, '-'));
+BoxingAndUnboxing boxingAndUnboxing = new BoxingAndUnboxing();
+boxingAndUnboxing.Boxing();
+boxingAndUnboxing.Unboxing();
+
+//Operator : OperatorOverloading -------------------------------------------------------------
+Console.WriteLine("\r\nOperator (OperatorOverloading): ".PadRight(60, '-'));
+OperatorsOverloading operatorsOverloading01 = new OperatorsOverloading() { InnerValue = 10 };
+OperatorsOverloading operatorsOverloading02 = new OperatorsOverloading() { InnerValue = 20 };
+OperatorsOverloading operatorsOverloading03 = operatorsOverloading01 + operatorsOverloading02;
+Console.WriteLine(operatorsOverloading03);
+Console.WriteLine(operatorsOverloading01 == operatorsOverloading02);
+Console.WriteLine(operatorsOverloading01 != operatorsOverloading02);
