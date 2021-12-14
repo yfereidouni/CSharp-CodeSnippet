@@ -12,26 +12,16 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace iWPF
+namespace iWPF_Calculator
 {
     /// <summary>
-    /// Interaction logic for MainWindow1.xaml
+    /// Interaction logic for DependencyProperties.xaml
     /// </summary>
-    public partial class MainWindow1 : Window
+    public partial class DependencyProperties : Window
     {
-        public MainWindow1()
+        public DependencyProperties()
         {
             InitializeComponent();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

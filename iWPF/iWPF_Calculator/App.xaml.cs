@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace iWPF_S11_Components_and_Toolkits
+namespace iWPF_Calculator
 {
     /// <summary>
     /// Interaction logic for App.xaml

@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace iWPF
+namespace iWPF_Calculator
 {
     /// <summary>
-    /// Interaction logic for DependencyProperties.xaml
+    /// Interaction logic for DataBinding.xaml
     /// </summary>
-    public partial class DependencyProperties : Window
+    public partial class DataBinding : Window
     {
-        public DependencyProperties()
+        public DataBinding()
         {
             InitializeComponent();
         }

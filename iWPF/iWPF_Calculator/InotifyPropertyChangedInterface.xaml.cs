@@ -10,19 +10,22 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace iWPF_S11_Components_and_Toolkits
+namespace iWPF_Calculator
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for InotifyPropertyChangedInterface.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class InotifyPropertyChangedInterface : Window
     {
-        public MainWindow()
+        public Sum SumObj { get; set; }
+
+        public InotifyPropertyChangedInterface()
         {
             InitializeComponent();
+            SumObj = new Sum { Num1 = "1", Num2 = "3" };
+            this.DataContext = SumObj;
         }
     }
 }

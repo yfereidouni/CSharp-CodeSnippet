@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace iWPF
+namespace iWPF_Calculator
 {
     public class Sum : INotifyPropertyChanged
     {
