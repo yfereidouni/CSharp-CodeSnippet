@@ -15,6 +15,7 @@
     <CategoryAlreadyExists>Danh mục với tên đó đã tồn tại!</CategoryAlreadyExists>
     <DayFriday>Thứ 6</DayFriday>
     <DayMonday>Thứ 2</DayMonday>
+    <Days>Ngày</Days>
     <DaySaturday>Thứ 7</DaySaturday>
     <DaySunday>Chủ Nhật</DaySunday>
     <DayThursday>Thứ 5</DayThursday>
@@ -135,6 +136,7 @@
     <ShowMore>Hiển thị nhiều hơn</ShowMore>
     <ShowSpecific>Hiển thị '{0}'</ShowSpecific>
     <Submit>Gửi đi</Submit>
+    <SwitchTo>Chuyển sang {0}</SwitchTo>
     <Test>Kiểm tra</Test>
     <Up>Lên</Up>
     <Upgrade>Nâng cấp</Upgrade>
@@ -371,6 +373,7 @@
     <ButtonResendEmail>Gửi lại thư điện tử</ButtonResendEmail>
     <ButtonResetPassword>Đặt lại mật khẩu</ButtonResetPassword>
     <ButtonRun>Chạy</ButtonRun>
+    <ButtonScheduler>Bộ lập kế hoạch</ButtonScheduler>
     <ButtonShare>Chia sẻ</ButtonShare>
     <ButtonSignUp>Đăng ký</ButtonSignUp>
     <ButtonSignUpWith>Đăng ký với {0}</ButtonSignUpWith>
@@ -386,6 +389,7 @@
     <Create>Tạo</Create>
     <CreateError>Lỗi khi tạo báo cáo!</CreateError>
     <CreateNewCollection>Tạo bộ sưu tập mới</CreateNewCollection>
+    <CreateYourTeam>Tạo nhóm của bạn</CreateYourTeam>
     <CreatingReport>Đang tạo báo cáo...</CreatingReport>
     <DashboardWindowTitleNew>Bảng thông tin mới</DashboardWindowTitleNew>
     <DeleteFile>Xóa tệp</DeleteFile>
@@ -404,6 +408,8 @@
     <HyperlinkHavePassword>Có mật khẩu</HyperlinkHavePassword>
     <HyperlinkRegisterAccount>Đăng ký tài khoản MIỄN PHÍ</HyperlinkRegisterAccount>
     <InstallSamples>Cài đặt mẫu</InstallSamples>
+    <Invitations>Lời mời</Invitations>
+    <Invite>Mời</Invite>
     <LabelAddCloudFolder>Kết nối thư mục Đám mây Stimulsoft của bạn với các báo cáo và bảng điều khiển.</LabelAddCloudFolder>
     <LabelAddFolder>Thêm thư mục tại máy của bạn với các báo cáo và bảng điều khiển.</LabelAddFolder>
     <labelCollectionName>Tên bộ sưu tập:</labelCollectionName>
@@ -419,6 +425,7 @@
     <LabelForeground>Mặt trước:</LabelForeground>
     <LabelFromReport>Từ báo cáo</LabelFromReport>
     <LabelFromReportCode>Từ báo cáo (được định nghĩa trong mã)</LabelFromReportCode>
+    <LabelInviteUser>Mời người dùng mới vào nhóm của bạn. Gửi lời mời đến email của họ.</LabelInviteUser>
     <LabelLastLogin>Lần đăng nhập cuối:</LabelLastLogin>
     <LabelLastTime>Lần cuối cùng:</LabelLastTime>
     <LabelModified>Chỉnh sửa:</LabelModified>
@@ -432,6 +439,7 @@
     <LabelResultType>Loại kết quả:</LabelResultType>
     <LabelSeparateReport>Tách riêng biệt tệp báo cáo (và tập lệnh)</LabelSeparateReport>
     <LabelShowReport>Hiển thị báo cáo:</LabelShowReport>
+    <LabelStartDate>Ngày bắt đầu:</LabelStartDate>
     <labelUserName>Tên người dùng:</labelUserName>
     <License>Giấy phép</License>
     <LicenseInformation>Thông tin giấy phép</LicenseInformation>
@@ -494,6 +502,7 @@
     <TextItemsWorkspace>Không gian làm việc</TextItemsWorkspace>
     <TextLastName>Họ</TextLastName>
     <TextModify>Chỉnh sửa</TextModify>
+    <TextNewsLetters>Bản tin</TextNewsLetters>
     <TextNoFavoriteFiles>Không có tập tin yêu thích</TextNoFavoriteFiles>
     <TextNoFiles>Không có tập tin</TextNoFiles>
     <TextNoNotifications>Không có thông báo</TextNoNotifications>
@@ -564,10 +573,14 @@
     <WizardPublicShareDescription>Truy cập bên ngoài cho bất kỳ người dùng trái phép nào.</WizardPublicShareDescription>
     <WizardRegisteredShare>Truy cập được ủy quyền</WizardRegisteredShare>
     <WizardRegisteredShareDescription>Truy cập bên ngoài chỉ dành cho người dùng đã đăng ký từ bất kỳ không gian làm việc nào.</WizardRegisteredShareDescription>
+    <WizardTeamShare>Quyền truy cập nhóm</WizardTeamShare>
+    <WizardTeamShareDescription>Quyền truy cập bên ngoài chỉ dành cho người dùng của một không gian làm việc.</WizardTeamShareDescription>
     <WizardXmlDescription>Tạo một báo cáo với dữ liệu XML.</WizardXmlDescription>
   </Cloud>
   <Components>
     <StiBarCode>Mã vạch</StiBarCode>
+    <StiButton>Nút</StiButton>
+    <StiCards>Thẻ</StiCards>
     <StiChart>Biểu đồ</StiChart>
     <StiCheckBox>Hộp chọn</StiCheckBox>
     <StiChildBand>Con</StiChildBand>
@@ -606,6 +619,7 @@
     <StiIndicator>Chỉ số</StiIndicator>
     <StiListBox>Danh sách hộp</StiListBox>
     <StiMap>Bản đồ</StiMap>
+    <StiMathFormula>Công thức toán học</StiMathFormula>
     <StiOnlineMap>Bản đồ trực tuyến</StiOnlineMap>
     <StiOverlayBand>Lớp phủ</StiOverlayBand>
     <StiPage>Trang</StiPage>
@@ -625,6 +639,7 @@
     <StiReportTitleBand>Tiêu đề báo cáo</StiReportTitleBand>
     <StiRichText>Văn bản đa dạng</StiRichText>
     <StiRoundedRectanglePrimitive>Hình chữ nhật bo tròn</StiRoundedRectanglePrimitive>
+    <StiScreen>Màn hình</StiScreen>
     <StiShape>Hình dạng</StiShape>
     <StiSparkline>Biểu đồ Sparkline</StiSparkline>
     <StiSubReport>Báo cáo phụ</StiSubReport>
@@ -639,12 +654,22 @@
     <StiWinControl>Cửa sổ điều khiển</StiWinControl>
     <StiZipCode>Mã bưu chính</StiZipCode>
   </Components>
+  <CustomMapWindow>
+    <CheckedAll>Chọn tất cả</CheckedAll>
+    <HideText>Ẩn chữ</HideText>
+    <KeysChangePosition>Các phím (Trái, Trên, Phải, Dưới) thay đổi vị trí của văn bản</KeysChangePosition>
+    <KeysChangeSize>Shift + các phím (Trái, Trên, Phải, Dưới) thay đổi kích thước của vùng văn bản</KeysChangeSize>
+    <UncheckedAll>Bỏ chọn tất cả</UncheckedAll>
+  </CustomMapWindow>
   <Dashboard>
     <AddRange>Thêm phạm vi</AddRange>
     <AfterGroupingData>Áp dụng sau khi nhóm dữ liệu</AfterGroupingData>
+    <AfterSortingData>Áp dụng sau khi nhóm và sắp xếp dữ liệu</AfterSortingData>
+    <AllowUserColumnSelection>Cho phép lựa chọn cột người dùng</AllowUserColumnSelection>
     <AllowUserDrillDown>Cho phép truy cập sâu người dùng</AllowUserDrillDown>
     <AllowUserFiltering>Cho phép lọc người dùng</AllowUserFiltering>
     <AllowUserSorting>Cho phép sắp xếp người dùng</AllowUserSorting>
+    <BeforeTransformation>Áp dụng trước khi chuyển đổi dữ liệu</BeforeTransformation>
     <Blank>(Chỗ trống)</Blank>
     <Blanks>(Khoảng trống)</Blanks>
     <BooleanFilters>Bộ lọc boolean</BooleanFilters>
@@ -663,6 +688,7 @@
     <DateFilters>Bộ lọc ngày</DateFilters>
     <Dimension>Kích thước</Dimension>
     <Dimensions>Các kích thước</Dimensions>
+    <DragDropBlocks>Kéo và thả các khối từ bảng điều khiển</DragDropBlocks>
     <DragDropData>Kéo thả dữ liệu</DragDropData>
     <DragDropDataFromDictionary>Kéo và thả dữ liệu từ từ điển</DragDropDataFromDictionary>
     <DrillDown>Truy cập sâu</DrillDown>
@@ -686,6 +712,7 @@
     <LimitRows>Bỏ qua và giới hạn hàng</LimitRows>
     <Measure>Cách đo</Measure>
     <Measures>Các cách đo</Measures>
+    <Metrics>Số liệu</Metrics>
     <NewDimension>Kích thước mới</NewDimension>
     <NewField>Lĩnh vực mới</NewField>
     <NewMeasure>Đo mới</NewMeasure>
@@ -695,6 +722,7 @@
     <Nulls>(Nulls)</Nulls>
     <NumberFilters>Bộ lọc số</NumberFilters>
     <ParentElement>Thành phần chính</ParentElement>
+    <Priority>Sự ưu tiên</Priority>
     <RangeMode>Chế độ phạm vi</RangeMode>
     <RangeType>Loại phạm vi</RangeType>
     <RemoveActions>Xóa tác vụ</RemoveActions>
@@ -751,6 +779,7 @@
     <CurrentQuarter>Quý hiện tại</CurrentQuarter>
     <CurrentWeek>Tuần hiện tại</CurrentWeek>
     <CurrentYear>Năm hiện tại</CurrentYear>
+    <DaysAgo>{0} ngày trước</DaysAgo>
     <FirstQuarter>Quý I</FirstQuarter>
     <FourthQuarter>Quý IV</FourthQuarter>
     <Index>Chỉ số</Index>
@@ -805,6 +834,7 @@
     <ReportSuccessfullySaved>Báo cáo đã được lưu thành công.</ReportSuccessfullySaved>
     <RetrieveError>Lấy danh sách cột lỗi</RetrieveError>
     <RetrievingColumns>Đang lấy danh sách cột</RetrievingColumns>
+    <Saving>Đang lưu</Saving>
     <SavingConfiguration>Đang lưu cấu hình</SavingConfiguration>
     <SavingReport>Đang lưu báo cáo</SavingReport>
     <TestConnection>Kiểm tra kết nối</TestConnection>
@@ -851,6 +881,8 @@
     <StiTreeViewControl>Chế độ xem dạng cây</StiTreeViewControl>
   </Dialogs>
   <Editor>
+    <AllowSQLFormatting>Cho phép Định dạng SQL</AllowSQLFormatting>
+    <BetweenMetrics>Có thể chọn từ 1 đến 10 số liệu. </BetweenMetrics>
     <CantFind>Không thể tìm thấy dữ liệu bạn đang tìm kiếm.</CantFind>
     <CollapseToDefinitions>Thu gọn để định nghĩa</CollapseToDefinitions>
     <Column>Cột: {0}</Column>
@@ -868,6 +900,7 @@
     <MarkAll>Đánh dấu tất cả</MarkAll>
     <MatchCase>Phù hợp với trường hợp</MatchCase>
     <MatchWholeWord>Phù hợp với toàn bộ từ</MatchWholeWord>
+    <MaximumDimensions>Có thể chọn tối đa 7 số liệu. </MaximumDimensions>
     <Outlining>Phác thảo</Outlining>
     <PromptOnReplace>Nhắc khi thay thế</PromptOnReplace>
     <Replace>Thay thế</Replace>
@@ -911,6 +944,7 @@
   </Errors>
   <ExceptionProvider>
     <Assemblies>Lắp ráp</Assemblies>
+    <ClickIgnore>Nhấp vào 'Bỏ qua' để xóa tất cả các tệp được lưu tự động.</ClickIgnore>
     <Exception>Ngoại lệ</Exception>
     <ExceptionReport>Báo cáo ngoại lệ</ExceptionReport>
     <Framework>Khung</Framework>
@@ -923,6 +957,8 @@
     <SendErrorSuccess>Đã gửi thông báo lỗi thành công.</SendErrorSuccess>
     <Source>Nguồn</Source>
     <StackTrace>Ngăn xếp dấu vết</StackTrace>
+    <YouCanRestore>Bạn có thể khôi phục các thay đổi chưa được lưu từ tệp sao lưu.</YouCanRestore>
+    <YourPreviousWorkSession>Trong phiên làm việc trước của bạn, trình thiết kế đã bị lỗi.</YourPreviousWorkSession>
   </ExceptionProvider>
   <Export>
     <AddPageBreaks>Thêm ngắt trang</AddPageBreaks>
@@ -949,6 +985,7 @@
     <DotMatrixMode>Chế độ ma trận điểm</DotMatrixMode>
     <EmbeddedFonts>Phông chữ nhúng</EmbeddedFonts>
     <EmbeddedImageData>Dữ liệu hình ảnh nhúng</EmbeddedImageData>
+    <EnableAnimation>Bật hoạt ảnh</EnableAnimation>
     <Encoding>Mã hóa:</Encoding>
     <EncryptionError>Lỗi mã hóa ở bước</EncryptionError>
     <EscapeCodes>Chuỗi thoát</EscapeCodes>
@@ -1186,6 +1223,7 @@
     <AssignExpression>Gán biểu thức</AssignExpression>
     <BreakIfTrue>Ngắt nếu đúng</BreakIfTrue>
     <BreakIfTrueToolTip>Ngắt xử lý điều kiện hiện tại nếu nếu thỏa mãn</BreakIfTrueToolTip>
+    <ChangeBorder>Thay đổi đường viền...</ChangeBorder>
     <ChangeFont>Thay đổi phông chữ...</ChangeFont>
     <ComponentIsEnabled>Thành phần được kích hoạt</ComponentIsEnabled>
     <NoConditions>Không điều kiện</NoConditions>
@@ -1204,12 +1242,18 @@
   </FormCrossTabDesigner>
   <FormDatabaseEdit>
     <AccessToken>Mã thông báo truy cập</AccessToken>
+    <AccountKey>Chìa khóa tài khoản</AccountKey>
+    <AccountName>Tên tài khoản</AccountName>
     <AuthorizationCode>Mã ủy quyền</AuthorizationCode>
+    <BlobContentType>Loại nội dung Blob</BlobContentType>
+    <BlobName>Tên Blob</BlobName>
     <ClientId>Mã khách hàng</ClientId>
     <ClientSecret>Mã bí mật khách hàng</ClientSecret>
     <ConnectionString>Chuỗi kết nối:</ConnectionString>
+    <ContainerName>Tên vùng chứa</ContainerName>
     <DashboardConnections>Bảng thông tin kết nối</DashboardConnections>
     <DatabaseSecret>Mã bí mật cơ sở dữ liệu</DatabaseSecret>
+    <DatasetId>Id tập dữ liệu</DatasetId>
     <DB2Edit>Chỉnh sửa kết nối IBM DB2</DB2Edit>
     <DB2New>Tạo mới kết nối IBM DB2</DB2New>
     <EditConnection>Chỉnh sửa {0} kết nối</EditConnection>
@@ -1246,6 +1290,7 @@
     <Pin>Ghim</Pin>
     <PostgreSQLEdit>Chỉnh sửa kết nối PostgreSQL</PostgreSQLEdit>
     <PostgreSQLNew>Tạo mới kết nối PostgreSQL</PostgreSQLNew>
+    <ProjectId>Id dự án</ProjectId>
     <PromptUserNameAndPassword>Nhắc nhở người dùng và mật khẩu</PromptUserNameAndPassword>
     <RecentConnections>Gần đây</RecentConnections>
     <RedirectUrl>Chuyển hướng URL</RedirectUrl>
@@ -1254,6 +1299,7 @@
     <RelationDirection>Hướng quan hệ:</RelationDirection>
     <ReportConnections>Kết nối báo cáo</ReportConnections>
     <SelectData>Chọn dữ liệu</SelectData>
+    <ServiceAccountKeyFile>Tệp khóa tài khoản dịch vụ</ServiceAccountKeyFile>
     <SpreadsheetId>Mã bảng tính</SpreadsheetId>
     <SqlCeEdit>Chỉnh sửa kết nối SQLServerCE</SqlCeEdit>
     <SqlCeNew>Tạo mới kết nối SQLServerCE</SqlCeNew>
@@ -1347,6 +1393,7 @@
     <ExecutedSQLStatementSuccessfully>Thực hiện câu lệnh SQL thành công</ExecutedSQLStatementSuccessfully>
     <ExpressionNew>Tạo biểu thức mới</ExpressionNew>
     <GetColumnsFromAssembly>Lấy cột từ kết cấu</GetColumnsFromAssembly>
+    <HideUnsupportedDatabases>Ẩn các nguồn dữ liệu không được hỗ trợ</HideUnsupportedDatabases>
     <ImportRelations>Nạp quan hệ</ImportRelations>
     <LabelSeparator>Phân cách:</LabelSeparator>
     <MarkUsedItems>Đánh dấu mục đã dùng</MarkUsedItems>
@@ -1442,8 +1489,11 @@
     <AutoSave>Tự động lưu</AutoSave>
     <AutoSaveReportToReportClass>Tự động lưu báo cáo thành tệp C # hoặc VB.NET</AutoSaveReportToReportClass>
     <BlankDashboard>Bảng điều khiển trống</BlankDashboard>
+    <BlankForm>Mẫu trống</BlankForm>
     <BlankReport>Báo cáo trống</BlankReport>
+    <BlankScreen>Màn hình trống</BlankScreen>
     <Default>Mặc định</Default>
+    <DefaultScriptMode>Chế độ tập lệnh mặc định</DefaultScriptMode>
     <Drawing>Vẽ</Drawing>
     <DrawMarkersWhenMoving>Vẽ đánh dấu khi di chuyển</DrawMarkersWhenMoving>
     <EditAfterInsert>Chỉnh sửa sau khi chèn</EditAfterInsert>
@@ -1729,6 +1779,7 @@
     <barsys_autohide_tooltip>Tự ẩn</barsys_autohide_tooltip>
     <barsys_close_tooltip>Đóng</barsys_close_tooltip>
     <barsys_customize_tooltip>Tùy chỉnh</barsys_customize_tooltip>
+    <ClickAndDragPickColor>Nhấp và Kéo để chọn màu</ClickAndDragPickColor>
     <colorpicker_morecolors>Thêm màu sắc...</colorpicker_morecolors>
     <colorpicker_nofill>Không đổ màu</colorpicker_nofill>
     <colorpicker_standardcolorslabel>Màu sắc tiêu chuẩn</colorpicker_standardcolorslabel>
@@ -1844,6 +1895,7 @@
     <StiMap>Thành phần này được sử dụng để hiển thị dữ liệu được nhắm mục tiêu theo địa lý.</StiMap>
     <StiMapCategory>Nhóm các phần tử để làm việc với bản đồ và dữ liệu.</StiMapCategory>
     <StiMapElement>Phần tử này được sử dụng để hiển thị dữ liệu có mục tiêu theo địa lý.</StiMapElement>
+    <StiMathFormula>Thành phần này được sử dụng để hiển thị các công thức toán học trong một báo cáo.</StiMathFormula>
     <StiOnlineMapElement>Phần tử này được sử dụng để hiển thị các điểm đánh dấu địa lý trên bản đồ trực tuyến.</StiOnlineMapElement>
     <StiOverlayBand>Dải này được sử dụng để xuất các thủy ấn trên một trang.</StiOverlayBand>
     <StiPageFooterBand>Dải này được sử dụng để xuất ra thông tin ở cuối mỗi trang như số trang, ngày, và các thông tin bổ sung khác.</StiPageFooterBand>
@@ -1860,9 +1912,11 @@
     <StiRoundedRectanglePrimitive>Thành phần này được sử dụng để xuất các hình chữ nhật bo tròn.</StiRoundedRectanglePrimitive>
     <StiShape>Thành phần này được sử dụng để chèn các hình dạng đã làm sẵn, chẳng hạn như các mũi tên, đường chéo xuống, đường chéo lên, đường ngang, các đường bên trái và bên phải, hình bầu dục, hình chữ nhật, hình chữ nhật tròn, đường trên cùng và dưới cùng, tam giác, đường thẳng đứng.</StiShape>
     <StiShapeElement>Phần tử này được sử dụng để chèn các hình dạng sẵn có, như mũi tên, đường chéo lên, đường chéo xuống, đường ngang, đường trái và phải, hình bầu dục, hình chữ nhật, hình chữ nhật tròn, đường trên cùng và dưới cùng, hình tam giác, đường thẳng đứng.</StiShapeElement>
+    <StiSparkline>Thành phần này được sử dụng để tạo đồ họa nhỏ trong một báo cáo. Nó cho phép bạn theo dõi dữ liệu thay đổi động dưới dạng thanh, đường, khu vực.</StiSparkline>
     <StiSubReport>Thành phần này được sử dụng để xuất dữ liệu bổ sung ở các vị trí khác nhau của báo cáo.</StiSubReport>
     <StiTable>Thành phần này là tập hợp các phần tử dữ liệu được tổ chức sử dụng mô hình cột dọc và các hàng ngang.</StiTable>
     <StiTableElement>Phần tử này là tập hợp các phần tử dữ liệu được sắp xếp bằng cách sử dụng mô hình cột dọc và hàng ngang.</StiTableElement>
+    <StiTableOfContents>Thành phần này được sử dụng để tạo mục lục trong báo cáo.</StiTableOfContents>
     <StiText>Thành phần này là một đối tượng cơ bản để xuất dữ liệu dưới dạng văn bản.</StiText>
     <StiTextElement>Phần tử này là một đối tượng cơ bản để xuất dữ liệu dưới dạng văn bản.</StiTextElement>
     <StiTextInCells>Thành phần này được sử dụng để xuất ra một văn bản trong các ô. Nó thường được sử dụng để tạo các biểu mẫu.</StiTextInCells>
@@ -1930,6 +1984,7 @@
     <FontStyleBoldWatermark>Làm cho văn bản của thủy ấn đậm.</FontStyleBoldWatermark>
     <FontStyleItalic>Làm cho chữ nghiêng.</FontStyleItalic>
     <FontStyleItalicWatermark>Làm cho văn bản của thủy ấn nghiêng.</FontStyleItalicWatermark>
+    <FontStyleStrikeout>Làm cho văn bản gạch ngang.</FontStyleStrikeout>
     <FontStyleUnderline>Làm cho chữ gạch dưới.</FontStyleUnderline>
     <FontStyleUnderlineWatermark>Làm cho văn bản của thủy ấn gạch chân.</FontStyleUnderlineWatermark>
     <FormatBoolean>Định dạng này được sử dụng để định dạng các giá trị của kiểu boolean.</FormatBoolean>
@@ -2210,6 +2265,7 @@
     <menuFileReportWizardNew>Tạo báo cáo mới với thuật sĩ...</menuFileReportWizardNew>
     <menuFileSave>Lưu</menuFileSave>
     <menuFileSaveAs>Lưu thành...</menuFileSaveAs>
+    <menuFileScreenNew>Màn hình mới</menuFileScreenNew>
     <menuHelp>Trợ giúp</menuHelp>
     <menuHelpAboutProgramm>Về chúng tôi...</menuHelpAboutProgramm>
     <menuHelpContents>Nội dung</menuHelpContents>
@@ -2271,14 +2327,23 @@
     <LinkDataForm>Liên kết dữ liệu</LinkDataForm>
     <MapEditorForm>Trình chỉnh sửa bản đồ</MapEditorForm>
   </Map>
+  <MathFormula>
+    <Alphabets>Bảng chữ cái</Alphabets>
+    <Arrows>Mũi tên</Arrows>
+    <Formulas>Công thức</Formulas>
+    <Maths>Toán học</Maths>
+    <Operators>Toán tử</Operators>
+  </MathFormula>
   <Messages>
     <ChangeRequestTimeout>Thời gian chờ yêu cầu cho các truy vấn SQL vượt quá thời gian chờ yêu cầu của trình thiết kế báo cáo. Đặt thời gian chờ yêu cầu cho thành phần thiết kế không quá {0} giây.</ChangeRequestTimeout>
     <DoNotShowAgain>Không hiển thị trở lại</DoNotShowAgain>
+    <LatexFormat>Định dạng LaTeX được sử dụng để hiển thị các công thức toán học.</LatexFormat>
     <MessageTimeOutExpired>Thời gian chờ của lệnh đã hết hạn!</MessageTimeOutExpired>
     <RenderingWillOccurInTheInterpretationMode>Khi xem báo cáo được chia sẻ, kết xuất sẽ xảy ra ở chế độ giải thích</RenderingWillOccurInTheInterpretationMode>
     <ResourceCannotBeDeleted>Tài nguyên "{0}" không thể bị xóa vì nó được sử dụng trong báo cáo!</ResourceCannotBeDeleted>
     <ShareURLOfTheItemHasBeenUpdated>URL chia sẻ của mục đã được cập nhật!</ShareURLOfTheItemHasBeenUpdated>
     <ShareYourReportYouShouldSave>Để chia sẻ báo cáo của bạn, bạn nên lưu báo cáo vào đám mây Stimulsoft!</ShareYourReportYouShouldSave>
+    <SwitchingBetweenModes>Chuyển đổi giữa các chế độ sẽ làm mất các thay đổi. Bạn có muốn tiếp tục?</SwitchingBetweenModes>
     <TextRegistrationSuccessfully>
       Đăng ký thành công!
 
@@ -2516,6 +2581,9 @@
     <MoveLeftFreeSpace>Di chuyển một thành phần đến phía bên trái của một không gian trống, tăng chiều cao của thành phần lên chiều cao của không gian trống.</MoveLeftFreeSpace>
     <MoveRightFreeSpace>Di chuyển một thành phần đến phía bên phải của một không gian trống, tăng chiều cao của thành phần lên chiều cao của không gian trống.</MoveRightFreeSpace>
   </PlacementComponent>
+  <PromptForm>
+    <CacheLoginData>Lưu dữ liệu đăng nhập vào bộ nhớ đệm cho phiên hiện tại </CacheLoginData>
+  </PromptForm>
   <PropertyCategory>
     <AppearanceCategory>Hình thức</AppearanceCategory>
     <AreaCategory>Vùng</AreaCategory>
@@ -2524,6 +2592,7 @@
     <BarCodeAdditionalCategory>Mã vạch bổ sung</BarCodeAdditionalCategory>
     <BarCodeCategory>Mã vạch</BarCodeCategory>
     <BehaviorCategory>Thuộc tính</BehaviorCategory>
+    <ButtonCategory>Nút</ButtonCategory>
     <CapNeedle>Nắp chụp kim</CapNeedle>
     <CellCategory>Ô</CellCategory>
     <ChartAdditionalCategory>Biểu đồ bổ sung</ChartAdditionalCategory>
@@ -2559,14 +2628,18 @@
     <InterlacingCategory>Xem kẽ nhau</InterlacingCategory>
     <LabelsCategory>Nhãn</LabelsCategory>
     <LegendCategory>Chú thích</LegendCategory>
+    <LinearScaleBarCategory>Thanh tỷ lệ tuyến tính</LinearScaleBarCategory>
+    <LinearScaleCategory>Quy mô tuyến tính</LinearScaleCategory>
     <ListBoxCategory>Danh sách hộp</ListBoxCategory>
     <MainCategory>Chính</MainCategory>
     <MarkerCategory>Đánh dấu</MarkerCategory>
+    <MathFormulaCategory>Công thức toán học</MathFormulaCategory>
     <MiscCategory>Các thức khác</MiscCategory>
     <MouseEventsCategory>Sự kiện chuột</MouseEventsCategory>
     <NavigationCategory>Điều hướng</NavigationCategory>
     <NavigationEventsCategory>Sự kiện điều hướng</NavigationEventsCategory>
     <Needle>Kim</Needle>
+    <NeedleCategory>Cây kim</NeedleCategory>
     <OnlineMapCategory>Bản đồ trực tuyến</OnlineMapCategory>
     <OptionsCategory>Tùy chọn</OptionsCategory>
     <PageAdditionalCategory>Trang bổ sung</PageAdditionalCategory>
@@ -2578,6 +2651,7 @@
     <PrimitiveCategory>Nguyên thủy</PrimitiveCategory>
     <PrintEventsCategory>Sự kiện in</PrintEventsCategory>
     <ProgressCategory>Tiến trình</ProgressCategory>
+    <RadialScaleBarCategory>Thanh tỷ lệ xuyên tâm</RadialScaleBarCategory>
     <RegionMapCategory>Bản đồ khu vực</RegionMapCategory>
     <RenderEventsCategory>Sự kiện kết xuất</RenderEventsCategory>
     <SeriesCategory>Dòng</SeriesCategory>
@@ -2589,6 +2663,10 @@
     <TableOfContents>Mục lục</TableOfContents>
     <TextAdditionalCategory>Văn bản bổ sung</TextAdditionalCategory>
     <TextCategory>Văn bản</TextCategory>
+    <TickLabelMajorCategory>Đánh dấu vào nhãn chính</TickLabelMajorCategory>
+    <TickLabelMinorCategory>Đánh dấu vào nhãn nhỏ</TickLabelMinorCategory>
+    <TickMarkMajorCategory>Điểm đánh dấu chính</TickMarkMajorCategory>
+    <TickMarkMinorCategory>Điểm đánh dấu nhỏ</TickMarkMinorCategory>
     <TitleCategory>Tiêu đề</TitleCategory>
     <TreeViewBoxCategory>Hộp xem dạng cây</TreeViewBoxCategory>
     <TreeViewCategory>Xem dạng cây</TreeViewCategory>
@@ -2881,6 +2959,9 @@
     <StiChartTrendLineTypeLinear>Tuyến tính</StiChartTrendLineTypeLinear>
     <StiChartTrendLineTypeLogarithmic>Lôgarit</StiChartTrendLineTypeLogarithmic>
     <StiChartTrendLineTypeNone>Không</StiChartTrendLineTypeNone>
+    <StiCheckStateChecked>Chọn</StiCheckStateChecked>
+    <StiCheckStateIndeterminate>Không xác định</StiCheckStateIndeterminate>
+    <StiCheckStateUnchecked>Bỏ chọn</StiCheckStateUnchecked>
     <StiCheckStyleCheck>Kiểm tra</StiCheckStyleCheck>
     <StiCheckStyleCheckRectangle>Chữ nhật kiểm tra</StiCheckStyleCheckRectangle>
     <StiCheckStyleCross>Chữ thập</StiCheckStyleCross>
@@ -2905,6 +2986,11 @@
     <StiCrossHorAlignmentLeft>Trái</StiCrossHorAlignmentLeft>
     <StiCrossHorAlignmentNone>Không</StiCrossHorAlignmentNone>
     <StiCrossHorAlignmentRight>Phải</StiCrossHorAlignmentRight>
+    <StiDashboardContentAlignmentCenter>Giữa</StiDashboardContentAlignmentCenter>
+    <StiDashboardContentAlignmentLeft>Trái</StiDashboardContentAlignmentLeft>
+    <StiDashboardContentAlignmentRight>Phải</StiDashboardContentAlignmentRight>
+    <StiDashboardContentAlignmentStretchX>Kéo dài X</StiDashboardContentAlignmentStretchX>
+    <StiDashboardContentAlignmentStretchXY>Kéo dài XY</StiDashboardContentAlignmentStretchXY>
     <StiDateSelectionModeAutoRange>Phạm vi tự động</StiDateSelectionModeAutoRange>
     <StiDateSelectionModeRange>Phạm vi</StiDateSelectionModeRange>
     <StiDateSelectionModeSingle>Cá nhân</StiDateSelectionModeSingle>
@@ -2917,6 +3003,10 @@
     <StiDesignerSpecificationBeginner>Tôi mới bắt đầu</StiDesignerSpecificationBeginner>
     <StiDesignerSpecificationBICreator>Tôi là người tạo BI</StiDesignerSpecificationBICreator>
     <StiDesignerSpecificationDeveloper>Tôi là nhà phát triển</StiDesignerSpecificationDeveloper>
+    <StiDirectionBottomToTop>Dưới lên trên</StiDirectionBottomToTop>
+    <StiDirectionLeftToRight>Trái qua phải</StiDirectionLeftToRight>
+    <StiDirectionRightToLeft>Phải qua trái</StiDirectionRightToLeft>
+    <StiDirectionTopToBottom>Trên xuống dưới</StiDirectionTopToBottom>
     <StiDisplayNameTypeFull>Đầy đủ</StiDisplayNameTypeFull>
     <StiDisplayNameTypeNone>Không</StiDisplayNameTypeNone>
     <StiDisplayNameTypeShort>Ngắn</StiDisplayNameTypeShort>
@@ -3103,6 +3193,7 @@
     <StiNestedFactorNormal>Bình thường</StiNestedFactorNormal>
     <StiNumberOfPassDoublePass>Truyền hai lần</StiNumberOfPassDoublePass>
     <StiNumberOfPassSinglePass>Truyền một lần</StiNumberOfPassSinglePass>
+    <StiOnlineMapHeatmapColorGradientTypeAddRange>Thêm phạm vi</StiOnlineMapHeatmapColorGradientTypeAddRange>
     <StiOnlineMapHeatmapColorGradientTypeBlackAquaWhite>Đen trắng</StiOnlineMapHeatmapColorGradientTypeBlackAquaWhite>
     <StiOnlineMapHeatmapColorGradientTypeBlueRed>Xanh đỏ</StiOnlineMapHeatmapColorGradientTypeBlueRed>
     <StiOnlineMapHeatmapColorGradientTypeColorSpectrum>Phổ màu</StiOnlineMapHeatmapColorGradientTypeColorSpectrum>
@@ -3274,8 +3365,21 @@
     <StiTextQualityStandard>Tiêu chuẩn</StiTextQualityStandard>
     <StiTextQualityTypographic>In</StiTextQualityTypographic>
     <StiTextQualityWysiwyg>Wysiwyg</StiTextQualityWysiwyg>
+    <StiTextSizeModeFit>Vừa vặn</StiTextSizeModeFit>
+    <StiTextSizeModeTrimming>Cắt</StiTextSizeModeTrimming>
+    <StiTextSizeModeWordWrap>Ngắt từ</StiTextSizeModeWordWrap>
+    <StiTimeDateStepDay>Ngày</StiTimeDateStepDay>
+    <StiTimeDateStepHour>Giờ</StiTimeDateStepHour>
+    <StiTimeDateStepMinute>Phút</StiTimeDateStepMinute>
+    <StiTimeDateStepMonth>Tháng</StiTimeDateStepMonth>
+    <StiTimeDateStepNone>Không</StiTimeDateStepNone>
+    <StiTimeDateStepSecond>Giây</StiTimeDateStepSecond>
+    <StiTimeDateStepYear>Năm</StiTimeDateStepYear>
     <StiTitlePositionInside>Bên trong</StiTitlePositionInside>
     <StiTitlePositionOutside>Bên ngoài</StiTitlePositionOutside>
+    <StiTopNModeBottom>Dưới</StiTopNModeBottom>
+    <StiTopNModeNone>Không</StiTopNModeNone>
+    <StiTopNModeTop>Trên</StiTopNModeTop>
     <StiTypeModeList>Danh sách</StiTypeModeList>
     <StiTypeModeNullableValue>Giá trị có thể null</StiTypeModeNullableValue>
     <StiTypeModeRange>Phạm vi</StiTypeModeRange>
@@ -3317,8 +3421,11 @@
     <EnterEvent>Đi vào</EnterEvent>
     <ExportedEvent>Đã xuất</ExportedEvent>
     <ExportingEvent>Đang xuấy</ExportingEvent>
+    <FillParametersEvent>Điền thông số</FillParametersEvent>
     <GetArgumentEvent>Lấy đối số</GetArgumentEvent>
+    <GetBarCodeEvent>Nhận mã vạch</GetBarCodeEvent>
     <GetBookmarkEvent>Lấy đánh dấu</GetBookmarkEvent>
+    <GetCheckedEvent>Nhận kiểm tra</GetCheckedEvent>
     <GetCollapsedEvent>Lấy thu gọn</GetCollapsedEvent>
     <GetCrossValueEvent>Lấy giá trị chéo</GetCrossValueEvent>
     <GetCutPieListEvent>Nhận danh sách hình tròn cắt</GetCutPieListEvent>
@@ -3338,6 +3445,7 @@
     <GetListOfValuesEvent>Lấy danh sách giá trị</GetListOfValuesEvent>
     <GetListOfWeights>Lấy danh sách trọng số</GetListOfWeights>
     <GetListOfWeightsEvent>Lấy danh sách trọng số</GetListOfWeightsEvent>
+    <GetPointerEvent>Nhận con trỏ</GetPointerEvent>
     <GetSummaryExpressionEvent>Lấy biểu thức tóm tắt</GetSummaryExpressionEvent>
     <GetTagEvent>Lấy thẻ</GetTagEvent>
     <GetTitleEvent>Lấy tiêu đề</GetTitleEvent>
@@ -3503,6 +3611,7 @@
     <BarCodeType>Loại mã vạch</BarCodeType>
     <BasicStyleColor>Màu kiểu cơ bản</BasicStyleColor>
     <Blend>Trộn</Blend>
+    <Blocks>Khối</Blocks>
     <Bold>Đậm</Bold>
     <Bookmark>Đánh dấu</Bookmark>
     <Border>Viền</Border>
@@ -3512,8 +3621,11 @@
     <Borders>Đường viền</Borders>
     <BorderSize>Kích cỡ đường viền</BorderSize>
     <BorderStyle>Kiểu đường viền</BorderStyle>
+    <BorderThickness>Độ dày đường viền</BorderThickness>
     <BorderWidth>Chiều rộng đường viền</BorderWidth>
     <Bottom>Dưới</Bottom>
+    <BottomLeft>Dưới cùng bên trái</BottomLeft>
+    <BottomRight>Dưới cùng bên phải</BottomRight>
     <BottomSide>Mặt dưới</BottomSide>
     <BreakIfLessThan>Ngắt nếu nhỏ hơn</BreakIfLessThan>
     <Brush>Cọ</Brush>
@@ -3546,7 +3658,10 @@
     <ChartAreaBrush>Khung cọ</ChartAreaBrush>
     <ChartAreaShowShadow>Hiện bóng</ChartAreaShowShadow>
     <ChartType>Kiểu biểu đồ</ChartType>
+    <CheckAlignment>Chọn Căn chỉnh</CheckAlignment>
+    <CheckColor>Chọn Màu</CheckColor>
     <Checked>Đã kiểm tra</Checked>
+    <CheckedIcon>Biểu tượng đã chọn</CheckedIcon>
     <CheckOnClick>Kiểm tra khi nhấp chuột</CheckOnClick>
     <CheckStyle>Phong cách kiểm tra</CheckStyle>
     <CheckStyleForFalse>Phong cách kiểm tra cho sai</CheckStyleForFalse>
@@ -3594,11 +3709,13 @@
     <ConnectOnStart>Kết nối khi bắt đầu</ConnectOnStart>
     <ConstantLines>Đường cố định</ConstantLines>
     <Container>Thành phần chứa</Container>
+    <ContentAlignment>Căn chỉnh nội dung</ContentAlignment>
     <ContinuousText>Chữ đường viền</ContinuousText>
     <ContourColor>Màu đường viền</ContourColor>
     <Converting>Chuyển đổi</Converting>
     <ConvertNulls>Chuyển đổi null</ConvertNulls>
     <Copies>Sao chép</Copies>
+    <CornerRadius>Bán kính góc</CornerRadius>
     <Count>Số lượng</Count>
     <CountData>Đếm dữ liệu</CountData>
     <Create>Tạo</Create>
@@ -3614,6 +3731,7 @@
     <DataAdapters>Các bộ điều hợp dữ liệu</DataAdapters>
     <DataBarCondition>Điều kiện thanh dữ liệu</DataBarCondition>
     <DataBindings>Liên kết dữ liệu</DataBindings>
+    <DataCells>Các ô dữ liệu</DataCells>
     <DataColor>Màu dữ liệu</DataColor>
     <DataColumn>Cột dữ liệu</DataColumn>
     <DataColumns>Các cột dữ liệu</DataColumns>
@@ -3690,6 +3808,7 @@
     <ErrorCorrectionLevel>Mức hiệu chỉnh lỗi</ErrorCorrectionLevel>
     <ErrorsCorrectionLevel>Các mức hiệu chỉnh lỗi</ErrorsCorrectionLevel>
     <EvenStyle>Phong cách trang chẵn</EvenStyle>
+    <ExceedMargins>Vượt quá lề</ExceedMargins>
     <ExcelSheet>Bảng tính Excel</ExcelSheet>
     <ExcelValue>Giá trị Excel</ExcelValue>
     <Exponential>Lũy thừa</Exponential>
@@ -3745,6 +3864,7 @@
     <FullConvertExpression>Biểu thức chuyển đổi đầy đủ</FullConvertExpression>
     <Function>Chức năng</Function>
     <Functions>Các chức năng</Functions>
+    <GisSettings>Cài đặt Gis</GisSettings>
     <GlobalizationStrings>Chuỗi ký tự toàn cầu hóa</GlobalizationStrings>
     <GlobalizedName>Tên toàn cầu hoá</GlobalizedName>
     <GlyphColor>Màu nét</GlyphColor>
@@ -3761,6 +3881,7 @@
     <GroupDataColumn>Cột dữ liệu nhóm</GroupDataColumn>
     <GroupMeter>Nhóm</GroupMeter>
     <GrowToHeight>Phát triển đến chiều cao</GrowToHeight>
+    <Header>Tiêu đề</Header>
     <HeaderBackColor>Màu nền tiêu đề</HeaderBackColor>
     <HeaderCanBreak>Tiêu đề có thể ngắt</HeaderCanBreak>
     <HeaderCanGrow>Tiêu đề có thể phát triển</HeaderCanGrow>
@@ -3778,7 +3899,9 @@
     <Headers>Tiêu đề</Headers>
     <HeaderText>Tiêu đề văn bản</HeaderText>
     <Heading>Phần mở đầu</Heading>
+    <Heatmap>Bản đồ nhiệt</Heatmap>
     <HeatmapColors>Màu bản đồ nhiệt</HeatmapColors>
+    <HeatmapWithGroup>Bản đồ nhiệt với nhóm</HeatmapWithGroup>
     <Height>Chiều cao</Height>
     <HideSeriesWithEmptyTitle>Ẩn dòng với tiêu đề trống</HideSeriesWithEmptyTitle>
     <HideZeros>Ẩn số 0</HideZeros>
@@ -3800,8 +3923,10 @@
     <HtmlTags>Thẻ HTML</HtmlTags>
     <Hyperlink>Liên kết</Hyperlink>
     <HyperlinkDataColumn>Cột dữ liệu liên kết</HyperlinkDataColumn>
+    <HyperlinkPattern>Mẫu siêu liên kết </HyperlinkPattern>
     <Icon>Biểu tượng</Icon>
     <IconAlignment>Sắp xếp biểu tượng</IconAlignment>
+    <IconBrush>Biểu tượng bàn chải</IconBrush>
     <IconColor>Màu biểu tượng</IconColor>
     <IconSet>Bộ biểu tượng</IconSet>
     <IconSetCondition>Điều kiện bộ biểu tượng</IconSetCondition>
@@ -3866,6 +3991,7 @@
     <Language>Ngôn ngữ</Language>
     <LargeHeight>Chiều cao lớn</LargeHeight>
     <LargeHeightFactor>Hệ số chiều cao lớn</LargeHeightFactor>
+    <LaTexExpression>Biểu thức LaTex</LaTexExpression>
     <Latitude>Vĩ độ</Latitude>
     <Layout>Bố trí</Layout>
     <Left>Trái</Left>
@@ -3885,8 +4011,10 @@
     <LinearBarBrush>Cọ thanh tuyến tính</LinearBarBrush>
     <LinearBarEmptyBorderBrush>Cọ viền thanh tuyến tính rỗng</LinearBarEmptyBorderBrush>
     <LinearBarEmptyBrush>Cọ thanh tuyến tính rỗng</LinearBarEmptyBrush>
+    <LinearScaleBrush>Bàn chải tỷ lệ tuyến tính</LinearScaleBrush>
     <LineColor>Màu đường thẳng</LineColor>
     <LineColorNegative>Màu dòng âm</LineColorNegative>
+    <LineLength>Độ dài dòng</LineLength>
     <LineLimit>Giới hạn dòng</LineLimit>
     <LineMarker>Dòng đánh dấu</LineMarker>
     <LinesOfUnderline>Các đường gạch chân</LinesOfUnderline>
@@ -4004,6 +4132,7 @@
     <OpenValues>Giá trị mở</OpenValues>
     <Operation>Hoạt động</Operation>
     <Options>Tùy chọn</Options>
+    <Options3D>Lựa chọn 3D</Options3D>
     <Orientation>Hướng</Orientation>
     <OthersText>Văn bản khác</OthersText>
     <Padding>Lề trong</Padding>
@@ -4057,6 +4186,8 @@
     <ProcessingDuplicates>Đang xử lý nhân bản</ProcessingDuplicates>
     <ProcessTilde>Đang xử lý dấu ngã</ProcessTilde>
     <ProductHomePage>Trang chủ sản phẩm</ProductHomePage>
+    <Property>Tính chất</Property>
+    <Provider>Các nhà cung cấp</Provider>
     <RadarStyle>Phong cách mạng nhện</RadarStyle>
     <RadialBarBorderBrush>Cọ viền thanh xuyên tâm</RadialBarBorderBrush>
     <RadialBarBrush>Cọ thanh xuyên tâm</RadialBarBrush>
@@ -4169,10 +4300,12 @@
     <ShowBubble>Hiển thị bong bóng</ShowBubble>
     <ShowDialog>Hiển thị hộp thoại</ShowDialog>
     <ShowEdgeValues>Hiển thị giá trị cạnh</ShowEdgeValues>
+    <ShowHyperlink>Hiển thị siêu liên kết</ShowHyperlink>
     <ShowImageBehind>Hiển thị ảnh đằng sau</ShowImageBehind>
     <ShowInLegend>Hiển thị bằng chú thích</ShowInLegend>
     <ShowInnerPoints>Hiển thị các điểm bên trong</ShowInnerPoints>
     <ShowInPercent>Hiển thị bằng phần trăm</ShowInPercent>
+    <ShowLabel>Hiển thị nhãn</ShowLabel>
     <ShowLabels>Hiển thị nhãn</ShowLabels>
     <ShowLabelText>Hiển thị nhãn văn bản</ShowLabelText>
     <ShowLegend>Hiển thị chú thích</ShowLegend>
@@ -4181,6 +4314,7 @@
     <ShowNulls>Hiển thị nulls</ShowNulls>
     <ShowOthers>Hiển thị khác</ShowOthers>
     <ShowPercents>Hiển thị phần trăm</ShowPercents>
+    <ShowPlacemark>Hiển thị Dấu vị trí</ShowPlacemark>
     <ShowQuietZoneIndicator>Hiển thị chỉ số khu yên tĩnh</ShowQuietZoneIndicator>
     <ShowQuietZones>Hiển thị các khu yên tĩnh</ShowQuietZones>
     <ShowScrollBar>Hiển thị thanh cuộn</ShowScrollBar>
@@ -4188,6 +4322,7 @@
     <ShowSeriesLabels>Hiển thị dòng nhãn</ShowSeriesLabels>
     <ShowShadow>Hiển thị bóng</ShowShadow>
     <ShowTotal>Hiển thị tổng</ShowTotal>
+    <ShowTotalSummary>Hiển thị Tổng số Tóm tắt</ShowTotalSummary>
     <ShowUpDown>Hiển thị lên xuống</ShowUpDown>
     <ShowValue>Hiển thị giá trị</ShowValue>
     <ShowXAxis>Hiển thị trục X</ShowXAxis>
@@ -4248,6 +4383,7 @@
     <SubReportPage>Báo cáo phụ</SubReportPage>
     <Summaries>Tóm tắt</Summaries>
     <Summary>Tóm tắt</Summary>
+    <SummaryAlignment>Căn chỉnh tóm tắt</SummaryAlignment>
     <SummaryExpression>Biểu thức tóm tắt</SummaryExpression>
     <SummarySortDirection>Hướng sắp xếp tóm tắt</SummarySortDirection>
     <SummaryType>Loại tóm tắt</SummaryType>
@@ -4263,8 +4399,10 @@
     <TagDataColumn>Cột dữ liệu thẻ</TagDataColumn>
     <TagValue>Giá trị thẻ</TagValue>
     <Target>Mục tiêu</Target>
+    <TargetColor>Màu mục tiêu </TargetColor>
     <TargetIcon>Biểu tượng mục tiêu</TargetIcon>
     <TargetMode>Chế độ mục tiêu</TargetMode>
+    <TargetSettings>Mục tiêu</TargetSettings>
     <Tension>Sức căng</Tension>
     <Text>Văn bản</Text>
     <TextAfter>Văn bản sau</TextAfter>
@@ -4299,11 +4437,17 @@
     <ToolTip>Chú thích</ToolTip>
     <ToolTipDataColumn>Chú thích dữ liệu cột</ToolTipDataColumn>
     <Top>Trên</Top>
+    <TopLeft>Phía trên bên trái</TopLeft>
     <Topmost>Trên cùng</Topmost>
     <TopmostLine>Dòng trên cùng</TopmostLine>
     <TopN>Top N</TopN>
+    <TopRight>Phía trên bên phải</TopRight>
     <TopSide>Phía trên</TopSide>
     <Total>Toàn bộ</Total>
+    <TotalCellColumnBackColor>Tổng màu nền của cột ô</TotalCellColumnBackColor>
+    <TotalCellColumnForeColor>Tổng màu phía trước của cột ô</TotalCellColumnForeColor>
+    <TotalCellRowBackColor>Tổng màu nền của hàng ô</TotalCellRowBackColor>
+    <TotalCellRowForeColor>Tổng màu phía trước của hàng ô</TotalCellRowForeColor>
     <TotalLabel>Tổng nhãn</TotalLabel>
     <Totals>Toàn bộ</Totals>
     <TrackColor>Theo dõi màu</TrackColor>
@@ -4317,6 +4461,7 @@
     <Type>Kiểu</Type>
     <TypeName>Tên kiểu</TypeName>
     <Types>Các kiểu</Types>
+    <UncheckedIcon>Biểu tượng đã bỏ chọn</UncheckedIcon>
     <Underline>Gạch chân</Underline>
     <UndoLimit>Giới hạn hoàn tác</UndoLimit>
     <Unit>Đơn vị</Unit>
@@ -4358,6 +4503,7 @@
     <VertSpacing>Khoảng cách dọc</VertSpacing>
     <ViewMode>Chế độ xem</ViewMode>
     <Visible>Có thể nhìn thấy</Visible>
+    <VisualStates>Trạng thái thị giác</VisualStates>
     <Watermark>Thủy ấn</Watermark>
     <Weight>Trọng số</Weight>
     <WeightDataColumn>Trọng số dữ liệu cột</WeightDataColumn>
@@ -4371,6 +4517,7 @@
     <XTopAxis>Trục X trên</XTopAxis>
     <YAxis>Trục Y</YAxis>
     <YRightAxis>Trục Y phải</YRightAxis>
+    <ZeroColor>Không màu</ZeroColor>
     <Zoom>Thu phóng</Zoom>
   </PropertyMain>
   <PropertySystemColors>
@@ -4510,6 +4657,7 @@
     <Dialogs>Hộp thoại</Dialogs>
     <EditStyles>[Chỉnh sửa kiểu]</EditStyles>
     <Enhancements>Cải tiến</Enhancements>
+    <EnterDataManually>Nhập thủ công dữ liệu</EnterDataManually>
     <Errors>Lỗi</Errors>
     <EventsTab>Tab sự kiện</EventsTab>
     <ExpandAll>Mở rộng tất cả</ExpandAll>
@@ -4518,6 +4666,8 @@
     <FinishingReport>Hoàn thành báo cáo</FinishingReport>
     <FirstPass>Truyền đầu tiên</FirstPass>
     <FixedBugs>Các lỗi đã được sửa</FixedBugs>
+    <FromCurrentState>Từ trạng thái hiện tại</FromCurrentState>
+    <FromDefaultState>Từ trạng thái mặc định</FromDefaultState>
     <Gallery>Bộ sưu tập</Gallery>
     <GenerateNewCode>Tạo mã mới</GenerateNewCode>
     <History>Lịch sử</History>
@@ -4563,6 +4713,7 @@
     <NoNewVersions>Không có phiên bản mới nào!</NoNewVersions>
     <NotAssigned>Không được chỉ định</NotAssigned>
     <Null>Null</Null>
+    <Obsoleted>Bị che khuất</Obsoleted>
     <Office2010Back>Quay lại</Office2010Back>
     <PageNofM>Trang {0} của {1}</PageNofM>
     <PreparingReport>Chuẩn bị báo cáo</PreparingReport>
@@ -4595,6 +4746,12 @@
     <StyleNormal>Bình thường</StyleNormal>
     <StyleNote>Chú thích</StyleNote>
     <StyleWarning>Cảnh báo</StyleWarning>
+    <UseDataFields>Sử dụng trường dữ liệu</UseDataFields>
+    <VisualChecked>Đã kiểm tra</VisualChecked>
+    <VisualDefault>Mặc định</VisualDefault>
+    <VisualDisabled>Vô hiệu hóa</VisualDisabled>
+    <VisualHover>Di chuột qua</VisualHover>
+    <VisualPressed>Nhấn</VisualPressed>
     <Warnings>Cảnh báo</Warnings>
     <WhatsNewInVersion>Có gì mới trong {0}</WhatsNewInVersion>
     <When>khi {0} {1}</When>
@@ -4614,6 +4771,79 @@
     <Browse>Duyệt</Browse>
     <Import>Nhập vào</Import>
   </ReportOpen>
+  <Scheduler>
+    <ActionRunReport>Chạy báo cáo</ActionRunReport>
+    <AdvancedSettings>Cài đặt nâng cao</AdvancedSettings>
+    <CheckBoxOverwriteIfExists>Ghi đè nếu tồn tại</CheckBoxOverwriteIfExists>
+    <DayAll>Tất cả</DayAll>
+    <DayDayX>Ngày {0}</DayDayX>
+    <DayLast>Cuối cùng</DayLast>
+    <DayNone>Không</DayNone>
+    <DaysOfWeekAll>Tất cả</DaysOfWeekAll>
+    <DaysOfWeekNone>Không</DaysOfWeekNone>
+    <DelayTaskForUpToRandomDelay>Trì hoãn nhiệm vụ lên đến (độ trễ ngẫu nhiên)</DelayTaskForUpToRandomDelay>
+    <EditScheduler>Chỉnh sửa bộ kế hoạch</EditScheduler>
+    <EnableSSL>Bật SSL</EnableSSL>
+    <Expire>Hết hạn</Expire>
+    <ForADurationOf>trong một khoảng thời gian</ForADurationOf>
+    <GetFolder>Nhận thư mục</GetFolder>
+    <GroupBoxFiles>Tệp</GroupBoxFiles>
+    <Host>Tổ chức</Host>
+    <Info>Windows Task Scheduler được sử dụng để chạy các bộ lập lịch.</Info>
+    <LabelDaysOfWeek>Ngày trong tuần</LabelDaysOfWeek>
+    <LabelMessage>Thông điệp</LabelMessage>
+    <LabelResultName>Tên kết quả</LabelResultName>
+    <LabelRunAtDay>Chạy vào ngày</LabelRunAtDay>
+    <LabelRunAtMonth>Chạy vào tháng</LabelRunAtMonth>
+    <LabelRunAtTime>Chạy tại thời điểm</LabelRunAtTime>
+    <LabelRunEvery>Chạy mỗi</LabelRunEvery>
+    <LabelSubject>Chủ đề</LabelSubject>
+    <LabelTo>Tới</LabelTo>
+    <Logs>Nhật ký</Logs>
+    <MessageInvalidName>Tên tác vụ không được bao gồm bất kỳ ký tự nào không hợp lệ đối với tên tệp.</MessageInvalidName>
+    <MessageInvalidTaskName>Không thể truy xuất tên công việc kết thúc bằng dấu chấm có ba ký tự trở xuống do lỗi trong thư viện gốc.</MessageInvalidTaskName>
+    <MessagePropertyNotSet>'{0}' chưa được đặt!</MessagePropertyNotSet>
+    <MonthAll>Tất cả</MonthAll>
+    <MonthNone>Không</MonthNone>
+    <NewAction>Hành động mới</NewAction>
+    <NewScheduler>Tạo mới bộ kế hoạch</NewScheduler>
+    <NoLogs>Không có nhật ký</NoLogs>
+    <NoSchedulers>Không có bộ kế hoạch</NoSchedulers>
+    <NoShedulers>Không có bộ kế hoạch</NoShedulers>
+    <NumberOfDayAll>Tất cả</NumberOfDayAll>
+    <NumberOfDayFirst>Ngày thứ nhất</NumberOfDayFirst>
+    <NumberOfDayFourth>Ngày thứ tư</NumberOfDayFourth>
+    <NumberOfDayLast>Cuối cùng</NumberOfDayLast>
+    <NumberOfDayNone>Không</NumberOfDayNone>
+    <NumberOfDaySecond>Ngày thứ hai</NumberOfDaySecond>
+    <NumberOfDayThird>Ngày thứ ba</NumberOfDayThird>
+    <OpenWindowsTaskScheduler>Mở Trình lập lịch tác vụ của Windows</OpenWindowsTaskScheduler>
+    <PleaseSelectSchedulerType>Vui lòng chọn loại công cụ lập kế hoạch</PleaseSelectSchedulerType>
+    <RadioButtonDay>Ngày</RadioButtonDay>
+    <RadioButtonOn>Trên</RadioButtonOn>
+    <RepeatTaskEvery>Lặp lại nhiệm vụ mỗi</RepeatTaskEvery>
+    <Schedule>Kế hoạch</Schedule>
+    <Scheduler>Bộ lập kế hoạch</Scheduler>
+    <Schedulers>Bộ lập kế hoạch</Schedulers>
+    <SenderEmail>Email người gửi</SenderEmail>
+    <SmtpSettings>Cài đặt Smtp</SmtpSettings>
+    <StopAllRunningTasksAtEndOfRepetitionDuration>Dừng tất cả các tác vụ đang chạy khi hết thời gian lặp lại</StopAllRunningTasksAtEndOfRepetitionDuration>
+    <StopTasksIfItRunsLongerThan>Dừng nhiệm vụ nếu nó chạy lâu hơn</StopTasksIfItRunsLongerThan>
+    <TextDragDropDestinationHere>Kéo và Thả Thư mục Đích tại đây</TextDragDropDestinationHere>
+    <TextDragDropReportHere>Kéo và Thả Báo cáo Tại đây</TextDragDropReportHere>
+    <TextPressPlusIconAddNewAction>Nhấp vào biểu tượng dấu cộng để thêm một hành động mới!</TextPressPlusIconAddNewAction>
+    <ToolTipSetParameters>Xác định các thông số báo cáo</ToolTipSetParameters>
+    <WizardDaily>Hằng ngày</WizardDaily>
+    <WizardDailyDescription>Mỗi ngày một lần, vào một thời điểm xác định.</WizardDailyDescription>
+    <WizardHourly>Hàng giờ</WizardHourly>
+    <WizardHourlyDescription>Mỗi giờ một lần.</WizardHourlyDescription>
+    <WizardMonthly>Hàng tháng</WizardMonthly>
+    <WizardMonthlyDescription>Hàng tháng, vào các ngày đã chọn trong tuần hoặc các ngày trong tháng, tại một thời điểm cụ thể.</WizardMonthlyDescription>
+    <WizardOnce>Một lần</WizardOnce>
+    <WizardOnceDescription>Chạy bộ lập kế hoạch một lần vào bất kỳ lúc nào.</WizardOnceDescription>
+    <WizardWeekly>Hàng tuần</WizardWeekly>
+    <WizardWeeklyDescription>Vào những ngày đã chọn trong tuần, tại một thời điểm cụ thể.</WizardWeeklyDescription>
+  </Scheduler>
   <Services>
     <categoryContextTools>Công cụ ngữ cảnh</categoryContextTools>
     <categoryDesigner>Trình thiết kế</categoryDesigner>
@@ -4796,7 +5026,9 @@
   </WelcomeScreen>
   <Wizards>
     <BlankDashboard>Bảng thông tin trống</BlankDashboard>
+    <BlankForm>Mẫu trống</BlankForm>
     <BlankReport>Báo cáo trống</BlankReport>
+    <BlankScreen>Màn hình trống</BlankScreen>
     <ButtonBack>Quay lại</ButtonBack>
     <ButtonCancel>Hủy</ButtonCancel>
     <ButtonFinish>Hoàn thành</ButtonFinish>
