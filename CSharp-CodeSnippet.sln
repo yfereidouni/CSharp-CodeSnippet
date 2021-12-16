@@ -47,65 +47,69 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "iGenerics", "iGenerics", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "iOperators", "iOperators", "{618ABAE2-FFF8-4B4A-9433-CC031F3CE8F2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp-CodeSnippet.Generics.Fundamentals", "iGenerics\CSharp-CodeSnippet.Generics.Fundamentals\CSharp-CodeSnippet.Generics.Fundamentals.csproj", "{DD771318-5CA2-478C-BC86-1E44302F23E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iGenerics.Fundamentals", "iGenerics\CSharp-CodeSnippet.Generics.Fundamentals\iGenerics.Fundamentals.csproj", "{DD771318-5CA2-478C-BC86-1E44302F23E8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp-CodeSnippet.Generics.NormalClassWithGenericMethod", "iGenerics\CSharp-CodeSnippet.Generics.NormalClassWithGenericMethod\CSharp-CodeSnippet.Generics.NormalClassWithGenericMethod.csproj", "{686BFE86-94F4-4BE4-8D53-D310C1ED257E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iGenerics.NormalClassWithGenericMethod", "iGenerics\CSharp-CodeSnippet.Generics.NormalClassWithGenericMethod\iGenerics.NormalClassWithGenericMethod.csproj", "{686BFE86-94F4-4BE4-8D53-D310C1ED257E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp-CodeSnippet.Generics.StaticMembers", "iGenerics\CSharp-CodeSnippet.Generics.StaticMembers\CSharp-CodeSnippet.Generics.StaticMembers.csproj", "{20AD07FC-1A8B-49B7-A909-1463A4751600}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iGenerics.StaticMembers", "iGenerics\CSharp-CodeSnippet.Generics.StaticMembers\iGenerics.StaticMembers.csproj", "{20AD07FC-1A8B-49B7-A909-1463A4751600}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp-CodeSnippet.Generics.Inheritance", "iGenerics\CSharp-CodeSnippet.Generics.Inheritance\CSharp-CodeSnippet.Generics.Inheritance.csproj", "{5FA79A95-995B-4D60-8993-2E2CF1C79F71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iGenerics.Inheritance", "iGenerics\CSharp-CodeSnippet.Generics.Inheritance\iGenerics.Inheritance.csproj", "{5FA79A95-995B-4D60-8993-2E2CF1C79F71}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp-CodeSnippet.Operators", "iOperators\CSharp-CodeSnippet.Operators\CSharp-CodeSnippet.Operators.csproj", "{40301FDE-6514-4430-9E5F-561A2211FA05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iOperators", "iOperators\CSharp-CodeSnippet.Operators\iOperators.csproj", "{40301FDE-6514-4430-9E5F-561A2211FA05}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iOperatorOverloading", "iOperatorOverloading\iOperatorOverloading.csproj", "{6B501D80-DE1A-4DAE-BC3D-16B7F19F6DFC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "iWPF", "iWPF", "{78D139F9-5B58-4C8B-9FFD-543FF210DC81}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF_Calculator", "iWPF\iWPF_Calculator\iWPF_Calculator.csproj", "{759D2D32-D55F-4BD8-83C9-247E4EB4B37E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF.Calculator", "iWPF\iWPF_Calculator\iWPF.Calculator.csproj", "{759D2D32-D55F-4BD8-83C9-247E4EB4B37E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF_CheckBox", "iWPF\iWPF_CheckBox\iWPF_CheckBox.csproj", "{2111119A-5EDB-4E28-8F6C-C5B952915FF4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF.CheckBox", "iWPF\iWPF_CheckBox\iWPF.CheckBox.csproj", "{2111119A-5EDB-4E28-8F6C-C5B952915FF4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF_ComboBox", "iWPF\iWPF_ComboBox\iWPF_ComboBox.csproj", "{071FEE66-B87D-4ACE-8017-972C9915971B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF.ComboBox", "iWPF\iWPF_ComboBox\iWPF.ComboBox.csproj", "{071FEE66-B87D-4ACE-8017-972C9915971B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF_CurrencyConvertorWithAPI", "iWPF\iWPF_CurrencyConvertorWithAPI\iWPF_CurrencyConvertorWithAPI.csproj", "{BD0219BF-6245-4CAA-8A39-FC8BD16E0C03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF.CurrencyConvertorWithAPI", "iWPF\iWPF_CurrencyConvertorWithAPI\iWPF.CurrencyConvertorWithAPI.csproj", "{BD0219BF-6245-4CAA-8A39-FC8BD16E0C03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iWPF_LinqToSQL", "iWPF\iWPF_LinqToSQL\iWPF_LinqToSQL.csproj", "{C8AF6490-B43E-4576-8991-4F1629FFD743}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iWPF.LinqToSQL", "iWPF\iWPF_LinqToSQL\iWPF.LinqToSQL.csproj", "{C8AF6490-B43E-4576-8991-4F1629FFD743}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF_ListBox", "iWPF\iWPF_ListBox\iWPF_ListBox.csproj", "{CB0287CA-6A8A-44D1-B386-CC42AE4FD855}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF.ListBox", "iWPF\iWPF_ListBox\iWPF.ListBox.csproj", "{CB0287CA-6A8A-44D1-B386-CC42AE4FD855}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF_LoginForm", "iWPF\iWPF_LoginForm\iWPF_LoginForm.csproj", "{40971D9D-05F8-45EC-A654-25B297D7888D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF.LoginForm", "iWPF\iWPF_LoginForm\iWPF.LoginForm.csproj", "{40971D9D-05F8-45EC-A654-25B297D7888D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF_MVVM", "iWPF\iWPF_MVVM\iWPF_MVVM.csproj", "{90D6C212-D216-4AB0-90A7-3A8FF9A27EC5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF.MVVM", "iWPF\iWPF_MVVM\iWPF.MVVM.csproj", "{90D6C212-D216-4AB0-90A7-3A8FF9A27EC5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF_Property_Data_and_EventsTriggers", "iWPF\iWPF_Property_Data_and_EventsTriggers\iWPF_Property_Data_and_EventsTriggers.csproj", "{27AAD61E-8773-4403-A103-93AFEE9C7279}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF.Property_Data_and_EventsTriggers", "iWPF\iWPF_Property_Data_and_EventsTriggers\iWPF.Property_Data_and_EventsTriggers.csproj", "{27AAD61E-8773-4403-A103-93AFEE9C7279}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF_RadioButtons_and_Images", "iWPF\iWPF_RadioButtons_and_Images\iWPF_RadioButtons_and_Images.csproj", "{38264AC5-8CFC-499A-86AF-7D3C8540AD23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF.RadioButtons_and_Images", "iWPF\iWPF_RadioButtons_and_Images\iWPF.RadioButtons_and_Images.csproj", "{38264AC5-8CFC-499A-86AF-7D3C8540AD23}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF_S01", "iWPF\iWPF_S01\iWPF_S01.csproj", "{768F744E-FD5D-43FA-B224-399D18FD1F7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF.S01", "iWPF\iWPF_S01\iWPF.S01.csproj", "{768F744E-FD5D-43FA-B224-399D18FD1F7E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF_S02_TreeView", "iWPF\iWPF_S02_TreeView\iWPF_S02_TreeView.csproj", "{147B0A27-8EC8-40D3-921D-FFB5CCA984A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF.S02_TreeView", "iWPF\iWPF_S02_TreeView\iWPF.S02_TreeView.csproj", "{147B0A27-8EC8-40D3-921D-FFB5CCA984A3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF_S03", "iWPF\iWPF_S03\iWPF_S03.csproj", "{EBA02CA4-C498-4132-A766-5F72F701A8D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF.S03", "iWPF\iWPF_S03\iWPF.S03.csproj", "{EBA02CA4-C498-4132-A766-5F72F701A8D8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF_S04", "iWPF\iWPF_S04\iWPF_S04.csproj", "{B6DA5FE2-CAA1-4201-B775-211E6E3390C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF.S04", "iWPF\iWPF_S04\iWPF.S04.csproj", "{B6DA5FE2-CAA1-4201-B775-211E6E3390C2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF_S05", "iWPF\iWPF_S05\iWPF_S05.csproj", "{8F4F9AC8-FCDD-40FC-825C-7236FB69735E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF.S05", "iWPF\iWPF_S05\iWPF.S05.csproj", "{8F4F9AC8-FCDD-40FC-825C-7236FB69735E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF_S06_HandyControls", "iWPF\iWPF_S06_HandyControls\iWPF_S06_HandyControls.csproj", "{17192AC1-010F-41CF-A937-185975211B78}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF.S06_HandyControls", "iWPF\iWPF_S06_HandyControls\iWPF.S06_HandyControls.csproj", "{17192AC1-010F-41CF-A937-185975211B78}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iWPF_S06_LINQ_To_SQL", "iWPF\iWPF_S06_LINQ_To_SQL\iWPF_S06_LINQ_To_SQL.csproj", "{C945F0EF-364C-4B75-A02E-4BAB11121FFE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iWPF.S06_LINQ_To_SQL", "iWPF\iWPF_S06_LINQ_To_SQL\iWPF.S06_LINQ_To_SQL.csproj", "{C945F0EF-364C-4B75-A02E-4BAB11121FFE}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF_S11_StringFormats", "iWPF\iWPF_S11_StringFormats\iWPF_S11_StringFormats.csproj", "{8D672C73-1F2F-4334-9B5A-6617C669AA7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF.S11_StringFormats", "iWPF\iWPF_S11_StringFormats\iWPF.S11_StringFormats.csproj", "{8D672C73-1F2F-4334-9B5A-6617C669AA7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iWPF_S12_Stimulsoft_Report", "iWPF\iWPF_S12_Stimulsoft_Report\iWPF_S12_Stimulsoft_Report.csproj", "{7E2229DC-17E3-4470-A2CA-9EC6C216DDC5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iWPF.S12_Stimulsoft_Report", "iWPF\iWPF_S12_Stimulsoft_Report\iWPF.S12_Stimulsoft_Report.csproj", "{7E2229DC-17E3-4470-A2CA-9EC6C216DDC5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF_Tasks", "iWPF\iWPF_Tasks\iWPF_Tasks.csproj", "{ED1C91D5-9B55-420F-BD90-6C8CCFE3DE65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF.Tasks", "iWPF\iWPF_Tasks\iWPF.Tasks.csproj", "{ED1C91D5-9B55-420F-BD90-6C8CCFE3DE65}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF_ToolTip", "iWPF\iWPF_ToolTip\iWPF_ToolTip.csproj", "{43F8661C-65FB-4F9B-BD5E-959CC420E1A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF.ToolTip", "iWPF\iWPF_ToolTip\iWPF.ToolTip.csproj", "{43F8661C-65FB-4F9B-BD5E-959CC420E1A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iWPF_ZooManager", "iWPF\iWPF_ZooManager\iWPF_ZooManager.csproj", "{07BA89DD-4855-4026-9FAE-646BC7649AF9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iWPF.ZooManager", "iWPF\iWPF_ZooManager\iWPF.ZooManager.csproj", "{07BA89DD-4855-4026-9FAE-646BC7649AF9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF_S05_AnalogClock", "iWPF\iWPF_S05_AnalogClock\iWPF_S05_AnalogClock.csproj", "{C76FCF08-B91D-4120-AF3E-A58B87867A56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF.S05_AnalogClock", "iWPF\iWPF_S05_AnalogClock\iWPF.S05_AnalogClock.csproj", "{C76FCF08-B91D-4120-AF3E-A58B87867A56}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "iSort", "iSort", "{9B511FC3-FD85-4C2C-8513-347C6F76BED1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iSort.BubbleSort", "iSort\CSharp-CodeSnippet.iSort.BubbleSort\iSort.BubbleSort.csproj", "{9B8DB915-2118-4F1A-8C91-59161AB75F42}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -309,6 +313,10 @@ Global
 		{C76FCF08-B91D-4120-AF3E-A58B87867A56}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C76FCF08-B91D-4120-AF3E-A58B87867A56}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C76FCF08-B91D-4120-AF3E-A58B87867A56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B8DB915-2118-4F1A-8C91-59161AB75F42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B8DB915-2118-4F1A-8C91-59161AB75F42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B8DB915-2118-4F1A-8C91-59161AB75F42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B8DB915-2118-4F1A-8C91-59161AB75F42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -343,6 +351,7 @@ Global
 		{43F8661C-65FB-4F9B-BD5E-959CC420E1A7} = {78D139F9-5B58-4C8B-9FFD-543FF210DC81}
 		{07BA89DD-4855-4026-9FAE-646BC7649AF9} = {78D139F9-5B58-4C8B-9FFD-543FF210DC81}
 		{C76FCF08-B91D-4120-AF3E-A58B87867A56} = {78D139F9-5B58-4C8B-9FFD-543FF210DC81}
+		{9B8DB915-2118-4F1A-8C91-59161AB75F42} = {9B511FC3-FD85-4C2C-8513-347C6F76BED1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B71D1B38-C041-4707-8E22-1E08D97D82D9}
