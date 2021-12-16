@@ -1,27 +1,13 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-
-
 /// Anonymous Functions:
 
-/// Printer delegate is define in global using ~\obj\Debug\net6.0 
-Printer printer = delegate (int val)
-{
-    Console.WriteLine("Inside Anonymous method. Value: {0}", val);
-};
-
-/// Running Anonymous Function
-printer(100);
-///or
-printer.Invoke(100);
-Console.WriteLine("".PadRight(50, '-'));
-///----------------------------------------------------------------------
 Func<bool> Anonymous00 = () => true;
 
 var result00 = Anonymous00.Invoke();
 
 Console.WriteLine($"Anonymous result : {result00}");
-Console.WriteLine("".PadRight(50,'-'));
+Console.WriteLine("".PadRight(50, '-'));
 ///----------------------------------------------------------------------
 Func<int, int, int> Anonymous01 = (a, b) => a + b;
 
