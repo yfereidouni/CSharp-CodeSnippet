@@ -9,7 +9,7 @@ namespace ADO.NET
         {
             PersonRepository pr = new PersonRepository();
 
-            //int result = pr.CreatePerson("Reza", "Asadi", new DateTime(1985, 03, 30), "52");
+            //int result = pr.CreatePerson("Majid", "Akhshabi", new DateTime(1980, 07, 12), "26");
 
             //Console.WriteLine($"Record affected : {result}");
 

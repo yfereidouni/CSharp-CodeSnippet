@@ -50,10 +50,10 @@ namespace ADO.NET
                 Person pr = new Person
                 {
                     Id = int.Parse(reader["Id"].ToString()),
-                    Name = reader["Name"].ToString(),
-                    Family = reader["Family"].ToString(),
+                    Name = reader["FirstName"].ToString(),
+                    Family = reader["LastName"].ToString(),
                     BirthDate = DateTime.Parse(reader["BirthDate"].ToString()),
-                    ShSh = reader["BirthDate"].ToString(),
+                    ShSh = reader["ShSh"].ToString(),
                 };
                 InnerList.Add(pr);
             }
