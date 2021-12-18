@@ -33,8 +33,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iGarbageCollection", "iGarb
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iEvents_and_Delegates", "iEvents_and_Delegates\iEvents_and_Delegates.csproj", "{607F9E66-8ED8-4DFF-9D6F-B60F4F6AAA89}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iLinq2", "iLinq\iLinq2.csproj", "{0B7E7FB3-9CC7-4328-BC9C-EF9BC4FCC703}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iLinq_LinqToObjectsAndQueryOperators", "iLinq_LinqToObjectsAndQueryOperators\iLinq_LinqToObjectsAndQueryOperators.csproj", "{7B9E93A2-D3D0-4708-8F60-5DD5DD6CB3C3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iLinq_LinqToXML", "iLinq_LinqToXML\iLinq_LinqToXML.csproj", "{44D5806D-47DB-4020-B855-ED18A6BBD503}"
@@ -109,15 +107,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF.ToolTip", "iWPF\iWPF.T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iWPF.MVVM_Template", "iWPF\iWPF.MVVM_Template\iWPF.MVVM_Template.csproj", "{509F4CBA-90D2-4FCE-9726-B36A85D80D90}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iSorts.BubbleSort", "iSorts\iSorts.BubbleSort\iSorts.BubbleSort.csproj", "{A177B83F-7C6B-453C-918A-A3DA573E0C00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iSorts.BubbleSort", "iSorts\iSorts.BubbleSort\iSorts.BubbleSort.csproj", "{A177B83F-7C6B-453C-918A-A3DA573E0C00}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "iAnonymousFunctions", "iAnonymousFunctions", "{68FD7F3C-5BAB-4B02-B948-9D796A13B83D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iAnonymousFunctions.FuncAndAction", "iAnonymousFunctions\iAnonymousFunctions.FuncAndAction\iAnonymousFunctions.FuncAndAction.csproj", "{6C83019F-585A-4CE6-8C89-EE4C60B68A3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iAnonymousFunctions.FuncAndAction", "iAnonymousFunctions\iAnonymousFunctions.FuncAndAction\iAnonymousFunctions.FuncAndAction.csproj", "{6C83019F-585A-4CE6-8C89-EE4C60B68A3B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "iLINQ", "iLINQ", "{B8D118B2-8D9B-4AEC-A4A4-C9422F179310}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iLINQ.ReadFromFile", "iLINQ\iLINQ.ReadFromFile\iLINQ.ReadFromFile.csproj", "{73EE9906-F437-4183-8EC2-593D7DFDBA64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iLINQ.ReadFromFile", "iLINQ\iLINQ.ReadFromFile\iLINQ.ReadFromFile.csproj", "{73EE9906-F437-4183-8EC2-593D7DFDBA64}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -247,14 +245,6 @@ Global
 		{607F9E66-8ED8-4DFF-9D6F-B60F4F6AAA89}.Release|Any CPU.Build.0 = Release|Any CPU
 		{607F9E66-8ED8-4DFF-9D6F-B60F4F6AAA89}.Release|x86.ActiveCfg = Release|Any CPU
 		{607F9E66-8ED8-4DFF-9D6F-B60F4F6AAA89}.Release|x86.Build.0 = Release|Any CPU
-		{0B7E7FB3-9CC7-4328-BC9C-EF9BC4FCC703}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0B7E7FB3-9CC7-4328-BC9C-EF9BC4FCC703}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0B7E7FB3-9CC7-4328-BC9C-EF9BC4FCC703}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{0B7E7FB3-9CC7-4328-BC9C-EF9BC4FCC703}.Debug|x86.Build.0 = Debug|Any CPU
-		{0B7E7FB3-9CC7-4328-BC9C-EF9BC4FCC703}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0B7E7FB3-9CC7-4328-BC9C-EF9BC4FCC703}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0B7E7FB3-9CC7-4328-BC9C-EF9BC4FCC703}.Release|x86.ActiveCfg = Release|Any CPU
-		{0B7E7FB3-9CC7-4328-BC9C-EF9BC4FCC703}.Release|x86.Build.0 = Release|Any CPU
 		{7B9E93A2-D3D0-4708-8F60-5DD5DD6CB3C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7B9E93A2-D3D0-4708-8F60-5DD5DD6CB3C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B9E93A2-D3D0-4708-8F60-5DD5DD6CB3C3}.Debug|x86.ActiveCfg = Debug|Any CPU
