@@ -8,12 +8,7 @@ namespace iEFCore.Fundamentals.DAL
 {
     public class PersonRepository : IPersonRepository
     {
-        private readonly PersonDb personDb;
-
-        public PersonRepository(PersonDb personDb)
-        {
-            this.personDb = personDb;
-        }
+        private readonly PersonDb personDb= new PersonDb ();
 
         public void Create(Person person)
         {
