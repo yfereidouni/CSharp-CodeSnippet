@@ -6,8 +6,35 @@ using iEFCore.Fundamentals.DAL;
 using (var ctx = new PersonDb())
 {
     //CRUD_Test(ctx);
+    //Display_List(ctx);
 
-    Display_List(ctx);
+    CreatePerson();
+    ListPerson();
+
+}
+
+void ListPerson()
+{
+    PersonRepository personRepository = new PersonRepository(new PersonDb());
+    var result = personRepository.GetAll();
+    foreach (var item in result)
+    {
+        Console.WriteLine($"Person : {item.FirstName} | {item.LastName} | {item.BirthDate}");
+    }
+}
+
+void CreatePerson()
+{
+    var person = new Person
+    {
+        FirstName = "Meysam",
+        LastName = "Ghodsi",
+        BirthDate = DateTime.Now
+    };
+    person.Contacts.Add(new Contact { PhoneNumber = "09201235425" });
+    person.Contacts.Add(new Contact { PhoneNumber = "09203254254" });
+    PersonRepository personRepository = new PersonRepository(new PersonDb());
+    personRepository.Create(person);
 }
 
 void Display_List(PersonDb ctx)

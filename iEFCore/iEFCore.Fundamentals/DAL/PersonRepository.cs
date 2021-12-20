@@ -14,39 +14,58 @@ namespace iEFCore.Fundamentals.DAL
         {
             this.personDb = personDb;
         }
-        public void Add(Person person)
+
+        public void Create(Person person)
         {
             personDb.People.Add(person);
             personDb.SaveChanges();
         }
-
-        public void Delete(int id)
+        
+        public void Update(Person person)
         {
-            var person = personDb.People.FirstOrDefault(p => p.Id == id);
+            personDb.People.Update(person);
+            personDb.SaveChanges();
+        }
+
+        public void UpdateById(int id)
+        {
+            var person = personDb.People.Find(id);
+            personDb.People.Update(person);
+            personDb.SaveChanges();
+        }
+
+        public void Delete(Person person)
+        {
             personDb.People.Remove(person);
             personDb.SaveChanges();
         }
 
-        public Person Get(int id)
+        public void DeleteById(int id)
         {
-            return personDb.People.FirstOrDefault(c => c.Id == id);
+            var person = personDb.People.Find(id);
+            if (person != null)
+            {
+                personDb.People.Remove(person);
+                personDb.SaveChanges();
+            }
         }
 
+        public Person Get(Person person)
+        {
+            var result = personDb.People.Find(person);
+            return result;
+        }
+        
+        public Person GetById(int id)
+        {
+            var person = personDb.People.Find(id);
+            return person;
+        }
+        
         public List<Person> GetAll()
         {
             return personDb.People.ToList();
         }
 
-        public Person GetById(int id)
-        {
-            return (personDb.People.FirstOrDefault(c => c.Id == id));
-        }
-
-        public void Update(Person person)
-        {
-            personDb.People.Update(person);
-            personDb.SaveChanges(true);
-
-        }
     }
 }

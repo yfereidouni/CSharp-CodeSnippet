@@ -2,11 +2,13 @@
 {
     public interface IPersonRepository
     {
-        List<Person> GetAll();
-        void Add(Person person);
-        Person Get(int id);
-        Person GetById(int id);
+        void Create(Person person);
         void Update(Person person);
-        void Delete(int id);
+        void UpdateById(int id);
+        void Delete(Person person);
+        void DeleteById(int id);
+        Person Get(Person person);
+        Person GetById(int id);
+        List<Person> GetAll();
     }
 }
