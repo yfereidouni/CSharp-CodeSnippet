@@ -3,15 +3,14 @@
 using iEFCore.Fundamentals;
 using iEFCore.Fundamentals.DAL;
 
-using (var ctx = new PersonDb())
-{
-    //CRUD_Test(ctx);
-    //Display_List(ctx);
+//using (var ctx = new PersonDb())
+//{
+//    CRUD_Test(ctx);
+//    Display_List(ctx);
+//}
 
-    //CreatePerson();
-    ListPerson();
-
-}
+//CreatePerson();
+ListPerson();
 
 void Display_List(PersonDb ctx)
 {
