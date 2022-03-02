@@ -29,7 +29,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iDateTime", "iDateTime\iDat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iNullable", "iNullable\iNullable.csproj", "{62768C96-51DC-4766-92FA-37A3CED6FFA2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iGarbageCollection", "iGarbageCollection\iGarbageCollection.csproj", "{CD2D758F-AA5D-4786-937D-8D64CEB2A5F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iGarbageCollector", "iGarbageCollection\iGarbageCollector.csproj", "{CD2D758F-AA5D-4786-937D-8D64CEB2A5F6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iEvents_and_Delegates", "iEvents_and_Delegates\iEvents_and_Delegates.csproj", "{607F9E66-8ED8-4DFF-9D6F-B60F4F6AAA89}"
 EndProject
@@ -119,7 +119,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iLINQ.ReadFromFile", "iLINQ
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "iEFCore", "iEFCore", "{BD567A53-3FA7-465D-ADFA-A8FC5DF84A91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iEFCore.Fundamentals", "iEFCore\iEFCore.Fundamentals\iEFCore.Fundamentals.csproj", "{0B959251-1C94-42E3-8F52-78CA8A714E07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iEFCore.Fundamentals", "iEFCore\iEFCore.Fundamentals\iEFCore.Fundamentals.csproj", "{0B959251-1C94-42E3-8F52-78CA8A714E07}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "iGarbageCollection", "iGarbageCollection", "{21B4D4CE-20A2-47E6-AEAF-E169FEB9B0AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -550,6 +552,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{CD2D758F-AA5D-4786-937D-8D64CEB2A5F6} = {21B4D4CE-20A2-47E6-AEAF-E169FEB9B0AB}
 		{0E355A9D-BD99-47EA-98FA-1674A63C87F0} = {0F69BECA-B0A8-4182-8EE9-01DE79E522F0}
 		{B51DE45B-CA79-4516-A8B7-8EF014826D92} = {0F69BECA-B0A8-4182-8EE9-01DE79E522F0}
 		{836711C2-260B-4840-A6E9-BEB0B09EEC1F} = {0F69BECA-B0A8-4182-8EE9-01DE79E522F0}
