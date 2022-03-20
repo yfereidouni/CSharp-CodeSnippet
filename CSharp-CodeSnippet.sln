@@ -123,17 +123,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "iGarbageCollection", "iGarb
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "iRecords", "iRecords", "{3446039A-1759-4F0C-8E6E-134B03BDD9B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iRecords.NominalRecords", "iRecords\iRecords.NominalRecords\iRecords.NominalRecords.csproj", "{56CC9375-A0E5-4F2C-8246-135FA4A3F651}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iRecords.NominalRecords", "iRecords\iRecords.NominalRecords\iRecords.NominalRecords.csproj", "{56CC9375-A0E5-4F2C-8246-135FA4A3F651}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iRecords.PositionalRecords", "iRecords\iRecords.PositionalRecords\iRecords.PositionalRecords.csproj", "{0C280895-E248-4B2D-A730-DA06E9DE56F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iRecords.PositionalRecords", "iRecords\iRecords.PositionalRecords\iRecords.PositionalRecords.csproj", "{0C280895-E248-4B2D-A730-DA06E9DE56F9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "iTypes", "iTypes", "{AEDB1D45-FD17-4966-BCD9-1A765C65F0DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iTypes.Enums", "iTypes\iTypes.iEnums.Enums\iTypes.Enums.csproj", "{9B1982F1-0C33-4440-8FB4-6DCDD6E037C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iTypes.Enums", "iTypes\iTypes.iEnums.Enums\iTypes.Enums.csproj", "{9B1982F1-0C33-4440-8FB4-6DCDD6E037C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iTypes.Structs", "iTypes\iTypes.iStruct.Structs\iTypes.Structs.csproj", "{C3659C8E-F87D-4CDE-AC8C-5318BD9D52AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iTypes.Structs", "iTypes\iTypes.iStruct.Structs\iTypes.Structs.csproj", "{C3659C8E-F87D-4CDE-AC8C-5318BD9D52AC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iTypes.TType", "iTypes\iTType\iTypes.TType.csproj", "{BDADDB7E-0EAD-49D9-A848-AC8A9A097E68}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iTypes.Interfaces", "iTypes\iTypes.Interfaces\iTypes.Interfaces.csproj", "{FBA2782D-FF78-4ED7-B564-4F8B38E38C7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -583,14 +583,14 @@ Global
 		{C3659C8E-F87D-4CDE-AC8C-5318BD9D52AC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C3659C8E-F87D-4CDE-AC8C-5318BD9D52AC}.Release|x86.ActiveCfg = Release|Any CPU
 		{C3659C8E-F87D-4CDE-AC8C-5318BD9D52AC}.Release|x86.Build.0 = Release|Any CPU
-		{BDADDB7E-0EAD-49D9-A848-AC8A9A097E68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BDADDB7E-0EAD-49D9-A848-AC8A9A097E68}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BDADDB7E-0EAD-49D9-A848-AC8A9A097E68}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{BDADDB7E-0EAD-49D9-A848-AC8A9A097E68}.Debug|x86.Build.0 = Debug|Any CPU
-		{BDADDB7E-0EAD-49D9-A848-AC8A9A097E68}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BDADDB7E-0EAD-49D9-A848-AC8A9A097E68}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BDADDB7E-0EAD-49D9-A848-AC8A9A097E68}.Release|x86.ActiveCfg = Release|Any CPU
-		{BDADDB7E-0EAD-49D9-A848-AC8A9A097E68}.Release|x86.Build.0 = Release|Any CPU
+		{FBA2782D-FF78-4ED7-B564-4F8B38E38C7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBA2782D-FF78-4ED7-B564-4F8B38E38C7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBA2782D-FF78-4ED7-B564-4F8B38E38C7B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{FBA2782D-FF78-4ED7-B564-4F8B38E38C7B}.Debug|x86.Build.0 = Debug|Any CPU
+		{FBA2782D-FF78-4ED7-B564-4F8B38E38C7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBA2782D-FF78-4ED7-B564-4F8B38E38C7B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBA2782D-FF78-4ED7-B564-4F8B38E38C7B}.Release|x86.ActiveCfg = Release|Any CPU
+		{FBA2782D-FF78-4ED7-B564-4F8B38E38C7B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -634,7 +634,7 @@ Global
 		{0C280895-E248-4B2D-A730-DA06E9DE56F9} = {3446039A-1759-4F0C-8E6E-134B03BDD9B5}
 		{9B1982F1-0C33-4440-8FB4-6DCDD6E037C4} = {AEDB1D45-FD17-4966-BCD9-1A765C65F0DB}
 		{C3659C8E-F87D-4CDE-AC8C-5318BD9D52AC} = {AEDB1D45-FD17-4966-BCD9-1A765C65F0DB}
-		{BDADDB7E-0EAD-49D9-A848-AC8A9A097E68} = {AEDB1D45-FD17-4966-BCD9-1A765C65F0DB}
+		{FBA2782D-FF78-4ED7-B564-4F8B38E38C7B} = {AEDB1D45-FD17-4966-BCD9-1A765C65F0DB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B71D1B38-C041-4707-8E22-1E08D97D82D9}

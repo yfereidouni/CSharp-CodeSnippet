@@ -1,5 +1,4 @@
-﻿using System;
-using iTypes.TType;
+﻿using iTypes.Interfaces;
 
 Newspaper jamejam = new Newspaper
 {
@@ -20,8 +19,5 @@ Magazin IranDaily = new Magazin
 PrintService<IDocument> ps = new PrintService<IDocument>();
 
 ps.Print(jamejam);
-        ps.Print(harryPotter);
-        ps.Print(IranDaily);
-    
-
-
+ps.Print(harryPotter);
+ps.Print(IranDaily);
