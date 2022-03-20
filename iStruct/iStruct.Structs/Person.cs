@@ -8,7 +8,14 @@ namespace iStruct.Structs
 {
     public struct PersonStruct_Old
     {
-        public int Id { get; set; }
+        public PersonStruct_Old() //Default Constructor was added in C# 10
+        {
+            Id = 0;
+            FirstName = "Yasser";
+            LastName = "Fereidouni";
+            Age = 36;
+        }
+        public int Id = 0; // Field and property initializing was added in C# 10
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int Age { get; set; }
@@ -39,4 +46,6 @@ namespace iStruct.Structs
             return $"{FirstName} {LastName}";
         }
     }
+
+    public record struct PersonStruct_V10(int Id, string FirstName, string LastName, int Age);
 }

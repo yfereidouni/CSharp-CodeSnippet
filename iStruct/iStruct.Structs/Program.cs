@@ -20,6 +20,8 @@ PersonStruct_V8 PersonStruct_V8 = new PersonStruct_V8()
     Age = 36
 };
 
+PersonStruct_V10 PersonStruct_V10 = new PersonStruct_V10(1, "Yasser", "Fereidouni", 36);
+
 //---------------------------------------------------------------
 Console.WriteLine("\r\nPersonStruct_Old:");
 Console.WriteLine($"{personStruct_Old.Id} | " +
