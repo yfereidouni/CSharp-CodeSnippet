@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace iTType
+namespace iTypes.TType
 {
     public class PrintService<T> where T:IDocument
     {

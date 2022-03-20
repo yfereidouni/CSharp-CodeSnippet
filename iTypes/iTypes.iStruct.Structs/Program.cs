@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using iStruct.Structs;
+using iTypes.Structs;
+
 
 PersonStruct_Old personStruct_Old = new PersonStruct_Old()
 {

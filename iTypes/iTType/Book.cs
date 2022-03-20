@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace iTType
+namespace iTypes.TType
 {
     public class Book : IDocument
     {

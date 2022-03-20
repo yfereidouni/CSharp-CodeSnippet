@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace iStruct.Structs
+namespace iTypes.Structs
 {
     public struct PersonStruct_Old
     {
