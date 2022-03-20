@@ -135,6 +135,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iTypes.Structs", "iTypes\iT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iTypes.Interfaces", "iTypes\iTypes.Interfaces\iTypes.Interfaces.csproj", "{FBA2782D-FF78-4ED7-B564-4F8B38E38C7B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iTypes.RefInOut", "iTypes\iTypes.RefInOut\iTypes.RefInOut.csproj", "{F8979A69-AB0D-477C-B4EB-C6D388F78F1D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -591,6 +593,14 @@ Global
 		{FBA2782D-FF78-4ED7-B564-4F8B38E38C7B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FBA2782D-FF78-4ED7-B564-4F8B38E38C7B}.Release|x86.ActiveCfg = Release|Any CPU
 		{FBA2782D-FF78-4ED7-B564-4F8B38E38C7B}.Release|x86.Build.0 = Release|Any CPU
+		{F8979A69-AB0D-477C-B4EB-C6D388F78F1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8979A69-AB0D-477C-B4EB-C6D388F78F1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8979A69-AB0D-477C-B4EB-C6D388F78F1D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F8979A69-AB0D-477C-B4EB-C6D388F78F1D}.Debug|x86.Build.0 = Debug|Any CPU
+		{F8979A69-AB0D-477C-B4EB-C6D388F78F1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8979A69-AB0D-477C-B4EB-C6D388F78F1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8979A69-AB0D-477C-B4EB-C6D388F78F1D}.Release|x86.ActiveCfg = Release|Any CPU
+		{F8979A69-AB0D-477C-B4EB-C6D388F78F1D}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -635,6 +645,7 @@ Global
 		{9B1982F1-0C33-4440-8FB4-6DCDD6E037C4} = {AEDB1D45-FD17-4966-BCD9-1A765C65F0DB}
 		{C3659C8E-F87D-4CDE-AC8C-5318BD9D52AC} = {AEDB1D45-FD17-4966-BCD9-1A765C65F0DB}
 		{FBA2782D-FF78-4ED7-B564-4F8B38E38C7B} = {AEDB1D45-FD17-4966-BCD9-1A765C65F0DB}
+		{F8979A69-AB0D-477C-B4EB-C6D388F78F1D} = {AEDB1D45-FD17-4966-BCD9-1A765C65F0DB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B71D1B38-C041-4707-8E22-1E08D97D82D9}
