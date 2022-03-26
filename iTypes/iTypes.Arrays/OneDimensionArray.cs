@@ -16,6 +16,7 @@ public static class OneDimensionArray
     public static void AccessToArrayViaIndex()
     {
         Console.WriteLine("1-D Arrays: \r\n");
+        
         // Access to array via index :
         array01[0] = 7;      //{ 7, 0, 0, 0, 0 };
         array02[4] = 7;      //{ 0, 1, 2, 3, 7 };

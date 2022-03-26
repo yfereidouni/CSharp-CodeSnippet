@@ -8,4 +8,10 @@ using iTypes.Arrays;
 
 //MultiDimensionArray.AccessToArrayViaIndex();
 
-JaggedArray.AccessToArrayViaIndex();
+//JaggedArray.AccessToArrayViaIndex();
+
+//ArrayClass:
+//ArrayClass.ArrayClassSample();
+//ArrayClass.CloneArray();
+//ArrayClass.SortedArray();
+ArrayClass.SortedArrayWithIComparable();

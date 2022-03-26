@@ -124,11 +124,26 @@ public static class JaggedArray
     
     public static void AccessToArrayViaIndex()
     {
+        _Jagged_1D_Array01[0] = new int[] { 1, 2, 3, 4 };
+        _Jagged_1D_Array01[1] = new int[] { 11, 34 };
+
         Console.WriteLine("Jagged 1-D Arrays: \r\n");
-        Console.WriteLine($"Jagged 1-D Array03 Dimension is : {_Jagged_1D_Array01.Length}");
-        Console.WriteLine($"Jagged 1-D Array03 Dimension is : {_Jagged_1D_Array02.Length}");
-        Console.WriteLine($"Jagged 1-d Array03 Dimension is : {_Jagged_1D_Array03.Length}");
+        for (int n = 0; n < _Jagged_1D_Array01.Length; n++)
+        {
+
+            // Print the row number
+            System.Console.Write("Row({0}): ", n);
+
+            for (int k = 0; k < _Jagged_1D_Array01[n].Length; k++)
+            {
+
+                // Print the elements in the row
+                System.Console.Write("{0} ", _Jagged_1D_Array01[n][k]);
+            }
+            System.Console.WriteLine();
+        }
         Console.WriteLine("\r\n----------------------------"); 
+
         Console.WriteLine("Jagged 2-D Arrays: \r\n");
         Console.WriteLine($"Jagged 2-D Array03 Dimension is : {_Jagged_2D_Array01.Length}");
         Console.WriteLine($"Jagged 2-D Array03 Dimension is : {_Jagged_2D_Array02.Length}");
@@ -139,5 +154,13 @@ public static class JaggedArray
         Console.WriteLine($"Jagged 3-D Array03 Dimension is : {_Jagged_3D_Array02.Length}");
         Console.WriteLine($"Jagged 3-d Array03 Dimension is : {_Jagged_3D_Array03.Length}");
         Console.WriteLine("\r\n----------------------------");
+
+        for (int i = 0; i < _Jagged_3D_Array02.Length; i++)
+        {
+            for (int j = 0; j < _Jagged_3D_Array02[i].GetUpperBound(0); j++)
+            {
+                
+            }
+        }
     }
 }
