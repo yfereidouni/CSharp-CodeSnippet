@@ -78,22 +78,25 @@ namespace iTypes.Arrays
                 return $"Person : {Id} | {FirstName}";
             }
         }
-        //public class FirstNameSortAsc : IComparer<Person>
+        public class FirstNameSortAsc : IComparer<Person>
+        {
+            public int Compare(Person? x, Person? y)
+            {
+                return string.Compare(x?.FirstName, y?.FirstName);
+            }
+        }
+        //public class FirstNameSortDes : IComparer<Person>
         //{
         //    public int Compare(Person? x, Person? y)
         //    {
         //        if (x.FirstName == y.FirstName)
-        //        {
         //            return 0;
-        //        }
-        //        else if (x.FirstName > y.FirstName)
-        //        {
-        //            return 1;
-        //        }
-        //        else
-        //        {
+
+        //        if (x.FirstName > y.FirstName)
         //            return -1;
-        //        }
+                
+        //        if (x.FirstName < y.FirstName)
+        //            return 1;
         //    }
         //}
         public static void SortedArrayWithIComparable()
@@ -118,6 +121,17 @@ namespace iTypes.Arrays
             Array.Sort(myPersonArray); // Sorting array
 
             Console.WriteLine("Sorted:");
+
+            foreach (var item in myPersonArray)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine("----------------------------------");
+
+            Array.Sort(myPersonArray, new FirstNameSortAsc());
+
+            Console.WriteLine("Sorted by FirstName:");
 
             foreach (var item in myPersonArray)
             {
