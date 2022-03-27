@@ -21,5 +21,9 @@ ArrayClass.CloneArray();
 ArrayClass.SortedArray();
 ArrayClass.SortedArrayWithIComparable();
 
-*/
+///IEnumerable and IEnumarator -----------------------------------------
 Enumeration.TestEnumeration();
+
+*/
+///Hat & Range ---------------------------------------------------------
+HatAndRange.HatAndRangeSample();
