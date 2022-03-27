@@ -82,61 +82,68 @@ namespace iTypes.Arrays
         {
             public int Compare(Person? x, Person? y)
             {
-                return string.Compare(x?.FirstName, y?.FirstName);
+                if (string.Compare(x?.FirstName, y?.FirstName) == 0)
+                    return 0;
+                else if (string.Compare(x?.FirstName, y?.FirstName) < 0)
+                    return -1;
+                else
+                    return 1;
             }
         }
-        //public class FirstNameSortDes : IComparer<Person>
-        //{
-        //    public int Compare(Person? x, Person? y)
-        //    {
-        //        if (x.FirstName == y.FirstName)
-        //            return 0;
+        public class FirstNameSortDesc : IComparer<Person>
+        {
+            public int Compare(Person? x, Person? y)
+            {
+                if (string.Compare(x?.FirstName, y?.FirstName) == 0)
+                    return 0;
+                else if (string.Compare(x?.FirstName, y?.FirstName) < 0)
+                    return 1;
+                else
+                    return -1;
+            }
+        }
 
-        //        if (x.FirstName > y.FirstName)
-        //            return -1;
-                
-        //        if (x.FirstName < y.FirstName)
-        //            return 1;
-        //    }
-        //}
         public static void SortedArrayWithIComparable()
         {
             Person[] myPersonArray = new Person[] {
                 new Person{ Id=9,FirstName="Yasser"},
                 new Person{ Id=2,FirstName="Reza"},
-                new Person{ Id=7,FirstName="Majid"},
-                new Person{ Id=1,FirstName="Hamed"},
-                new Person{ Id=5,FirstName="Kazem"},
-                new Person{ Id=4,FirstName="Soroush"},
+                new Person{ Id=7,FirstName="Ahmad"},
             };
-
+            
+            Console.WriteLine("----------------------------------");
             Console.WriteLine("Unsorted:");
             foreach (var item in myPersonArray)
             {
                 Console.WriteLine(item);
             }
-
-            Console.WriteLine("----------------------------------");
-
+            Console.WriteLine();
             Array.Sort(myPersonArray); // Sorting array
-
-            Console.WriteLine("Sorted:");
-
+            Console.WriteLine("----------------------------------");
+            Console.WriteLine("Sorted by ID:");
             foreach (var item in myPersonArray)
             {
                 Console.WriteLine(item);
             }
 
-            Console.WriteLine("----------------------------------");
-
+            Console.WriteLine();
             Array.Sort(myPersonArray, new FirstNameSortAsc());
-
-            Console.WriteLine("Sorted by FirstName:");
+            Console.WriteLine("----------------------------------");
+            Console.WriteLine("Sorted by FirstName Asc:");
+            foreach (var item in myPersonArray)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine();
+            Array.Sort(myPersonArray, new FirstNameSortDesc());
+            Console.WriteLine("----------------------------------");
+            Console.WriteLine("Sorted by FirstName Desc:");
 
             foreach (var item in myPersonArray)
             {
                 Console.WriteLine(item);
             }
         }
+
     }
 }
