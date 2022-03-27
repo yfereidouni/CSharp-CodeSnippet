@@ -22,8 +22,10 @@ namespace iLambdaExpressions
 
         static void Main(string[] args)
         {
-            
-            LambdaExpressions();
+
+            //LambdaExpressions();
+
+            LambdaExpressionSamples.MyLambdaExpressions();
 
             Console.ReadKey();
         }
@@ -170,8 +172,6 @@ namespace iLambdaExpressions
             //    Console.WriteLine(item);
             //}
         }
-        
-
     }
 }
 
