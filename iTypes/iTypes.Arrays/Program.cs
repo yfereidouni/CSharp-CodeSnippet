@@ -2,6 +2,7 @@
 
 using iTypes.Arrays;
 
+/*
 ///OneDimensionArray-Array ---------------------------------------------
 OneDimensionArray.AccessToArrayViaIndex();
 
@@ -19,3 +20,6 @@ ArrayClass.ArrayClassSample();
 ArrayClass.CloneArray();
 ArrayClass.SortedArray();
 ArrayClass.SortedArrayWithIComparable();
+
+*/
+Enumeration.TestEnumeration();
