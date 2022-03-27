@@ -2,28 +2,36 @@
 
 using iTypes.Arrays;
 
-/*
+
 ///OneDimensionArray-Array ---------------------------------------------
-OneDimensionArray.AccessToArrayViaIndex();
+//OneDimensionArray.AccessToArrayViaIndex();
 
 ///TwoDimensionArray-Array ---------------------------------------------
-TwoDimensionArray.AccessToArrayViaIndex();
+//TwoDimensionArray.AccessToArrayViaIndex();
 
 ///MultiDimension-Array ------------------------------------------------
-MultiDimensionArray.AccessToArrayViaIndex();
+//MultiDimensionArray.AccessToArrayViaIndex();
 
 ///JaggedArray ---------------------------------------------------------
-JaggedArray.AccessToArrayViaIndex();
+//JaggedArray.AccessToArrayViaIndex();
 
 ///ArrayClass ----------------------------------------------------------
-ArrayClass.ArrayClassSample();
-ArrayClass.CloneArray();
-ArrayClass.SortedArray();
-ArrayClass.SortedArrayWithIComparable();
+//ArrayClass.ArrayClassSample();
+//ArrayClass.CloneArray();
+//ArrayClass.SortedArray();
+//ArrayClass.SortedArrayWithIComparable();
 
 ///IEnumerable and IEnumarator -----------------------------------------
-Enumeration.TestEnumeration();
+//Enumeration.TestEnumeration();
 
-*/
+
 ///Hat & Range ---------------------------------------------------------
-HatAndRange.HatAndRangeSample();
+//HatAndRange.HatSample();
+//HatAndRange.RangeSample();
+//HatAndRange.HatAndRangeSample();
+
+///Array Pool ----------------------------------------------------------
+//ArrayPools.ArrayPoolSample();
+
+///Bit Array -----------------------------------------------------------
+BitArrays.BitArraySample();
