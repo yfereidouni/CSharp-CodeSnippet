@@ -2,16 +2,20 @@
 
 using iTypes.Arrays;
 
-//OneDimensionArray.AccessToArrayViaIndex();
+///OneDimensionArray-Array ---------------------------------------------
+OneDimensionArray.AccessToArrayViaIndex();
 
-//TwoDimensionArray.AccessToArrayViaIndex();
+///TwoDimensionArray-Array ---------------------------------------------
+TwoDimensionArray.AccessToArrayViaIndex();
 
-//MultiDimensionArray.AccessToArrayViaIndex();
+///MultiDimension-Array ------------------------------------------------
+MultiDimensionArray.AccessToArrayViaIndex();
 
-//JaggedArray.AccessToArrayViaIndex();
+///JaggedArray ---------------------------------------------------------
+JaggedArray.AccessToArrayViaIndex();
 
-//ArrayClass:
-//ArrayClass.ArrayClassSample();
-//ArrayClass.CloneArray();
-//ArrayClass.SortedArray();
+///ArrayClass ----------------------------------------------------------
+ArrayClass.ArrayClassSample();
+ArrayClass.CloneArray();
+ArrayClass.SortedArray();
 ArrayClass.SortedArrayWithIComparable();
