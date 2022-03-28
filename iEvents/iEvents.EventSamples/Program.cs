@@ -1,12 +1,15 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-
 using iEvents.EventSamples;
 
-Teacher teacher = new Teacher("Yasser");
 
-TeacherNameChangeLogger tl1 = new TeacherNameChangeLogger();
+ProcessBusinessLogic bl = new ProcessBusinessLogic();
+bl.ProcessCompleted += bl_ProcessCompleted; // register with an event
+bl.StartProcess();
+bl.ProcessCompleted -= bl_ProcessCompleted; // Unregister with an event
 
-teacher.TeacherNameChange += tl1.Log;
-
-teacher.SetName("Meysam");
+// event handler
+static void bl_ProcessCompleted()
+{
+    Console.WriteLine("Process Completed!");
+}
