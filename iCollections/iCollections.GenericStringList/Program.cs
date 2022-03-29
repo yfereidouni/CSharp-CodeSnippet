@@ -4,21 +4,24 @@ using iCollections.GenericStringList;
 
 ListSample ls = new ListSample();
 
-ls.PrintCapacity();
+ls.CountAndCapacity();
 ls.AddMember("Yasser");
-ls.PrintCapacity();
+ls.CountAndCapacity();
 //ls.Ensure();
 ls.Trim();
-ls.PrintCapacity();
+ls.CountAndCapacity();
 
 ls.AddMember("Shervin");
 ls.AddMember("Soroush");
 //ls.AddMember("Majid");
 //ls.AddMember("Kazem");
 
-ls.PrintCapacity();
+ls.CountAndCapacity();
 ls.Trim();
-ls.PrintCapacity();
+ls.CountAndCapacity();
 
 ls.Ensure();
-ls.PrintCapacity();
+ls.CountAndCapacity();
+
+//You can just read the items. Changes is not possible.
+var readOnlyList = ls.GetReadOnly();
