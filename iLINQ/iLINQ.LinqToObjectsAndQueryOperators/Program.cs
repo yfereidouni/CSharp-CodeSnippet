@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace iLinq_LinqToObjectsAndQueryOperators
+namespace iLINQ.LinqToObjectsAndQueryOperators
 {
     class Program
     {
