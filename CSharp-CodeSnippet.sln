@@ -149,29 +149,29 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iEvents.MicrosoftEventPatte
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "iCollections", "iCollections", "{43D6648F-C24A-4AA2-AAEF-0851CFB2D0EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iCollections.GenericStringList", "iCollections\iCollections.GenericStringList\iCollections.GenericStringList.csproj", "{17E0D452-E631-4953-9D3C-451690B94552}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iCollections.GenericStringList", "iCollections\iCollections.GenericStringList\iCollections.GenericStringList.csproj", "{17E0D452-E631-4953-9D3C-451690B94552}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iCollections.Queues", "iCollections\iCollections.Queues\iCollections.Queues.csproj", "{9686F6AF-EF58-4E21-950F-0622C5BA5040}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iCollections.Queues", "iCollections\iCollections.Queues\iCollections.Queues.csproj", "{9686F6AF-EF58-4E21-950F-0622C5BA5040}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iCollections.Stacks", "iCollections\iCollections.Stacks\iCollections.Stacks.csproj", "{39A9C1FA-1AB1-4056-826A-C2C14DF285BC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iCollections.Linkedlists", "iCollections\iCollections.Linkedlists\iCollections.Linkedlists.csproj", "{2FC56E32-CC28-4199-ADB4-8AEF15D916F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iCollections.Sortedlists", "iCollections\iCollections.Sortedlists\iCollections.Sortedlists.csproj", "{3E4BB017-FD9D-4AFF-881C-35EFB2B92AA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iCollections.Sortedlists", "iCollections\iCollections.Sortedlists\iCollections.Sortedlists.csproj", "{3E4BB017-FD9D-4AFF-881C-35EFB2B92AA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iCollections.Dictionaries", "iCollections\iCollections.Dictionaries\iCollections.Dictionaries.csproj", "{6B963F31-29B2-4872-B316-752EEAD708B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iCollections.Dictionaries", "iCollections\iCollections.Dictionaries\iCollections.Dictionaries.csproj", "{6B963F31-29B2-4872-B316-752EEAD708B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iCollections.Sets", "iCollections\iCollections.Sets\iCollections.Sets.csproj", "{02D01DA8-78EF-4933-B80D-58FB64A9DC43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iCollections.Sets", "iCollections\iCollections.Sets\iCollections.Sets.csproj", "{02D01DA8-78EF-4933-B80D-58FB64A9DC43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iCollections.Immutables", "iCollections\iCollections.Immutables\iCollections.Immutables.csproj", "{E556BB95-1109-4735-B7D6-BB8BA1787EE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iCollections.Immutables", "iCollections\iCollections.Immutables\iCollections.Immutables.csproj", "{E556BB95-1109-4735-B7D6-BB8BA1787EE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iLINQ.LinqSample", "iLINQ\iLINQ.LinqSample\iLINQ.LinqSample.csproj", "{EAEC440A-5FF2-4710-84BF-4CB109F29E10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iLINQ.LinqSample", "iLINQ\iLINQ.LinqSample\iLINQ.LinqSample.csproj", "{EAEC440A-5FF2-4710-84BF-4CB109F29E10}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iLINQ.LinqToObjectsAndQueryOperators", "iLINQ\iLINQ.LinqToObjectsAndQueryOperators\iLINQ.LinqToObjectsAndQueryOperators.csproj", "{56E0118D-3330-4588-8756-7828E541AE28}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iLINQ.LinqToXML", "iLINQ\iLINQ.LinqToXML\iLINQ.LinqToXML.csproj", "{6F2EE5B4-211F-4BE5-833A-54BF6D9B5FB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iTypes.DateTimes", "iTypes\iTypes.DateTimes\iTypes.DateTimes.csproj", "{7219758B-062A-4E21-8D28-8C91F91A73E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iTypes.DateTimes", "iTypes\iTypes.DateTimes\iTypes.DateTimes.csproj", "{7219758B-062A-4E21-8D28-8C91F91A73E7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iMath", "iMath\iMath.csproj", "{9749BE38-127D-49C2-A2BC-3CAE72F1472F}"
 EndProject
@@ -185,7 +185,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iAttributes.Domain", "iAttr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iAttributes.UI", "iAttributes\src\iAttributes.UI\iAttributes.UI.csproj", "{4FBEC4C9-721B-465D-B08D-DABE23D7BB8B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iAttributes.DomainTests", "iAttributes\tests\iAttributes.Domain\iAttributes.DomainTests\iAttributes.DomainTests.csproj", "{D267B24D-3F48-4D51-AC8E-F612BB3A78FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iAttributes.DomainTests", "iAttributes\tests\iAttributes.Domain\iAttributes.DomainTests\iAttributes.DomainTests.csproj", "{D267B24D-3F48-4D51-AC8E-F612BB3A78FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iAttributes.CustomAttributes", "iAttributes\src\iAttributes.CustomAttributes\iAttributes.CustomAttributes.csproj", "{C66D7150-82B3-4897-BA0D-5FDB68B256AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iAttributes.ReflectionUI", "iAttributes\src\iAttributes.ReflectionUI\iAttributes.ReflectionUI.csproj", "{CE8449F4-C2BB-437D-87DB-CDEA87C4A959}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iAttributes.DiscoveringMetadata", "iAttributes\src\iAttributes.DiscoveringMetadata\iAttributes.DiscoveringMetadata.csproj", "{736CF2AB-21A4-4BEF-B58C-11C9C9D92CF0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -795,6 +801,30 @@ Global
 		{D267B24D-3F48-4D51-AC8E-F612BB3A78FA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D267B24D-3F48-4D51-AC8E-F612BB3A78FA}.Release|x86.ActiveCfg = Release|Any CPU
 		{D267B24D-3F48-4D51-AC8E-F612BB3A78FA}.Release|x86.Build.0 = Release|Any CPU
+		{C66D7150-82B3-4897-BA0D-5FDB68B256AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C66D7150-82B3-4897-BA0D-5FDB68B256AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C66D7150-82B3-4897-BA0D-5FDB68B256AC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C66D7150-82B3-4897-BA0D-5FDB68B256AC}.Debug|x86.Build.0 = Debug|Any CPU
+		{C66D7150-82B3-4897-BA0D-5FDB68B256AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C66D7150-82B3-4897-BA0D-5FDB68B256AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C66D7150-82B3-4897-BA0D-5FDB68B256AC}.Release|x86.ActiveCfg = Release|Any CPU
+		{C66D7150-82B3-4897-BA0D-5FDB68B256AC}.Release|x86.Build.0 = Release|Any CPU
+		{CE8449F4-C2BB-437D-87DB-CDEA87C4A959}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE8449F4-C2BB-437D-87DB-CDEA87C4A959}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE8449F4-C2BB-437D-87DB-CDEA87C4A959}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CE8449F4-C2BB-437D-87DB-CDEA87C4A959}.Debug|x86.Build.0 = Debug|Any CPU
+		{CE8449F4-C2BB-437D-87DB-CDEA87C4A959}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE8449F4-C2BB-437D-87DB-CDEA87C4A959}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE8449F4-C2BB-437D-87DB-CDEA87C4A959}.Release|x86.ActiveCfg = Release|Any CPU
+		{CE8449F4-C2BB-437D-87DB-CDEA87C4A959}.Release|x86.Build.0 = Release|Any CPU
+		{736CF2AB-21A4-4BEF-B58C-11C9C9D92CF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{736CF2AB-21A4-4BEF-B58C-11C9C9D92CF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{736CF2AB-21A4-4BEF-B58C-11C9C9D92CF0}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{736CF2AB-21A4-4BEF-B58C-11C9C9D92CF0}.Debug|x86.Build.0 = Debug|Any CPU
+		{736CF2AB-21A4-4BEF-B58C-11C9C9D92CF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{736CF2AB-21A4-4BEF-B58C-11C9C9D92CF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{736CF2AB-21A4-4BEF-B58C-11C9C9D92CF0}.Release|x86.ActiveCfg = Release|Any CPU
+		{736CF2AB-21A4-4BEF-B58C-11C9C9D92CF0}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -867,6 +897,9 @@ Global
 		{E9CC1D09-A3C7-4D3B-8639-B7328B7852F7} = {657A204B-64EE-4AE1-A52E-7E572E0CE449}
 		{4FBEC4C9-721B-465D-B08D-DABE23D7BB8B} = {657A204B-64EE-4AE1-A52E-7E572E0CE449}
 		{D267B24D-3F48-4D51-AC8E-F612BB3A78FA} = {C974DA5D-C77F-4124-A752-0AE729422AEC}
+		{C66D7150-82B3-4897-BA0D-5FDB68B256AC} = {657A204B-64EE-4AE1-A52E-7E572E0CE449}
+		{CE8449F4-C2BB-437D-87DB-CDEA87C4A959} = {657A204B-64EE-4AE1-A52E-7E572E0CE449}
+		{736CF2AB-21A4-4BEF-B58C-11C9C9D92CF0} = {657A204B-64EE-4AE1-A52E-7E572E0CE449}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B71D1B38-C041-4707-8E22-1E08D97D82D9}

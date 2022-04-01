@@ -1,8 +1,10 @@
-﻿using System.Diagnostics;
+﻿using iAttributes.CustomAttributes;
+using System.Diagnostics;
 using System.Reflection;
 
 namespace iAttributes.Domain;
 
+[AutoScanForDependency]
 public class PersonPrinter
 {
     private readonly Person person;
