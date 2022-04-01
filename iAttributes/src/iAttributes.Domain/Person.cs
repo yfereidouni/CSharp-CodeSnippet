@@ -13,9 +13,19 @@ namespace iAttributes.Domain;
 public class Person
 {
     [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-    public string FirstName { get; set; }
+    public string FirstName { get; set; } = "Yasser";
     [Required]
     [CodeChangeHistory("Yasser Fereidouni", isBug: false, Description = "Use Attribute for your properties")]
-    public string LastName { get; set; }
+    public string LastName { get; set; } = "Fereidouni";
     public int Age { get; set; }
+
+    public void Print()
+    {
+        Console.WriteLine($"{this.FirstName} {this.LastName}");
+    }
+
+    public void InputPrint(string message)
+    {
+        Console.WriteLine($"{this.FirstName} {this.LastName} --- {message}");
+    }
 }
