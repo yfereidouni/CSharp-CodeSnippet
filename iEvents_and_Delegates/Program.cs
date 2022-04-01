@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -20,21 +19,6 @@ namespace iEvents_and_Delegates
             downloadHelper.FileDownloaded += notifiService.OnFileDownloadedNotification;
 
             downloadHelper.Download(file);
-        }
-    }
-
-    public class UnpackService
-    {
-        public void OnFileDownloaded(object source, FileEventArgs e)
-        {
-            Console.WriteLine("Service 1: Unpacking the file... --> " + e.File.Title);
-        }
-    }
-    public class NotificationService
-    {
-        public void OnFileDownloadedNotification(object source, EventArgs e)
-        {
-            Console.WriteLine("Service 2: Notifcation was send to all receivers...");
         }
     }
 }
