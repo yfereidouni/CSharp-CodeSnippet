@@ -10,15 +10,15 @@
     public class CodeChangeHistoryAttribute : Attribute
     {
         private readonly string author;
-        private readonly bool isBug;
 
         public string Description { get; set; }
         public DateTime ChangeDateTime { get; set; }
+        public bool IsBug { get; set; }
 
         public CodeChangeHistoryAttribute(string author, bool isBug = false)
         {
             this.author = author;
-            this.isBug = isBug;
+            this.IsBug = isBug;
         }
     }
 }

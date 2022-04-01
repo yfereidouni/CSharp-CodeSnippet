@@ -8,11 +8,11 @@ var intPrinter = new MetadataPrinter(typeof(int));
 
 var personPrinter = new MetadataPrinter(typeof(Person));
 
-intPrinter.Print();
-Console.WriteLine("Press any key to print Person metadata");
-Console.ReadLine();
-Console.Clear();
+//intPrinter.Print();
+//Console.WriteLine("Press any key to print Person metadata");
+//Console.ReadLine();
+//Console.Clear();
 
 personPrinter.Print();
-Console.WriteLine("Press any key to exit");
+//Console.WriteLine("Press any key to exit");
 Console.ReadLine();

@@ -12,7 +12,7 @@ namespace iAttributes.Domain;
 
 public class Person
 {
-    [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+    [DebuggerBrowsable(DebuggerBrowsableState.Collapsed)]
     public string FirstName { get; set; } = "Yasser";
     [Required]
     [CodeChangeHistory("Yasser Fereidouni", isBug: false, Description = "Use Attribute for your properties")]

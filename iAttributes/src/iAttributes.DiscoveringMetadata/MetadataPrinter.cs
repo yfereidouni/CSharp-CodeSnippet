@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using iAttributes.CustomAttributes;
+using System.Reflection;
 
 namespace iAttributes.DiscoveringMetadata
 {
@@ -21,6 +18,7 @@ namespace iAttributes.DiscoveringMetadata
             PrintMethodInfo();
             PrintPropertyInfo();
             PrintFieldInfo();
+            PrintCodeChangeHistory();
         }
 
         private void PrintFieldInfo()
@@ -74,6 +72,17 @@ namespace iAttributes.DiscoveringMetadata
             Console.WriteLine($"IsEnum: {type.IsEnum}");
             Console.WriteLine($"IsPublic: {type.IsPublic}");
 
+        }
+
+        public void PrintCodeChangeHistory()
+        {
+            Console.WriteLine($"\r\n***** Change history of ({type.Name}) *****\r\n");
+
+            var attributes = type.GetCustomAttributes(typeof(CodeChangeHistoryAttribute));
+            foreach (CodeChangeHistoryAttribute item in attributes)
+            {
+                Console.WriteLine($"Change DateTime: {item.ChangeDateTime}\t\tIsBug Fix: {item.IsBug} {item.Description}");
+            }
         }
     }
 }
