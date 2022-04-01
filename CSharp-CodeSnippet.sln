@@ -17,8 +17,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iRandom", "iRandom\iRandom.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iRegularExpression", "iRegularExpression\iRegularExpression.csproj", "{75C2B46A-62E4-4CE6-B0C5-C0B9B8A1D393}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iDateTime", "iDateTime\iDateTime.csproj", "{61C3B423-5FB4-4434-A587-01CD3037EB09}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iGarbageCollector", "iGarbageCollection\iGarbageCollector.csproj", "{CD2D758F-AA5D-4786-937D-8D64CEB2A5F6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iEvents_and_Delegates", "iEvents_and_Delegates\iEvents_and_Delegates.csproj", "{607F9E66-8ED8-4DFF-9D6F-B60F4F6AAA89}"
@@ -175,6 +173,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iLINQ.LinqToObjectsAndQuery
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iLINQ.LinqToXML", "iLINQ\iLINQ.LinqToXML\iLINQ.LinqToXML.csproj", "{6F2EE5B4-211F-4BE5-833A-54BF6D9B5FB7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iTypes.DateTimes", "iTypes\iTypes.DateTimes\iTypes.DateTimes.csproj", "{7219758B-062A-4E21-8D28-8C91F91A73E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -239,14 +239,6 @@ Global
 		{75C2B46A-62E4-4CE6-B0C5-C0B9B8A1D393}.Release|Any CPU.Build.0 = Release|Any CPU
 		{75C2B46A-62E4-4CE6-B0C5-C0B9B8A1D393}.Release|x86.ActiveCfg = Release|Any CPU
 		{75C2B46A-62E4-4CE6-B0C5-C0B9B8A1D393}.Release|x86.Build.0 = Release|Any CPU
-		{61C3B423-5FB4-4434-A587-01CD3037EB09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{61C3B423-5FB4-4434-A587-01CD3037EB09}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{61C3B423-5FB4-4434-A587-01CD3037EB09}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{61C3B423-5FB4-4434-A587-01CD3037EB09}.Debug|x86.Build.0 = Debug|Any CPU
-		{61C3B423-5FB4-4434-A587-01CD3037EB09}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{61C3B423-5FB4-4434-A587-01CD3037EB09}.Release|Any CPU.Build.0 = Release|Any CPU
-		{61C3B423-5FB4-4434-A587-01CD3037EB09}.Release|x86.ActiveCfg = Release|Any CPU
-		{61C3B423-5FB4-4434-A587-01CD3037EB09}.Release|x86.Build.0 = Release|Any CPU
 		{CD2D758F-AA5D-4786-937D-8D64CEB2A5F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CD2D758F-AA5D-4786-937D-8D64CEB2A5F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD2D758F-AA5D-4786-937D-8D64CEB2A5F6}.Debug|x86.ActiveCfg = Debug|Any CPU
@@ -759,6 +751,14 @@ Global
 		{6F2EE5B4-211F-4BE5-833A-54BF6D9B5FB7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6F2EE5B4-211F-4BE5-833A-54BF6D9B5FB7}.Release|x86.ActiveCfg = Release|Any CPU
 		{6F2EE5B4-211F-4BE5-833A-54BF6D9B5FB7}.Release|x86.Build.0 = Release|Any CPU
+		{7219758B-062A-4E21-8D28-8C91F91A73E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7219758B-062A-4E21-8D28-8C91F91A73E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7219758B-062A-4E21-8D28-8C91F91A73E7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7219758B-062A-4E21-8D28-8C91F91A73E7}.Debug|x86.Build.0 = Debug|Any CPU
+		{7219758B-062A-4E21-8D28-8C91F91A73E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7219758B-062A-4E21-8D28-8C91F91A73E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7219758B-062A-4E21-8D28-8C91F91A73E7}.Release|x86.ActiveCfg = Release|Any CPU
+		{7219758B-062A-4E21-8D28-8C91F91A73E7}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -825,6 +825,7 @@ Global
 		{EAEC440A-5FF2-4710-84BF-4CB109F29E10} = {B8D118B2-8D9B-4AEC-A4A4-C9422F179310}
 		{56E0118D-3330-4588-8756-7828E541AE28} = {B8D118B2-8D9B-4AEC-A4A4-C9422F179310}
 		{6F2EE5B4-211F-4BE5-833A-54BF6D9B5FB7} = {B8D118B2-8D9B-4AEC-A4A4-C9422F179310}
+		{7219758B-062A-4E21-8D28-8C91F91A73E7} = {AEDB1D45-FD17-4966-BCD9-1A765C65F0DB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B71D1B38-C041-4707-8E22-1E08D97D82D9}
