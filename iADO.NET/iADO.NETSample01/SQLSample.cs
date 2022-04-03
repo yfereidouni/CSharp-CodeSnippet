@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -216,6 +217,80 @@ namespace iADO.NETSample01
             int result = command.ExecuteNonQuery();
 
             Console.WriteLine($"Affected row(s) is: {result}");
+        }
+
+        public void AddTransactional(string categoryName, int categoryId, string productName, int price)
+        {
+            SqlTransaction transaction = null;
+
+            SqlCommand addCategory = new SqlCommand
+            {
+                Connection = connection,
+                CommandType = CommandType.Text,
+                CommandText = $"INSERT INTO Categories (CategoryName) Values('{categoryName}')",
+            };
+
+            SqlCommand addProduct = new SqlCommand
+            {
+                Connection = connection,
+                CommandType = CommandType.Text,
+                CommandText = $"INSERT INTO Products (CategoryId,ProductName,Price) Values({categoryId},'{productName}',{price})",
+            };
+            try
+            {
+                connection.Open();
+                transaction = connection.BeginTransaction();
+                int result = addCategory.ExecuteNonQuery();
+                result += addProduct.ExecuteNonQuery();
+                transaction.Commit();
+                Console.WriteLine($"Affected row(s) is: {result}");
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine(ex.Message);
+                transaction.Rollback();
+            }
+
+        }
+
+        public void BulkInsert()
+        {
+            SqlCommand command = new SqlCommand
+            {
+                Connection = connection,
+                CommandType = CommandType.Text,
+            };
+            connection.Open();
+            Stopwatch stopwatch = Stopwatch.StartNew();
+            for (int i = 0; i < 1000; i++)
+            {
+                command.CommandText = $"INSERT INTO BulkTable (Name, [Desc]) Values ('Name {i}', 'Desc {i}')";
+                command.ExecuteNonQuery();
+            }
+            stopwatch.Stop();
+            Console.WriteLine(stopwatch.ElapsedMilliseconds);
+        }
+
+        public void SqlBulkCopy()
+        {
+            
+            SqlBulkCopy sqlBulkCopy = new SqlBulkCopy(connection);
+            sqlBulkCopy.DestinationTableName = "BulkTable";
+            connection.Open();
+            Stopwatch stopwatch = Stopwatch.StartNew();
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add(new DataColumn("Name"));
+            dt.Columns.Add(new DataColumn("Desc"));
+            for (int i = 0; i < 1000; i++)
+            {
+                dt.Rows.Add(new object[] { $"Name {i}, Desc {i}" });
+            }
+            sqlBulkCopy.WriteToServer(dt);
+
+            stopwatch.Stop();
+            Console.WriteLine(stopwatch.ElapsedMilliseconds);
         }
     }
 }
