@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ADO.NET
+namespace iADO.NETSample02
 {
     public class Person
     {

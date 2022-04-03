@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace ADO.NET
+namespace iADO.NETSample02
 {
     public class PersonRepository
     {
