@@ -30,7 +30,7 @@ namespace iConcurrencyAndAsynchrony.ThreadSample
             Console.WriteLine($"DashPrinterWorker isAlive after start : {dashPrinterWorker.IsAlive}");
 
         }
-        
+
         public void JoinSample()
         {
             CharPrinter charPrinter = new CharPrinter();
@@ -39,7 +39,7 @@ namespace iConcurrencyAndAsynchrony.ThreadSample
 
             //Join Wait for a process to finishing its work
             dashPrinterWorker.Join(TimeSpan.FromMilliseconds(1));
-            
+
             charPrinter.PrintStar();
         }
 
@@ -50,5 +50,18 @@ namespace iConcurrencyAndAsynchrony.ThreadSample
             dashPrinterWorker.Start();
             charPrinter.PrintStar();
         }
+
+        public void ThreadStateCheck()
+        {
+            CharPrinter charPrinter = new CharPrinter();
+            Thread dashPrinterWorker = new Thread(charPrinter.PrintDash);
+            dashPrinterWorker.Start();
+            
+            Console.WriteLine(dashPrinterWorker.ThreadState);
+            var isBlock = (dashPrinterWorker.ThreadState & ThreadState.WaitSleepJoin) != 0;
+            Console.WriteLine($"\r\ndashPrinterWorker is block ? {isBlock}");
+
+        }
+
     }
 }

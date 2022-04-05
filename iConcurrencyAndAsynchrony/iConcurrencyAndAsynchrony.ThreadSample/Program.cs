@@ -8,4 +8,12 @@ ThreadMethodSamples threadMethodSamples = new ThreadMethodSamples();
 
 //threadMethodSamples.JoinSample();
 
-threadMethodSamples.SleepSample();
+//threadMethodSamples.SleepSample();
+
+//threadMethodSamples.ThreadStateCheck();
+
+//-----------------------------------------------
+
+SharedAndLocalState localState = new SharedAndLocalState();
+localState.Start();
+//localState.SafeCheckSharedState();
