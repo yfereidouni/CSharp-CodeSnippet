@@ -13,7 +13,18 @@ ThreadMethodSamples threadMethodSamples = new ThreadMethodSamples();
 //threadMethodSamples.ThreadStateCheck();
 
 //-----------------------------------------------
-
 SharedAndLocalState localState = new SharedAndLocalState();
-localState.Start();
+//localState.Start();
 //localState.SafeCheckSharedState();
+
+//------------------------------------------------
+ForegroundBackgroundThread thread = new ForegroundBackgroundThread();
+//thread.Start();
+
+//------------------------------------------------
+ThreadPrioritySample threadPriority = new ThreadPrioritySample();
+//threadPriority.Start();
+
+//------------------------------------------------
+ThreadPoolSample threadPoolSample = new ThreadPoolSample();
+threadPoolSample.Start();
