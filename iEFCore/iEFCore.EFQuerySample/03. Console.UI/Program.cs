@@ -12,21 +12,27 @@ CourseStoreDbContext ctx = new CourseStoreDbContext(optionBuilder.Options);
 //foreach (var course in result)
 //    Console.WriteLine($"{course.CourseId} {course.Name} {course.Description} {course.Price} {course.StartDate}");
 
-// Eager Loading : ---------------------------------
-CourseStoreRepository repository = new CourseStoreRepository(ctx);
-//repository.PrintCourseAndTeachers();
-//repository.PrintCourseAndTeachersAndTags_EagerLoading();
-//repository.PrintCourseAndTeachers_ExplicitLoading();
-//repository.CourseShortDTO_SelectLoading();
-//repository.Course_ClientVsServer();
-//repository.PrintOrderedTags_OrderBy();
-//repository.PrintTags_Like();
-//repository.PrintTags_Paging();
+// Queries : ---------------------------------
+CourseStoreQueryRepository queryRepository = new CourseStoreQueryRepository(ctx);
+//queryRepository.PrintCourseAndTeachers();
+//queryRepository.PrintCourseAndTeachersAndTags_EagerLoading();
+//queryRepository.PrintCourseAndTeachers_ExplicitLoading();
+//queryRepository.CourseShortDTO_SelectLoading();
+//queryRepository.Course_ClientVsServer();
+//queryRepository.PrintOrderedTags_OrderBy();
+//queryRepository.PrintTags_Like();
+//queryRepository.PrintTags_Paging();
 
 // Entity State : ----------------------------------
 EntityStatePrinter entityStatePrinter = new EntityStatePrinter(ctx);
-entityStatePrinter.Print_DetachedState();
-entityStatePrinter.Print_AddedState();
-entityStatePrinter.Print_DeletedState();
-entityStatePrinter.Print_UpdatedState();
-entityStatePrinter.Print_UnchangedState();
+//entityStatePrinter.Print_DetachedState();
+//entityStatePrinter.Print_AddedState();
+//entityStatePrinter.Print_DeletedState();
+//entityStatePrinter.Print_UpdatedState();
+//entityStatePrinter.Print_UnchangedState();
+
+// Commands : ---------------------------------
+CourseStoreCommandRepository commandRepository = new CourseStoreCommandRepository (ctx);
+//commandRepository.AddTag($"NewTag-{DateTime.Now.Ticks}");
+//commandRepository.AddCourseWithComment();
+commandRepository.AddCourseWithFullDependencies();

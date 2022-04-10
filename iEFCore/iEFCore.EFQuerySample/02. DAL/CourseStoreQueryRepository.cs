@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace iEFCore.EFQuerySample;
 
-public class CourseStoreRepository
+public class CourseStoreQueryRepository
 {
     private readonly CourseStoreDbContext courseStoreDbContext;
 
-    public CourseStoreRepository(CourseStoreDbContext courseStoreDbContext)
+    public CourseStoreQueryRepository(CourseStoreDbContext courseStoreDbContext)
     {
         this.courseStoreDbContext = courseStoreDbContext;
     }
