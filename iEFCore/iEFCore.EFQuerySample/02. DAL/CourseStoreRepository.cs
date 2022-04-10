@@ -92,4 +92,61 @@ public class CourseStoreRepository
         }
         Console.WriteLine("\r\n".PadRight(100, '-') + "\r\n");
     }
+
+    public void Course_ClientVsServer()
+    {
+        // Client vs Server Evaluation
+        Console.WriteLine("\r\n".PadRight(100, '-') + "\r\n");
+        var result = courseStoreDbContext.Courses.Include(c => c.Tags)
+            .Select(c => new
+            {
+                c.CourseId,
+                c.Name,
+                c.StartDate,
+                Tags = string.Join(',', c.Tags),
+            });
+        foreach (var item in result)
+        {
+            Console.WriteLine($"{item.Name}, {item.Tags}");
+        }
+    }
+
+    public void PrintOrderedTags_OrderBy()
+    {
+        Console.WriteLine("OrderBy Ascending: ");
+        var tagsOrderedByAsc = courseStoreDbContext.Tags.OrderBy(c => c.Name).ToList();
+        foreach (var item in tagsOrderedByAsc)
+        {
+            Console.WriteLine($"{item.TagId}: {item.Name}");
+        }
+
+        Console.WriteLine("\r\nOrderBy Descending: ");
+        var tagsOrderedByDesc = courseStoreDbContext.Tags.OrderByDescending(c => c.Name).ToList();
+        foreach (var item in tagsOrderedByDesc)
+        {
+            Console.WriteLine($"{item.TagId}: {item.Name}");
+        }
+    }
+
+    public void PrintTags_Like()
+    {
+        //FullText-Search
+        Console.WriteLine("Text Search with LIKE: ");
+        var tagsLike = courseStoreDbContext.Tags.Where(c => EF.Functions.Like(c.Name, "%A%")).ToList();
+        foreach (var item in tagsLike)
+        {
+            Console.WriteLine($"{item.TagId}: {item.Name}");
+        }
+    }
+
+    public void PrintTags_Paging()
+    {
+        //Paging with Take and Skip
+        Console.WriteLine("Paging: ");
+        var pagedData = courseStoreDbContext.Tags.Skip(2).Take(2).ToList();
+        foreach (var item in pagedData)
+        {
+            Console.WriteLine($"{item.TagId}: {item.Name}");
+        }
+    }
 }
