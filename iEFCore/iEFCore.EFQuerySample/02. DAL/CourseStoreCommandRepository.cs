@@ -214,4 +214,11 @@ public class CourseStoreCommandRepository
         courseStoreDbContext.SaveChanges();
         Console.WriteLine($"Tag: '{tag.Name}' was deleted");
     }
+    public void DeleteTag_PhysicalDelete_OptimizePerformance(int id)
+    {
+        var tag = new Tag { TagId = id }; // We don't load anything from DB
+        courseStoreDbContext.Remove(tag);
+        courseStoreDbContext.SaveChanges();
+        Console.WriteLine($"Tag was deleted");
+    }
 }
