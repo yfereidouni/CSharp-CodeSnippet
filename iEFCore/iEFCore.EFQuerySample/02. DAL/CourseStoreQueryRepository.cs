@@ -80,7 +80,7 @@ public class CourseStoreQueryRepository
         // Select Loading : 
         Console.WriteLine("\r\nSelect Loading ".PadRight(100, '-') + "\r\n");
         var result = courseStoreDbContext.Courses
-            .Select(c => new CourseShortDTO 
+            .Select(c => new CourseDTO 
             {
                 Id = c.CourseId,
                 Name = c.Name,

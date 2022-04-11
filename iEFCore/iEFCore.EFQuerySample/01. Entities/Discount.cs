@@ -7,4 +7,5 @@ public class Discount
     public Course Course { get; set; }
     public string Name { get; set; }
     public int NewPrice { get; set; }
+    public bool IsDeleted { get; set; }
 }

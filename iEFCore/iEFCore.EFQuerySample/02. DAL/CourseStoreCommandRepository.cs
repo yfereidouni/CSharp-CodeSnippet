@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -124,5 +125,76 @@ public class CourseStoreCommandRepository
         Console.WriteLine("".PadRight(100, '-'));
     }
 
+    public void UpdateTag_ConectedScenario(int tagId, string newName)
+    {
+        var tag = courseStoreDbContext.Tags.Find(tagId);
+        Console.WriteLine($"Tags State : {courseStoreDbContext.Entry(tag).State} | TagsId: {tag.TagId}");
+        tag.Name = newName;
+        Console.WriteLine($"Tags State : {courseStoreDbContext.Entry(tag).State} | TagsId: {tag.TagId}");
+        courseStoreDbContext.SaveChanges();
+        Console.WriteLine($"Tags State : {courseStoreDbContext.Entry(tag).State} | TagsId: {tag.TagId}");
+    }
 
+    public CourseDTO GetCourse(int id)
+    {
+        var result = courseStoreDbContext.Courses.Where(c => c.CourseId == id).Select(c =>
+        new CourseDTO
+        {
+            Id = c.CourseId,
+            Name = c.Name,
+            Description = c.Description,
+        }).FirstOrDefault();
+        return result;
+    }
+
+    public void UpdateCourse_DisconnectedScenario_Way1(CourseDTO dto)
+    {
+        // Specific update command just for updated field
+        var course = courseStoreDbContext.Courses.FirstOrDefault(c => c.CourseId == dto.Id);
+        // course is an attached object
+        course.Description = dto.Description;
+        course.Name = dto.Name;
+        courseStoreDbContext.SaveChanges();
+    }
+
+    public TagDTO GetTag(int id)
+    {
+        var result =  courseStoreDbContext.Tags.Where(c => c.TagId == id).Select(c=> 
+        new TagDTO 
+        {
+            Id= c.TagId,
+            Name= c.Name,
+        }).FirstOrDefault();
+        return result;
+    }
+    
+    public void UpdateTag_DisconnectedScenario_Way2(TagDTO dto)
+    {
+        // Disconnected Entity and Unattached
+        Tag tag = new Tag 
+        {
+            TagId = dto.Id,
+            Name = dto.Name,
+        };
+        // Become attached and modified state
+        courseStoreDbContext.Update(tag);
+        courseStoreDbContext.SaveChanges(true);
+    }
+
+    public void DeleteCourse(int id)
+    {
+        var course = courseStoreDbContext.Courses.SingleOrDefault(c => c.CourseId == id);
+        course.IsDeleted = true;
+        courseStoreDbContext.SaveChanges();
+    }
+
+    public void DisplayAllCourse()
+    {
+        var courses = courseStoreDbContext.Courses.ToList();
+        //var courses = courseStoreDbContext.Courses.IgnoreQueryFilters().ToList(); // IgnoreQueryFilters
+        foreach (var course in courses)
+        {
+            Console.WriteLine($"{course.CourseId} | {course.Name} | {course.IsDeleted}");
+        }
+    }
 }

@@ -17,4 +17,5 @@ public class Course
     public ICollection<Tag> Tags { get; set; }
     public ICollection<Comment> Comments { get; set; }
     public Discount Discount { get; set; }
+    public bool IsDeleted { get; set; } // For Soft Delete
 }

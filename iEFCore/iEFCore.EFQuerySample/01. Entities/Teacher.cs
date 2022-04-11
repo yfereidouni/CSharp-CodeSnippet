@@ -6,4 +6,5 @@ public class Teacher
     public string FirstName { get; set; }
     public string LastName { get; set; }
     public ICollection<CourseTeachers> CourseTeachers { get; set; }
+    public bool IsDeleted { get; set; }
 }

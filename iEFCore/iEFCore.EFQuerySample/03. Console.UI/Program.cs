@@ -35,4 +35,24 @@ EntityStatePrinter entityStatePrinter = new EntityStatePrinter(ctx);
 CourseStoreCommandRepository commandRepository = new CourseStoreCommandRepository (ctx);
 //commandRepository.AddTag($"NewTag-{DateTime.Now.Ticks}");
 //commandRepository.AddCourseWithComment();
-commandRepository.AddCourseWithFullDependencies();
+//commandRepository.AddCourseWithFullDependencies();
+//commandRepository.UpdateTag_ConectedScenario(1, "ASP.NET Core MVC");
+
+/// Update using Discounected Scenario ----------------------------------
+/// Way-1:
+//var courseDTO = commandRepository.GetCourse(1);
+/// Show Web Page
+//Console.WriteLine($"{courseDTO.Id} | {courseDTO.Name} | {courseDTO.Description}");
+/// Update some fields
+//courseDTO.Description = "Updated description for ASP.NET Course (Disconected)";
+//commandRepository.UpdateCourse_DisconnectedScenario_Way1(courseDTO);
+///----------------------------------------------------------------------
+/// Way-2:
+//var tagDTO = commandRepository.GetTag(1);
+//tagDTO.Name = tagDTO.Name + " By YFereidouni";
+//commandRepository.UpdateTag_DisconnectedScenario_Way2(tagDTO);
+///----------------------------------------------------------------------
+
+// Remove : -------------------------------------------------------------
+//commandRepository.DeleteCourse(1);
+commandRepository.DisplayAllCourse();

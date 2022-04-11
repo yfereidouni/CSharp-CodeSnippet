@@ -27,8 +27,14 @@ public class CourseStoreDbContext : DbContext
     #region Methods
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<Course>().HasQueryFilter(c => !c.IsDeleted);
+        modelBuilder.Entity<Tag>().HasQueryFilter(c => !c.IsDeleted);
+        modelBuilder.Entity<Teacher>().HasQueryFilter(c => !c.IsDeleted);
+        modelBuilder.Entity<Comment>().HasQueryFilter(c => !c.IsDeleted);
+        modelBuilder.Entity<Discount>().HasQueryFilter(c => !c.IsDeleted);
         base.OnModelCreating(modelBuilder);
     }
+
     #endregion
 
 }

@@ -9,4 +9,5 @@ public class Comment
     public string CommentText { get; set; }
     public int StarCount { get; set; }
     public bool IsApproved { get; set; }
+    public bool IsDeleted { get; set; }
 }
