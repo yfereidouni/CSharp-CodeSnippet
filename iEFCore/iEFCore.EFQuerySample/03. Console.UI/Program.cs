@@ -54,5 +54,12 @@ CourseStoreCommandRepository commandRepository = new CourseStoreCommandRepositor
 ///----------------------------------------------------------------------
 
 // Remove : -------------------------------------------------------------
-//commandRepository.DeleteCourse(1);
-commandRepository.DisplayAllCourse();
+//commandRepository.DisplayAllCourse();
+//Console.WriteLine("------------------------------");
+//commandRepository.DeleteCourse_SoftDelete(1);
+//commandRepository.DisplayAllCourse();
+
+commandRepository.DisplayAllTags();
+Console.WriteLine("------------------------------");
+commandRepository.DeleteTag_PhysicalDelete(7);
+commandRepository.DisplayAllTags();

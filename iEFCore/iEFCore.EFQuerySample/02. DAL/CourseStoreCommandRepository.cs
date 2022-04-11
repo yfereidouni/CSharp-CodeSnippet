@@ -181,7 +181,7 @@ public class CourseStoreCommandRepository
         courseStoreDbContext.SaveChanges(true);
     }
 
-    public void DeleteCourse(int id)
+    public void DeleteCourse_SoftDelete(int id)
     {
         var course = courseStoreDbContext.Courses.SingleOrDefault(c => c.CourseId == id);
         course.IsDeleted = true;
@@ -196,5 +196,22 @@ public class CourseStoreCommandRepository
         {
             Console.WriteLine($"{course.CourseId} | {course.Name} | {course.IsDeleted}");
         }
+    }
+    public void DisplayAllTags()
+    {
+        var tags = courseStoreDbContext.Tags.ToList();
+        //var courses = courseStoreDbContext.Courses.IgnoreQueryFilters().ToList(); // IgnoreQueryFilters
+        foreach (var tag in tags)
+        {
+            Console.WriteLine($"{tag.TagId} | {tag.Name} | {tag.IsDeleted}");
+        }
+    }
+
+    public void DeleteTag_PhysicalDelete(int id)
+    {
+        var tag = courseStoreDbContext.Tags.SingleOrDefault(c => c.TagId == id);
+        courseStoreDbContext.Remove(tag);
+        courseStoreDbContext.SaveChanges();
+        Console.WriteLine($"Tag: '{tag.Name}' was deleted");
     }
 }
