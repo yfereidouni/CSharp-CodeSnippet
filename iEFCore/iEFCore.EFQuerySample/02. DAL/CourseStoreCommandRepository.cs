@@ -197,6 +197,7 @@ public class CourseStoreCommandRepository
             Console.WriteLine($"{course.CourseId} | {course.Name} | {course.IsDeleted}");
         }
     }
+    
     public void DisplayAllTags()
     {
         var tags = courseStoreDbContext.Tags.ToList();
@@ -214,6 +215,7 @@ public class CourseStoreCommandRepository
         courseStoreDbContext.SaveChanges();
         Console.WriteLine($"Tag: '{tag.Name}' was deleted");
     }
+    
     public void DeleteTag_PhysicalDelete_OptimizePerformance(int id)
     {
         var tag = new Tag { TagId = id }; // We don't load anything from DB
