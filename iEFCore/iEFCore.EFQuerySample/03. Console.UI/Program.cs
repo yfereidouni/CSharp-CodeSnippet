@@ -79,5 +79,4 @@ CourseStoreCommandRepository commandRepository = new CourseStoreCommandRepositor
 //teacher.LastName = Console.ReadLine() ?? "Doe";
 //commandRepository.UpdateTeacher_DisconnectedScenario(teacher);
 //commandRepository.DisplayAllTeachers();
-
-commandRepository.UpdateDisount_DisconnectedScenario(50);
+//commandRepository.UpdateDisount_DisconnectedScenario(10);

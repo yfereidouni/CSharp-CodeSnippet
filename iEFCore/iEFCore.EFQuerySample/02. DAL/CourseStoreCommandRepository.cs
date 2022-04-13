@@ -214,7 +214,6 @@ public class CourseStoreCommandRepository
         foreach (var teacher in teachers)
         {
             Console.WriteLine($"{teacher.TeacherId} | {teacher.FirstName}, {teacher.LastName} | {teacher.IsDeleted}");
-
         }
     }
 
@@ -261,8 +260,9 @@ public class CourseStoreCommandRepository
     {
         var course = courseStoreDbContext.Courses.Include(c=>c.Discount).Where(c => c.Name.Contains("MicroService 2030")) .FirstOrDefault();
         Console.WriteLine($"{course.Name} {course.Discount.Name} {course.Discount.NewPrice}");
-        double d = discountPercent / 100;
-        course.Discount.NewPrice = (int)(course.Price * d);
+        //double finalPrice = course.Price * ((double)discountPercent / 100);
+
+        course.Discount.NewPrice = course.Price - ((int)(course.Price * ((double)discountPercent / 100)));
         
         courseStoreDbContext.Update(course);
         courseStoreDbContext.SaveChanges();
