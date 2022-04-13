@@ -159,19 +159,19 @@ public class CourseStoreCommandRepository
 
     public TagDTO GetTag(int id)
     {
-        var result =  courseStoreDbContext.Tags.Where(c => c.TagId == id).Select(c=> 
-        new TagDTO 
+        var result = courseStoreDbContext.Tags.Where(c => c.TagId == id).Select(c =>
+        new TagDTO
         {
-            Id= c.TagId,
-            Name= c.Name,
+            Id = c.TagId,
+            Name = c.Name,
         }).FirstOrDefault();
         return result;
     }
-    
+
     public void UpdateTag_DisconnectedScenario_Way2(TagDTO dto)
     {
         // Disconnected Entity and Unattached
-        Tag tag = new Tag 
+        Tag tag = new Tag
         {
             TagId = dto.Id,
             Name = dto.Name,
@@ -197,7 +197,7 @@ public class CourseStoreCommandRepository
             Console.WriteLine($"{course.CourseId} | {course.Name} | {course.IsDeleted}");
         }
     }
-    
+
     public void DisplayAllTags()
     {
         var tags = courseStoreDbContext.Tags.ToList();
@@ -208,6 +208,16 @@ public class CourseStoreCommandRepository
         }
     }
 
+    public void DisplayAllTeachers()
+    {
+        var teachers = courseStoreDbContext.Teachers.ToList();
+        foreach (var teacher in teachers)
+        {
+            Console.WriteLine($"{teacher.TeacherId} | {teacher.FirstName}, {teacher.LastName} | {teacher.IsDeleted}");
+
+        }
+    }
+
     public void DeleteTag_PhysicalDelete(int id)
     {
         var tag = courseStoreDbContext.Tags.SingleOrDefault(c => c.TagId == id);
@@ -215,12 +225,50 @@ public class CourseStoreCommandRepository
         courseStoreDbContext.SaveChanges();
         Console.WriteLine($"Tag: '{tag.Name}' was deleted");
     }
-    
+
     public void DeleteTag_PhysicalDelete_OptimizePerformance(int id)
     {
         var tag = new Tag { TagId = id }; // We don't load anything from DB
         courseStoreDbContext.Remove(tag);
         courseStoreDbContext.SaveChanges();
         Console.WriteLine($"Tag was deleted");
+    }
+
+    public TeacherDTO GetTeacher(int id)
+    {
+        var result = courseStoreDbContext.Teachers.Where(c => c.TeacherId == id).Select(c =>
+        new TeacherDTO
+        {
+            Id = c.TeacherId,
+            FirstName = c.FirstName,
+            LastName = c.LastName,
+        }).FirstOrDefault();
+
+        return result;
+    }
+
+    public void UpdateTeacher_DisconnectedScenario(TeacherDTO dto)
+    {
+        // Specific update command just for updated field
+        var teacher = courseStoreDbContext.Teachers.FirstOrDefault(c => c.TeacherId == dto.Id);
+        // course is an attached object
+        teacher.FirstName = dto.FirstName;
+        teacher.LastName = dto.LastName;
+        courseStoreDbContext.SaveChanges();
+    }
+
+    public void UpdateDisount_DisconnectedScenario(int discountPercent)
+    {
+        var course = courseStoreDbContext.Courses.Include(c=>c.Discount).Where(c => c.Name.Contains("MicroService 2030")) .FirstOrDefault();
+        Console.WriteLine($"{course.Name} {course.Discount.Name} {course.Discount.NewPrice}");
+        double d = discountPercent / 100;
+        course.Discount.NewPrice = (int)(course.Price * d);
+        
+        courseStoreDbContext.Update(course);
+        courseStoreDbContext.SaveChanges();
+
+        course = courseStoreDbContext.Courses.Include(c => c.Discount).Where(c => c.Name.Contains("MicroService 2030")).FirstOrDefault();
+        Console.WriteLine($"{course.Name} {course.Discount.Name} {course.Discount.NewPrice}");
+
     }
 }

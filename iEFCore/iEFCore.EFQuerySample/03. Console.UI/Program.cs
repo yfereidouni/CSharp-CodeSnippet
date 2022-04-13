@@ -32,7 +32,7 @@ EntityStatePrinter entityStatePrinter = new EntityStatePrinter(ctx);
 //entityStatePrinter.Print_UnchangedState();
 
 // Commands : --------------------------------------------------------------------------
-CourseStoreCommandRepository commandRepository = new CourseStoreCommandRepository (ctx);
+CourseStoreCommandRepository commandRepository = new CourseStoreCommandRepository(ctx);
 //commandRepository.AddTag($"NewTag-{DateTime.Now.Ticks}");
 //commandRepository.AddCourseWithComment();
 //commandRepository.AddCourseWithFullDependencies();
@@ -68,4 +68,16 @@ CourseStoreCommandRepository commandRepository = new CourseStoreCommandRepositor
 //Way-3 (Remove with good performance):
 //commandRepository.DeleteTag_PhysicalDelete_OptimizePerformance(8);
 
-//--------------------------------------------------------------------------------------
+// Change Teachers: ---------------------------------------------------------------------
+//var teacher = commandRepository.GetTeacher(7);
+//Console.WriteLine("Your Teacher information is: ");
+//Console.WriteLine($"{teacher.Id} | {teacher.FirstName} | {teacher.LastName}");
+//Console.WriteLine("".PadLeft(100, '-'));
+//Console.Write("Enter New Teacher's FirstName: ");
+//teacher.FirstName = Console.ReadLine() ?? "John";
+//Console.Write("Enter New Teacher's LastName: ");
+//teacher.LastName = Console.ReadLine() ?? "Doe";
+//commandRepository.UpdateTeacher_DisconnectedScenario(teacher);
+//commandRepository.DisplayAllTeachers();
+
+commandRepository.UpdateDisount_DisconnectedScenario(50);
