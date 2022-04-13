@@ -80,3 +80,8 @@ CourseStoreCommandRepository commandRepository = new CourseStoreCommandRepositor
 //commandRepository.UpdateTeacher_DisconnectedScenario(teacher);
 //commandRepository.DisplayAllTeachers();
 //commandRepository.UpdateDisount_DisconnectedScenario(10);
+
+// Tips and Tricks: ---------------------------------------------------------------------
+TipsAndTricks tipsAndTricks = new TipsAndTricks(ctx);
+tipsAndTricks.AsNoTrackingSample();
+tipsAndTricks.AsNoTrackingSampleWithIdentityResolution();
