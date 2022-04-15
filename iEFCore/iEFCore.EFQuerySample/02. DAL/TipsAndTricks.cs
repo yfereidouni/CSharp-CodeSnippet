@@ -43,4 +43,32 @@ public class TipsAndTricks
         Console.WriteLine(Object.ReferenceEquals(t1c1, t1c3));
         Console.WriteLine(Object.ReferenceEquals(t1c2, t1c3));
     }
+
+    public void AddNewCourse(string name, string description)
+    {
+        var teacher = courseStoreDbContext.Teachers.FirstOrDefault();
+        var courseTeacher = new CourseTeachers
+        {
+            Teacher = teacher,
+        };
+        var course = new Course
+        {
+            Name = name,
+            Description = description,
+            CourseTeachers = new List<CourseTeachers>()
+            {
+                courseTeacher
+            },
+            Price = 1000
+        };
+        Console.WriteLine($"{course.CourseId}");
+        Console.WriteLine(courseStoreDbContext.Entry(course).Property(c => c.CourseId).CurrentValue);
+        courseStoreDbContext.Courses.Add(course);
+        Console.WriteLine($"{course.CourseId}");
+        Console.WriteLine(courseStoreDbContext.Entry(course).Property(c => c.CourseId).CurrentValue);
+        courseStoreDbContext.SaveChanges();
+        Console.WriteLine($"{course.CourseId}");
+        Console.WriteLine(courseStoreDbContext.Entry(course).Property(c => c.CourseId).CurrentValue);
+        Console.WriteLine("Finish!");
+    }
 }

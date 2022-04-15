@@ -83,5 +83,6 @@ CourseStoreCommandRepository commandRepository = new CourseStoreCommandRepositor
 
 // Tips and Tricks: ---------------------------------------------------------------------
 TipsAndTricks tipsAndTricks = new TipsAndTricks(ctx);
-tipsAndTricks.AsNoTrackingSample();
-tipsAndTricks.AsNoTrackingSampleWithIdentityResolution();
+//tipsAndTricks.AsNoTrackingSample();
+//tipsAndTricks.AsNoTrackingSampleWithIdentityResolution();
+tipsAndTricks.AddNewCourse("Sample","Sample Description");
