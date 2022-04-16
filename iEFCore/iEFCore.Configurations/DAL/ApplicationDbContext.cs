@@ -6,13 +6,13 @@ using System.Text;
 
 namespace iEFCore.Configurations.DAL
 {
-    public class ApplicationDatabase : DbContext
+    public class ApplicationDbContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=.; Database=EF; Integrated Security=True;");
+            optionsBuilder.UseSqlServer("Server=.; Database=Configurations_DB; Integrated Security=True;");
         }
-        public DbSet<Person> Persons { get; set; }
+        public DbSet<Person> People { get; set; }
         public DbSet<Contact> Contacts { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

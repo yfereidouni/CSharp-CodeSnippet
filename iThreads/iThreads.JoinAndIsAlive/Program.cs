@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading;
 
-namespace iThread_Join_and_IsAlive
+namespace iThreads.JoinAndIsAlive
 {
     class Program
     {

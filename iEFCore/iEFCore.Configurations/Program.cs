@@ -8,7 +8,7 @@ namespace EFCore
     {
         static void Main(string[] args)
         {
-            using (var ctx = new ApplicationDatabase())
+            using (var ctx = new ApplicationDbContext())
             {
                 Person person = new Person
                 {
