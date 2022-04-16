@@ -1,5 +1,5 @@
-﻿using EFCore.DAL;
-using EFCore.Entities;
+﻿using iEFCore.Configurations.DAL;
+using iEFCore.Configurations.Entities;
 using System;
 
 namespace EFCore

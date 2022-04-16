@@ -1,11 +1,11 @@
-﻿using EFCore.Entities;
+﻿using iEFCore.Configurations.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace EFCore.DAL
+namespace iEFCore.Configurations.DAL
 {
     public class PersonConfiguration : IEntityTypeConfiguration<Person>
     {

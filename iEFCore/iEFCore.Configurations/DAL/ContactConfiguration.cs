@@ -1,8 +1,8 @@
-﻿using EFCore.Entities;
+﻿using iEFCore.Configurations.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace EFCore.DAL
+namespace iEFCore.Configurations.DAL
 {
     public class ContactConfiguration : IEntityTypeConfiguration<Contact>
     {

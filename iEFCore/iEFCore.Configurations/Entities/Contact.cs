@@ -1,4 +1,4 @@
-﻿namespace EFCore.Entities
+﻿namespace iEFCore.Configurations.Entities
 {
     public class Contact
     {

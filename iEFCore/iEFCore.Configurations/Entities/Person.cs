@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace EFCore.Entities
+namespace iEFCore.Configurations.Entities
 {
     //[Table("tbl_People", Schema = "dbo")]
     public class Person
