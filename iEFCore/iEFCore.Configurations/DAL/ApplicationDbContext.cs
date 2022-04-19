@@ -14,11 +14,19 @@ namespace iEFCore.Configurations.DAL
         }
         public DbSet<Person> People { get; set; }
         public DbSet<Contact> Contacts { get; set; }
+        public DbSet<PrimaryKeyAttribute> PrimaryKeyAttributes { get; set; }
+        public DbSet<PrimaryKeyFluent> PrimaryKeyFluents { get; set; }
+        public DbSet<ReadOnlyAttribute> ReadOnlyAttributes { get; set; }
+        public DbSet<IndexUsingAttribute> IndexUsingAttributes { get; set; }
+        public DbSet<IndexUsingFluentAPI> IndexUsingFluentAPIs { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new PersonConfiguration());
             modelBuilder.ApplyConfiguration(new ContactConfiguration());
+            modelBuilder.ApplyConfiguration(new PrimaryKeyFluentConfiguration());
+            modelBuilder.ApplyConfiguration(new ReadOnlyFluentConfiguration());
+            modelBuilder.ApplyConfiguration(new IndexUsingFluentAPIConfiguration());
             base.OnModelCreating(modelBuilder);
         }
     }

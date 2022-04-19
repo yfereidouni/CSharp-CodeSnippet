@@ -20,7 +20,7 @@ namespace EFCore
                     PhoneNumber="09124643426"
                 });;
 
-                ctx.Persons.Add(person);
+                ctx.People.Add(person);
                 ctx.SaveChanges();
             }
         }
