@@ -9,7 +9,9 @@ namespace iEFCore.Configurations.Entities
     public class Person
     {
         public int Id { get; set; }
+        //[Column("FirstName")]
         public string Name { get; set; }
+        //[Column("LastName")]
         public string Family { get; set; }
         public DateTime BirthDate { get; set; }
         public List<Contact> Contacts { get; set; } = new List<Contact>();
