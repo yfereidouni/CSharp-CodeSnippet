@@ -1,2 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿
+using iEFCore.RelationConfigurationExtera.OwnedTypeSample;
+
+OwnedTypeDbContext ctx = new OwnedTypeDbContext(); 
+
+var person = ctx.People.FirstOrDefault(); // Without Include you can have all related data to Person
+
+Console.ReadKey();
