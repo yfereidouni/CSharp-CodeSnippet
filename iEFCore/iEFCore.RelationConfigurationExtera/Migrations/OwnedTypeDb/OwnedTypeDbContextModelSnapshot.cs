@@ -105,11 +105,49 @@ namespace iEFCore.RelationConfigurationExtera.Migrations.OwnedTypeDb
                                 });
                         });
 
+                    b.OwnsMany("iEFCore.RelationConfigurationExtera.OwnedTypeSample.Money", "Money", b1 =>
+                        {
+                            b1.Property<int>("PersonId")
+                                .HasColumnType("int");
+
+                            b1.Property<int>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("int");
+
+                            SqlServerPropertyBuilderExtensions.UseIdentityColumn(b1.Property<int>("Id"), 1L, 1);
+
+                            b1.Property<int>("Value")
+                                .HasColumnType("int");
+
+                            b1.HasKey("PersonId", "Id");
+
+                            b1.ToTable("Money", (string)null);
+
+                            b1.WithOwner()
+                                .HasForeignKey("PersonId");
+
+                            b1.HasData(
+                                new
+                                {
+                                    PersonId = 1,
+                                    Id = 1,
+                                    Value = 1000
+                                },
+                                new
+                                {
+                                    PersonId = 1,
+                                    Id = 2,
+                                    Value = 5000
+                                });
+                        });
+
                     b.Navigation("Address")
                         .IsRequired();
 
                     b.Navigation("Car")
                         .IsRequired();
+
+                    b.Navigation("Money");
                 });
 #pragma warning restore 612, 618
         }

@@ -16,6 +16,7 @@ public class OwnedTypeDbContext : DbContext
         {
             person.OwnsOne(person => person.Address);
             person.OwnsOne(c => c.Car).ToTable("Cars");
+            person.OwnsMany(m => m.Money).ToTable("Money");
         });
        
         modelBuilder.Entity<Person>(p =>
@@ -38,6 +39,18 @@ public class OwnedTypeDbContext : DbContext
             {
                 PersonId = 1,
                 CarName = "Persia"
+            });
+            p.OwnsMany(m => m.Money).HasData(new 
+            {
+                 PersonId = 1,
+                 Id = 1,
+                 Value=1000
+            });
+            p.OwnsMany(m => m.Money).HasData(new
+            {
+                PersonId = 1,
+                Id = 2,
+                Value = 5000
             });
         });
     }

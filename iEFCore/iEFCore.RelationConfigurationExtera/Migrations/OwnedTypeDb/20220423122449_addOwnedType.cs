@@ -42,6 +42,26 @@ namespace iEFCore.RelationConfigurationExtera.Migrations.OwnedTypeDb
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "Money",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    PersonId = table.Column<int>(type: "int", nullable: false),
+                    Value = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Money", x => new { x.PersonId, x.Id });
+                    table.ForeignKey(
+                        name: "FK_Money_People_PersonId",
+                        column: x => x.PersonId,
+                        principalTable: "People",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.InsertData(
                 table: "People",
                 columns: new[] { "Id", "FirstName", "LastName", "Address_City", "Address_Street" },
@@ -51,12 +71,25 @@ namespace iEFCore.RelationConfigurationExtera.Migrations.OwnedTypeDb
                 table: "Cars",
                 columns: new[] { "PersonId", "CarName" },
                 values: new object[] { 1, "Persia" });
+
+            migrationBuilder.InsertData(
+                table: "Money",
+                columns: new[] { "Id", "PersonId", "Value" },
+                values: new object[] { 1, 1, 1000 });
+
+            migrationBuilder.InsertData(
+                table: "Money",
+                columns: new[] { "Id", "PersonId", "Value" },
+                values: new object[] { 2, 1, 5000 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
                 name: "Cars");
+
+            migrationBuilder.DropTable(
+                name: "Money");
 
             migrationBuilder.DropTable(
                 name: "People");
