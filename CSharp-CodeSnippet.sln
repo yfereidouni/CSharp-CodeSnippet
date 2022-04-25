@@ -249,7 +249,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iEFCore.TablePerType", "iEF
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iEFCore.TableSplitting", "iEFCore\iEFCore.TableSplitting\iEFCore.TableSplitting.csproj", "{EA342254-D5BF-4892-B013-4A917A4E7E00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iEFCore.AdvancedConfigurations", "iEFCore\iEFCore.AdvancedConfigurations\iEFCore.AdvancedConfigurations.csproj", "{AF7FC2F7-6445-4A2F-AA3A-D03D97FA9303}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iEFCore.AdvancedConfigurations", "iEFCore\iEFCore.AdvancedConfigurations\iEFCore.AdvancedConfigurations.csproj", "{AF7FC2F7-6445-4A2F-AA3A-D03D97FA9303}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iEFCore.ComputedColumn", "iEFCore\iEFCore.ComputedColumn\iEFCore.ComputedColumn.csproj", "{43099A37-FFEB-4AC4-A71C-3AA732CAB49B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1059,6 +1061,14 @@ Global
 		{AF7FC2F7-6445-4A2F-AA3A-D03D97FA9303}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AF7FC2F7-6445-4A2F-AA3A-D03D97FA9303}.Release|x86.ActiveCfg = Release|Any CPU
 		{AF7FC2F7-6445-4A2F-AA3A-D03D97FA9303}.Release|x86.Build.0 = Release|Any CPU
+		{43099A37-FFEB-4AC4-A71C-3AA732CAB49B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43099A37-FFEB-4AC4-A71C-3AA732CAB49B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43099A37-FFEB-4AC4-A71C-3AA732CAB49B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{43099A37-FFEB-4AC4-A71C-3AA732CAB49B}.Debug|x86.Build.0 = Debug|Any CPU
+		{43099A37-FFEB-4AC4-A71C-3AA732CAB49B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43099A37-FFEB-4AC4-A71C-3AA732CAB49B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43099A37-FFEB-4AC4-A71C-3AA732CAB49B}.Release|x86.ActiveCfg = Release|Any CPU
+		{43099A37-FFEB-4AC4-A71C-3AA732CAB49B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1163,6 +1173,7 @@ Global
 		{171F8AA4-0A41-40AA-A822-07FD3473F7D8} = {BD567A53-3FA7-465D-ADFA-A8FC5DF84A91}
 		{EA342254-D5BF-4892-B013-4A917A4E7E00} = {BD567A53-3FA7-465D-ADFA-A8FC5DF84A91}
 		{AF7FC2F7-6445-4A2F-AA3A-D03D97FA9303} = {BD567A53-3FA7-465D-ADFA-A8FC5DF84A91}
+		{43099A37-FFEB-4AC4-A71C-3AA732CAB49B} = {BD567A53-3FA7-465D-ADFA-A8FC5DF84A91}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B71D1B38-C041-4707-8E22-1E08D97D82D9}
