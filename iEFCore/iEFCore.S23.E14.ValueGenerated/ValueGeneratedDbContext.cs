@@ -2,7 +2,7 @@
 
 namespace iEFCore.S23.E14.ValueGenerated;
 
-internal class ValueGeneratedDbContext : DbContext
+public class ValueGeneratedDbContext : DbContext
 {
     public DbSet<Person> People { get; set; }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
