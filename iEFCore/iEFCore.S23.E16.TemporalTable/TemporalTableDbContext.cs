@@ -8,10 +8,13 @@ public class TemporalTableDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer("Server=.;Initial Catalog=S23.E15.RowVersion_DB;User Id=dbuser; Password=1qaz!QAZ;");
+        optionsBuilder.UseSqlServer("Server=.;Initial Catalog=S23.E16.TemporalTable_DB;User Id=dbuser; Password=1qaz!QAZ;");
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Person>().Property(c=>c.FirstName).IsConcurrencyToken();
+        modelBuilder.Entity<Person>().ToTable(t => 
+        {
+            t.IsTemporal();
+        });
     }
 }
