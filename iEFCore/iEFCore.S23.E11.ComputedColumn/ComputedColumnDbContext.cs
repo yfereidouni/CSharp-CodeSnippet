@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace iEFCore.ComputedColumn;
+namespace iEFCore.S23.E11.ComputedColumn;
 
 public class ComputedColumnDbContext : DbContext
 {
@@ -8,7 +8,7 @@ public class ComputedColumnDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer("Server=.;Initial Catalog=ComputedColumn_DB;User Id=dbuser; Password=1qaz!QAZ;");
+        optionsBuilder.UseSqlServer("Server=.;Initial Catalog=S23.E11.ComputedColumn_DB;User Id=dbuser; Password=1qaz!QAZ;");
 
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)

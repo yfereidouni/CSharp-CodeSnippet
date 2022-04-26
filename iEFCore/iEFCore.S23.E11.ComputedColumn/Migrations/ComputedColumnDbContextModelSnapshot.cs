@@ -3,19 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using iEFCore.ComputedColumn;
+using iEFCore.S23.E11.ComputedColumn;
 
 #nullable disable
 
-namespace iEFCore.ComputedColumn.Migrations
+namespace iEFCore.S23.E11.ComputedColumn.Migrations
 {
     [DbContext(typeof(ComputedColumnDbContext))]
-    [Migration("20220425161453_addDefaultValue")]
-    partial class addDefaultValue
+    partial class ComputedColumnDbContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -24,7 +22,7 @@ namespace iEFCore.ComputedColumn.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("iEFCore.ComputedColumn.Person", b =>
+            modelBuilder.Entity("iEFCore.S23.E11.ComputedColumn.Person", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

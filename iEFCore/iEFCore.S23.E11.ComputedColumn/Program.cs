@@ -1,4 +1,4 @@
-﻿using iEFCore.ComputedColumn;
+﻿using iEFCore.S23.E11.ComputedColumn;
 
 var ctx = new ComputedColumnDbContext();
 

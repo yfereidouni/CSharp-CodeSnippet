@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace iEFCore.ComputedColumn;
+namespace iEFCore.S23.E11.ComputedColumn;
 
 public class Person
 {

@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace iEFCore.ComputedColumn.Migrations
+namespace iEFCore.S23.E11.ComputedColumn.Migrations
 {
     public partial class init : Migration
     {
@@ -16,7 +17,9 @@ namespace iEFCore.ComputedColumn.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     FirstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    FullName = table.Column<string>(type: "nvarchar(max)", nullable: false, computedColumnSql: "FirstName+ ' ' + LastName", stored: true)
+                    FullName = table.Column<string>(type: "nvarchar(max)", nullable: false, computedColumnSql: "FirstName+ ' ' + LastName", stored: true),
+                    RegisterDate = table.Column<DateTime>(type: "datetime2", nullable: false, defaultValueSql: "GetDate()"),
+                    Age = table.Column<int>(type: "int", nullable: false, defaultValue: 100)
                 },
                 constraints: table =>
                 {
