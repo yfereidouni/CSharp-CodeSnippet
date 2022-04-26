@@ -17,6 +17,8 @@ public class PersonRepository
 
     public void SetEntityState(int id, string firstName, string LastName)
     {
+        //ctx.ChangeTracker.AutoDetectChangesEnabled = false;
+        
         Person person = new Person
         {
             Id = id,
