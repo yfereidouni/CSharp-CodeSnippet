@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace iEFCore.TableSplitting.Migrations
+namespace iEFCore.S22.E24.TableSplitting.Migrations
 {
     public partial class init : Migration
     {

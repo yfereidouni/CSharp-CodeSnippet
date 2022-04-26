@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace iEFCore.TableSplitting;
+namespace iEFCore.S22.E24.TableSplitting;
 
 public class TableSplittingDbContext : DbContext
 {
@@ -8,7 +8,7 @@ public class TableSplittingDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer("Server=.;Initial Catalog=TableSplitting_DB;User Id=dbuser; Password=1qaz!QAZ;");
+        optionsBuilder.UseSqlServer("Server=.;Initial Catalog=S22.E24.TableSplitting_DB;User Id=dbuser; Password=1qaz!QAZ;");
 
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)

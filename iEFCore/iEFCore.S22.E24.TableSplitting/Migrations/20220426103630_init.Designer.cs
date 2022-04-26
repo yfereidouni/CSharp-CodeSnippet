@@ -4,14 +4,14 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using iEFCore.TableSplitting;
+using iEFCore.S22.E24.TableSplitting;
 
 #nullable disable
 
-namespace iEFCore.TableSplitting.Migrations
+namespace iEFCore.S22.E24.TableSplitting.Migrations
 {
     [DbContext(typeof(TableSplittingDbContext))]
-    [Migration("20220424175006_init")]
+    [Migration("20220426103630_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,7 +23,7 @@ namespace iEFCore.TableSplitting.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("iEFCore.TableSplitting.News", b =>
+            modelBuilder.Entity("iEFCore.S22.E24.TableSplitting.News", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -48,7 +48,7 @@ namespace iEFCore.TableSplitting.Migrations
                     b.ToTable("News", (string)null);
                 });
 
-            modelBuilder.Entity("iEFCore.TableSplitting.NewsDetail", b =>
+            modelBuilder.Entity("iEFCore.S22.E24.TableSplitting.NewsDetail", b =>
                 {
                     b.Property<int>("Id")
                         .HasColumnType("int");
@@ -65,16 +65,16 @@ namespace iEFCore.TableSplitting.Migrations
                     b.ToTable("News", (string)null);
                 });
 
-            modelBuilder.Entity("iEFCore.TableSplitting.NewsDetail", b =>
+            modelBuilder.Entity("iEFCore.S22.E24.TableSplitting.NewsDetail", b =>
                 {
-                    b.HasOne("iEFCore.TableSplitting.News", null)
+                    b.HasOne("iEFCore.S22.E24.TableSplitting.News", null)
                         .WithOne("NewsDetail")
-                        .HasForeignKey("iEFCore.TableSplitting.NewsDetail", "Id")
+                        .HasForeignKey("iEFCore.S22.E24.TableSplitting.NewsDetail", "Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("iEFCore.TableSplitting.News", b =>
+            modelBuilder.Entity("iEFCore.S22.E24.TableSplitting.News", b =>
                 {
                     b.Navigation("NewsDetail");
                 });

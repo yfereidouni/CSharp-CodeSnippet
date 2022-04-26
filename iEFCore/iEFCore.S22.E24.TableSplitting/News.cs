@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace iEFCore.TableSplitting;
+namespace iEFCore.S22.E24.TableSplitting;
 
 public class News
 {

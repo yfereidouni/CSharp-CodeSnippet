@@ -1,17 +1,17 @@
-﻿using iEFCore.TableSplitting;
+﻿using iEFCore.S22.E24.TableSplitting;
 using Microsoft.EntityFrameworkCore;
 
 TableSplittingDbContext ctx = new TableSplittingDbContext();
 
-//News news = new News 
-//{ 
-//    ImageUrl ="Url",
+//News news = new News
+//{
+//    ImageUrl = "Url",
 //    ShortDescription = "Description",
-//    Title= "Title",
-//    NewsDetail= new NewsDetail 
+//    Title = "Title",
+//    NewsDetail = new NewsDetail
 //    {
-//        Body ="Body"
-        
+//        Body = "Body"
+
 //    }
 //};
 
