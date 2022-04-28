@@ -25,7 +25,18 @@ public class TeacherRepository
 
     public void InsertPersonRaw()
     {
+        //Equal with ExecutedNonQuery
         this.ctx.Database.ExecuteSqlRaw("INSERT INTO Teachers (FirstName, LastName) VALUES ('Meysam', 'Saberi')");
+    }
+
+    public void FromSqlQueryNews()
+    {
+        var newsSummary = ctx.Summaries.ToList();
+        foreach (var item in newsSummary)
+        {
+            Console.WriteLine($"{item.Id} | {item.Title}");
+        }
+
     }
 }
 

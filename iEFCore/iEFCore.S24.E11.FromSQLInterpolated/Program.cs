@@ -8,3 +8,6 @@ teacherRepository.FromSqlSample();
 
 //Write to SQL
 teacherRepository.InsertPersonRaw();
+
+//Read-Only Query
+teacherRepository.FromSqlQueryNews();
