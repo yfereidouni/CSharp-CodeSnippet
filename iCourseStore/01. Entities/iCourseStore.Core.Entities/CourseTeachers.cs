@@ -1,12 +1,11 @@
-﻿namespace iCourseStore.Core.Entities
+﻿namespace iCourseStore.Core.Entities;
+
+public class CourseTeachers
 {
-    public class CourseTeachers
-    {
-        public int CourseTeachersId { get; set; }
-        public int CourseId { get; set; }
-        public Course Course { get; set; }
-        public int TeacherId { get; set; }
-        public Teacher Teacher { get; set; }
-        public int SortOrder { get; set; }
-    }
+    public int CourseTeachersId { get; set; }
+    public int CourseId { get; set; }
+    public Course Course { get; set; }
+    public int TeacherId { get; set; }
+    public Teacher Teacher { get; set; }
+    public int SortOrder { get; set; }
 }

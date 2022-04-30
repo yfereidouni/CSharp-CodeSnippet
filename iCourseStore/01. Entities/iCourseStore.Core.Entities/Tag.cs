@@ -1,9 +1,8 @@
-﻿namespace iCourseStore.Core.Entities
+﻿namespace iCourseStore.Core.Entities;
+
+public class Tag
 {
-    public class Tag
-    {
-        public int TagId { get; set; }
-        public string Name { get; set; }
-        public ICollection<Course> Courses { get; set; }
-    }
+    public int TagId { get; set; }
+    public string Name { get; set; }
+    public ICollection<Course> Courses { get; set; }
 }
