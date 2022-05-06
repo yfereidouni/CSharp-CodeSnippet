@@ -5,7 +5,7 @@ public class Course
     public int CourseId { get; set; }
     public string Name { get; set; }
     public string Description { get; set; }
-    public string Price { get; set; }
+    public int Price { get; set; }
     public DateTime StartDate { get; set; }
     public ICollection<CourseTeachers> CourseTeachers { get; set; }
     public ICollection<Tag> Tags { get; set; }
