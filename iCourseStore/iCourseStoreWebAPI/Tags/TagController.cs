@@ -6,8 +6,8 @@ using iCourseStore.Model.Tags.Commands;
 
 namespace iCourseStoreWebAPI.Tags;
 
-[Route("api/[controller]")]
-[ApiController]
+//[Route("api/[controller]")]
+//[ApiController]
 public class TagController : BaseController
 {
     public TagController(IMediator mediator) : base(mediator)
