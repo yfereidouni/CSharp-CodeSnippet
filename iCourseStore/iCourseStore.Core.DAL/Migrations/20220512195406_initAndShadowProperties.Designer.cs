@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using iCourseStore.DAL.CourseStoreDB;
 
@@ -11,33 +12,19 @@ using iCourseStore.DAL.CourseStoreDB;
 namespace iCourseStore.DAL.Migrations
 {
     [DbContext(typeof(CourseStoreDbContext))]
-    partial class CourseStoreDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220512195406_initAndShadowProperties")]
+    partial class initAndShadowProperties
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.4")
+                .HasAnnotation("ProductVersion", "6.0.5")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("CourseTag", b =>
-                {
-                    b.Property<int>("CoursesId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TagsId")
-                        .HasColumnType("int");
-
-                    b.HasKey("CoursesId", "TagsId");
-
-                    b.HasIndex("TagsId");
-
-                    b.ToTable("CourseTag");
-                });
-
-            modelBuilder.Entity("iCourseStore.Core.Entities.Comment", b =>
+            modelBuilder.Entity("iCourseStore.Model.Courses.Entities.Comment", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -59,11 +46,27 @@ namespace iCourseStore.DAL.Migrations
                     b.Property<int>("CourseId")
                         .HasColumnType("int");
 
+                    b.Property<string>("CreateBy")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasMaxLength(50)
+                        .HasColumnType("datetime2");
+
                     b.Property<bool>("IsApproved")
                         .HasColumnType("bit");
 
                     b.Property<int>("StarCount")
                         .HasColumnType("int");
+
+                    b.Property<string>("UpdateBy")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasMaxLength(50)
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
@@ -72,13 +75,21 @@ namespace iCourseStore.DAL.Migrations
                     b.ToTable("Comments");
                 });
 
-            modelBuilder.Entity("iCourseStore.Core.Entities.Course", b =>
+            modelBuilder.Entity("iCourseStore.Model.Courses.Entities.Course", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("CreateBy")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasMaxLength(50)
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -108,12 +119,20 @@ namespace iCourseStore.DAL.Migrations
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("UpdateBy")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasMaxLength(50)
+                        .HasColumnType("datetime2");
+
                     b.HasKey("Id");
 
                     b.ToTable("Courses");
                 });
 
-            modelBuilder.Entity("iCourseStore.Core.Entities.CourseTeacher", b =>
+            modelBuilder.Entity("iCourseStore.Model.Courses.Entities.CourseTag", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -124,11 +143,66 @@ namespace iCourseStore.DAL.Migrations
                     b.Property<int>("CourseId")
                         .HasColumnType("int");
 
+                    b.Property<string>("CreateBy")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasMaxLength(50)
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("TagId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UpdateBy")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasMaxLength(50)
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CourseId");
+
+                    b.HasIndex("TagId");
+
+                    b.ToTable("CourseTag");
+                });
+
+            modelBuilder.Entity("iCourseStore.Model.Courses.Entities.CourseTeacher", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("CourseId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CreateBy")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasMaxLength(50)
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("SortOrder")
                         .HasColumnType("int");
 
                     b.Property<int>("TeacherId")
                         .HasColumnType("int");
+
+                    b.Property<string>("UpdateBy")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasMaxLength(50)
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
@@ -139,7 +213,7 @@ namespace iCourseStore.DAL.Migrations
                     b.ToTable("CourseTeachers");
                 });
 
-            modelBuilder.Entity("iCourseStore.Core.Entities.Discount", b =>
+            modelBuilder.Entity("iCourseStore.Model.Orders.Entities.Discount", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -150,12 +224,28 @@ namespace iCourseStore.DAL.Migrations
                     b.Property<int>("CourseId")
                         .HasColumnType("int");
 
+                    b.Property<string>("CreateBy")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasMaxLength(50)
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("NewPrice")
                         .HasColumnType("int");
+
+                    b.Property<string>("UpdateBy")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasMaxLength(50)
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
@@ -165,7 +255,7 @@ namespace iCourseStore.DAL.Migrations
                     b.ToTable("Discount");
                 });
 
-            modelBuilder.Entity("iCourseStore.Core.Entities.Order", b =>
+            modelBuilder.Entity("iCourseStore.Model.Orders.Entities.Order", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -175,6 +265,14 @@ namespace iCourseStore.DAL.Migrations
 
                     b.Property<int>("CourseId")
                         .HasColumnType("int");
+
+                    b.Property<string>("CreateBy")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasMaxLength(50)
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("CustomerEmail")
                         .IsRequired()
@@ -186,6 +284,14 @@ namespace iCourseStore.DAL.Migrations
                     b.Property<int>("Price")
                         .HasColumnType("int");
 
+                    b.Property<string>("UpdateBy")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasMaxLength(50)
+                        .HasColumnType("datetime2");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CourseId");
@@ -193,7 +299,7 @@ namespace iCourseStore.DAL.Migrations
                     b.ToTable("Orders");
                 });
 
-            modelBuilder.Entity("iCourseStore.Core.Entities.Tag", b =>
+            modelBuilder.Entity("iCourseStore.Model.Tags.Entities.Tag", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -201,22 +307,46 @@ namespace iCourseStore.DAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
+                    b.Property<string>("CreateBy")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasMaxLength(50)
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UpdateBy")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasMaxLength(50)
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
                     b.ToTable("Tags");
                 });
 
-            modelBuilder.Entity("iCourseStore.Core.Entities.Teacher", b =>
+            modelBuilder.Entity("iCourseStore.Model.Teachers.Entities.Teacher", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("CreateBy")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasMaxLength(50)
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("FirstName")
                         .IsRequired()
@@ -226,29 +356,22 @@ namespace iCourseStore.DAL.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("UpdateBy")
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasMaxLength(50)
+                        .HasColumnType("datetime2");
+
                     b.HasKey("Id");
 
                     b.ToTable("Teachers");
                 });
 
-            modelBuilder.Entity("CourseTag", b =>
+            modelBuilder.Entity("iCourseStore.Model.Courses.Entities.Comment", b =>
                 {
-                    b.HasOne("iCourseStore.Core.Entities.Course", null)
-                        .WithMany()
-                        .HasForeignKey("CoursesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("iCourseStore.Core.Entities.Tag", null)
-                        .WithMany()
-                        .HasForeignKey("TagsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("iCourseStore.Core.Entities.Comment", b =>
-                {
-                    b.HasOne("iCourseStore.Core.Entities.Course", "Course")
+                    b.HasOne("iCourseStore.Model.Courses.Entities.Course", "Course")
                         .WithMany("Comments")
                         .HasForeignKey("CourseId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -257,15 +380,34 @@ namespace iCourseStore.DAL.Migrations
                     b.Navigation("Course");
                 });
 
-            modelBuilder.Entity("iCourseStore.Core.Entities.CourseTeacher", b =>
+            modelBuilder.Entity("iCourseStore.Model.Courses.Entities.CourseTag", b =>
                 {
-                    b.HasOne("iCourseStore.Core.Entities.Course", "Course")
+                    b.HasOne("iCourseStore.Model.Courses.Entities.Course", "Course")
+                        .WithMany("CourseTags")
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("iCourseStore.Model.Tags.Entities.Tag", "Tag")
+                        .WithMany("CourseTags")
+                        .HasForeignKey("TagId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Course");
+
+                    b.Navigation("Tag");
+                });
+
+            modelBuilder.Entity("iCourseStore.Model.Courses.Entities.CourseTeacher", b =>
+                {
+                    b.HasOne("iCourseStore.Model.Courses.Entities.Course", "Course")
                         .WithMany("CourseTeachers")
                         .HasForeignKey("CourseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("iCourseStore.Core.Entities.Teacher", "Teacher")
+                    b.HasOne("iCourseStore.Model.Teachers.Entities.Teacher", "Teacher")
                         .WithMany("CourseTeachers")
                         .HasForeignKey("TeacherId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -276,20 +418,20 @@ namespace iCourseStore.DAL.Migrations
                     b.Navigation("Teacher");
                 });
 
-            modelBuilder.Entity("iCourseStore.Core.Entities.Discount", b =>
+            modelBuilder.Entity("iCourseStore.Model.Orders.Entities.Discount", b =>
                 {
-                    b.HasOne("iCourseStore.Core.Entities.Course", "Course")
+                    b.HasOne("iCourseStore.Model.Courses.Entities.Course", "Course")
                         .WithOne("Discount")
-                        .HasForeignKey("iCourseStore.Core.Entities.Discount", "CourseId")
+                        .HasForeignKey("iCourseStore.Model.Orders.Entities.Discount", "CourseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Course");
                 });
 
-            modelBuilder.Entity("iCourseStore.Core.Entities.Order", b =>
+            modelBuilder.Entity("iCourseStore.Model.Orders.Entities.Order", b =>
                 {
-                    b.HasOne("iCourseStore.Core.Entities.Course", "Course")
+                    b.HasOne("iCourseStore.Model.Courses.Entities.Course", "Course")
                         .WithMany()
                         .HasForeignKey("CourseId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -298,9 +440,11 @@ namespace iCourseStore.DAL.Migrations
                     b.Navigation("Course");
                 });
 
-            modelBuilder.Entity("iCourseStore.Core.Entities.Course", b =>
+            modelBuilder.Entity("iCourseStore.Model.Courses.Entities.Course", b =>
                 {
                     b.Navigation("Comments");
+
+                    b.Navigation("CourseTags");
 
                     b.Navigation("CourseTeachers");
 
@@ -308,7 +452,12 @@ namespace iCourseStore.DAL.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("iCourseStore.Core.Entities.Teacher", b =>
+            modelBuilder.Entity("iCourseStore.Model.Tags.Entities.Tag", b =>
+                {
+                    b.Navigation("CourseTags");
+                });
+
+            modelBuilder.Entity("iCourseStore.Model.Teachers.Entities.Teacher", b =>
                 {
                     b.Navigation("CourseTeachers");
                 });

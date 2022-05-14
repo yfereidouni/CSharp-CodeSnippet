@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using iCourseStore.DAL.CourseStoreDB;
 
@@ -11,9 +12,10 @@ using iCourseStore.DAL.CourseStoreDB;
 namespace iCourseStore.DAL.Migrations
 {
     [DbContext(typeof(CourseStoreDbContext))]
-    partial class CourseStoreDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220507180041_init")]
+    partial class init
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
