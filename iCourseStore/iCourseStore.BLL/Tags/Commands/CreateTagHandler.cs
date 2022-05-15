@@ -31,9 +31,41 @@ public class CreateTagHandler : IRequestHandler<CreateTag, ApplicationServiceRes
         await courseStoreDbContext.Tags.AddAsync(tag);
         await courseStoreDbContext.SaveChangesAsync();
 
-        return new ApplicationServiceResponse<Tag> 
+        return new ApplicationServiceResponse<Tag>
         {
             Result = tag
         };
+    }
+}
+
+public class UpdateTagHandler : IRequestHandler<UpdateTag, ApplicationServiceResponse<Tag>>
+{
+    private readonly CourseStoreDbContext courseStoreDbContext;
+
+    public UpdateTagHandler(CourseStoreDbContext courseStoreDbContext)
+    {
+        this.courseStoreDbContext = courseStoreDbContext;
+    }
+
+    ApplicationServiceResponse<Tag> response = new();
+
+    public async Task<ApplicationServiceResponse<Tag>> Handle(UpdateTag request, CancellationToken cancellationToken)
+    {
+        ApplicationServiceResponse<Tag> response = new();
+        
+        Tag tag = courseStoreDbContext.Tags.SingleOrDefault(c => c.Id == request.Id);
+        if (tag == null)
+        {
+            response.AddError($"تگ {request.Id} یافت نشد.");
+            await courseStoreDbContext.SaveChangesAsync();
+        }
+        else
+        {
+            tag.Name = request.TagName;
+            await courseStoreDbContext.SaveChangesAsync();
+            response.Result= tag;
+        }
+
+        return response;
     }
 }

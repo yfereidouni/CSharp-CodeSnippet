@@ -21,4 +21,12 @@ public class TagController : BaseController
         
         return response.IsSuccess ? Ok(response.Result) : BadRequest(response.Result);
     }
+
+    [HttpPut("UpdateTag")]
+    public async Task<IActionResult> UpdateTag(UpdateTag tag)
+    {
+        var response = await mediator.Send(tag);
+
+        return response.IsSuccess ? Ok(response.Result) : BadRequest(response.Result);
+    }
 }
