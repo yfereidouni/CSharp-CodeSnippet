@@ -38,7 +38,7 @@ namespace iCourseStore.DAL.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TagName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreateBy = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
                     CreateDate = table.Column<DateTime>(type: "datetime2", maxLength: 50, nullable: false),
                     UpdateBy = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),

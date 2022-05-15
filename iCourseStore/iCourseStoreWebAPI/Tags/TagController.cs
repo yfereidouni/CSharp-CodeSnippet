@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using MediatR;
 using iCourseStoreWebAPI.Framework;
 using iCourseStore.Model.Tags.Commands;
+using iCourseStore.Model.Tags.Queries;
 
 namespace iCourseStoreWebAPI.Tags;
 
@@ -19,7 +20,7 @@ public class TagController : BaseController
     {
         var response = await mediator.Send(tag);
         
-        return response.IsSuccess ? Ok(response.Result) : BadRequest(response.Result);
+        return response.IsSuccess ? Ok(response.Result) : BadRequest(response.Errors);
     }
 
     [HttpPut("UpdateTag")]
@@ -27,6 +28,14 @@ public class TagController : BaseController
     {
         var response = await mediator.Send(tag);
 
-        return response.IsSuccess ? Ok(response.Result) : BadRequest(response.Result);
+        return response.IsSuccess ? Ok(response.Result) : BadRequest(response.Errors);
+    }
+
+    [HttpGet("FilterByName")]
+    public async Task<IActionResult> SearchTag([FromQuery]FilterByName tag)
+    {
+        var response = await mediator.Send(tag);
+
+        return response.IsSuccess ? Ok(response.Result) : BadRequest(response.Errors);
     }
 }

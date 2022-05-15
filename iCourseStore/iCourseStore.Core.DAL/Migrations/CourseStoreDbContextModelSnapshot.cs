@@ -313,7 +313,7 @@ namespace iCourseStore.DAL.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("TagName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

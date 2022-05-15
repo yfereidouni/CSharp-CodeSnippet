@@ -5,6 +5,6 @@ namespace iCourseStore.Model.Tags.Entities;
 
 public class Tag : BaseEntity
 {
-    public string Name { get; set; }
+    public string TagName { get; set; }
     public List<CourseTag> CourseTags { get; set; }
 }

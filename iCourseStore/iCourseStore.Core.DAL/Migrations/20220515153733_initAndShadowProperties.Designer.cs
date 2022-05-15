@@ -12,7 +12,7 @@ using iCourseStore.DAL.CourseStoreDB;
 namespace iCourseStore.DAL.Migrations
 {
     [DbContext(typeof(CourseStoreDbContext))]
-    [Migration("20220512195406_initAndShadowProperties")]
+    [Migration("20220515153733_initAndShadowProperties")]
     partial class initAndShadowProperties
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -315,7 +315,7 @@ namespace iCourseStore.DAL.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("TagName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
