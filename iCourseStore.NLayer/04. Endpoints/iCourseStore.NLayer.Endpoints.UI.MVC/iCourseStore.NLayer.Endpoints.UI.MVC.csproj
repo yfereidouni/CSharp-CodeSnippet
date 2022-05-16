@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\01. Core\iCourseStore.NLayer.Core.Entities\iCourseStore.NLayer.Core.Entities.csproj" />
+    <ProjectReference Include="..\..\02. DAL\iCourseStore.NLayer.DAL\iCourseStore.NLayer.DAL.EF.csproj" />
+    <ProjectReference Include="..\..\03. BLL\iCourseStore.NLayer.BLL\iCourseStore.NLayer.BLL.csproj" />
+  </ItemGroup>
+
+</Project>

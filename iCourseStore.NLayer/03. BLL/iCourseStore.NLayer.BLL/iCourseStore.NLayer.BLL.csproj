@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\01. Core\iCourseStore.NLayer.Core.Entities\iCourseStore.NLayer.Core.Entities.csproj" />
+    <ProjectReference Include="..\..\02. DAL\iCourseStore.NLayer.DAL\iCourseStore.NLayer.DAL.EF.csproj" />
+  </ItemGroup>
+
+</Project>
