@@ -12,7 +12,7 @@ using iCourseStore.DAL.CourseStoreDB;
 namespace iCourseStore.DAL.Migrations
 {
     [DbContext(typeof(CourseStoreDbContext))]
-    [Migration("20220515153733_initAndShadowProperties")]
+    [Migration("20220517072641_initAndShadowProperties")]
     partial class initAndShadowProperties
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

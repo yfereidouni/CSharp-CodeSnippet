@@ -7,7 +7,7 @@ using iCourseStore.BLL.Tags.Commands;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddDbContext<CourseStoreDbContext>(c => c.UseSqlServer("Server=.;Initial Catalog=iCourseStore_DB;User Id=dbuser;Password=1qaz!QAZ;")
+builder.Services.AddDbContext<CourseStoreDbContext>(c => c.UseSqlServer("Server=.;Initial Catalog=S27E02.iCourseStore_DB;User Id=dbuser;Password=1qaz!QAZ;")
                 .AddInterceptors(new AddAuditFieldInterceptor()));
 
 builder.Services.AddMediatR(typeof(CreateTagHandler).Assembly);
