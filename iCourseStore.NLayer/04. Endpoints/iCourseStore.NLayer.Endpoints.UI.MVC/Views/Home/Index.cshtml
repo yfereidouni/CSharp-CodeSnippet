@@ -7,6 +7,10 @@
     <div>
         <img src="@course.ImageUrl">
         <h4>@course.Title</h4>
-        <p>@course.ShortDescription</p>
+        @*<p>@course.ShortDescription</p>*@
+        <p>@course.Description</p>
+        <span><strong>Start: </strong>@course.StartDate</span> | <strong>End: </strong><span>@course.EndTime</span>
+        <p><strong>Price: </strong>@course.Price</p>
+
     </div>
 }

@@ -1,8 +1,8 @@
-﻿using iCourseStore.Model.Orders.Entities;
+﻿using iCourseStore.YFereidouni.Model.Orders.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
-namespace iCourseStore.Core.DAL.Orders;
+namespace iCourseStore.YFereidouni.DAL.Orders;
 
 public class OrderConfiguration : IEntityTypeConfiguration<Order>
 {
