@@ -40,6 +40,14 @@ public class CourseStoreDbContext : DbContext
         //modelBuilder.ApplyConfiguration(new CommentConfiguration());
         //modelBuilder.ApplyConfiguration(new OrderConfiguration());
         //modelBuilder.ApplyConfiguration(new DiscountConfiguration());
+
+        foreach (var item in modelBuilder.Model.GetEntityTypes())
+        {
+            modelBuilder.Entity(item.ClrType).Property<string>("CreateBy").HasMaxLength(50);
+            modelBuilder.Entity(item.ClrType).Property<DateTime>("CreateDate");
+            modelBuilder.Entity(item.ClrType).Property<string>("UpdateBy").HasMaxLength(50);
+            modelBuilder.Entity(item.ClrType).Property<DateTime>("UpdateDate");
+        }
     }
 
     //Global Gonfigurations

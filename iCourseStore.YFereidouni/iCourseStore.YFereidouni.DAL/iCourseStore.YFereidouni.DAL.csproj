@@ -18,8 +18,4 @@
     <ProjectReference Include="..\iCourseStore.YFereidouni.Model\iCourseStore.YFereidouni.Model.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Framework\" />
-  </ItemGroup>
-
 </Project>

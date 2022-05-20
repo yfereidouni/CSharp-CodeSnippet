@@ -1,6 +1,13 @@
+using iCourseStore.YFereidouni.DAL.CourseStoreDB;
+using iCourseStore.YFereidouni.DAL.Framework;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddDbContext<CourseStoreDbContext>(c => c.UseSqlServer("Server =.; Initial Catalog = S27E02.YF.iCourseStore_DB; User Id = dbuser; Password = 1qaz!QAZ;")
+.AddInterceptors(new AddAuditFieldInterceptor()));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
