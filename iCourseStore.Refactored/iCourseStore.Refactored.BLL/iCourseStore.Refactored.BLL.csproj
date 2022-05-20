@@ -11,14 +11,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\iCourseStore.Core.DAL\iCourseStore.DAL.csproj" />
-    <ProjectReference Include="..\iCourseStore.Core.Model\iCourseStore.Model.csproj" />
+    <ProjectReference Include="..\iCourseStore.Refactored.DAL\iCourseStore.Refactored.DAL.csproj" />
+    <ProjectReference Include="..\iCourseStore.Refactored.Model\iCourseStore.Refactored.Model.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Courses\" />
-    <Folder Include="Teachers\" />
     <Folder Include="Orders\" />
+    <Folder Include="Teachers\" />
   </ItemGroup>
 
 </Project>

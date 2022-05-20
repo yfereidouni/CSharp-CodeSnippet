@@ -17,9 +17,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\iCourseStore.BLL\iCourseStore.BLL.csproj" />
-    <ProjectReference Include="..\iCourseStore.Core.DAL\iCourseStore.DAL.csproj" />
-    <ProjectReference Include="..\iCourseStore.Core.Model\iCourseStore.Model.csproj" />
+    <ProjectReference Include="..\iCourseStore.Refactored.BLL\iCourseStore.Refactored.BLL.csproj" />
+    <ProjectReference Include="..\iCourseStore.Refactored.DAL\iCourseStore.Refactored.DAL.csproj" />
   </ItemGroup>
 
 </Project>
