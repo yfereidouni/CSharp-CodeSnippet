@@ -7,8 +7,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="10.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\iCourseStore.YFereidouni.DAL\iCourseStore.YFereidouni.DAL.csproj" />
     <ProjectReference Include="..\iCourseStore.YFereidouni.Model\iCourseStore.YFereidouni.Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Courses\" />
+    <Folder Include="Tags\Queries\" />
+    <Folder Include="Teachers\" />
+    <Folder Include="Orders\" />
   </ItemGroup>
 
 </Project>
