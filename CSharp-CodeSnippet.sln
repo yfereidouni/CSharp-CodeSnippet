@@ -185,7 +185,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iADO.NETSample01", "iADO.NE
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "iConcurrencyAndAsynchrony", "iConcurrencyAndAsynchrony", "{A2D70C9C-B601-4FC4-8E85-1B2BF56C8267}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iConcurrencyAndAsynchrony.ThreadSample", "iConcurrencyAndAsynchrony\iConcurrencyAndAsynchrony.ThreadSample\iConcurrencyAndAsynchrony.ThreadSample.csproj", "{B37A19F0-C57C-4832-BFC4-19FDB992F350}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iConcurrencyAndAsynchrony.S15.E04.ThreadSample", "iConcurrencyAndAsynchrony\iConcurrencyAndAsynchrony.ThreadSample\iConcurrencyAndAsynchrony.S15.E04.ThreadSample.csproj", "{B37A19F0-C57C-4832-BFC4-19FDB992F350}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iConcurrencyAndAsynchrony.TaskSample", "iConcurrencyAndAsynchrony\iConcurrencyAndAsynchrony.TaskSample\iConcurrencyAndAsynchrony.TaskSample.csproj", "{0AA833B2-F655-4824-8761-A627A96E7362}"
 EndProject
@@ -309,13 +309,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iGenerics.InheritanceAndTTy
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "iCourseStore.YFereidouni", "iCourseStore.YFereidouni", "{9D60C5FE-53A8-458F-817E-93F7ECDC1FD8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iCourseStore.YFereidouni.Model", "iCourseStore.YFereidouni\iCourseStore.YFereidouni.Model\iCourseStore.YFereidouni.Model.csproj", "{FB55E801-8A7E-45BD-9EF1-BA8AA97F273F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iCourseStore.YFereidouni.Model", "iCourseStore.YFereidouni\iCourseStore.YFereidouni.Model\iCourseStore.YFereidouni.Model.csproj", "{FB55E801-8A7E-45BD-9EF1-BA8AA97F273F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iCourseStore.YFereidouni.BLL", "iCourseStore.YFereidouni\iCourseStore.YFereidouni.BLL\iCourseStore.YFereidouni.BLL.csproj", "{8D273D18-8876-4BFB-BC4B-4BDCAAF0D5A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iCourseStore.YFereidouni.BLL", "iCourseStore.YFereidouni\iCourseStore.YFereidouni.BLL\iCourseStore.YFereidouni.BLL.csproj", "{8D273D18-8876-4BFB-BC4B-4BDCAAF0D5A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iCourseStore.YFereidouni.DAL", "iCourseStore.YFereidouni\iCourseStore.YFereidouni.DAL\iCourseStore.YFereidouni.DAL.csproj", "{76C824AE-A3F7-4B28-8036-3F006B7FB30B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iCourseStore.YFereidouni.DAL", "iCourseStore.YFereidouni\iCourseStore.YFereidouni.DAL\iCourseStore.YFereidouni.DAL.csproj", "{76C824AE-A3F7-4B28-8036-3F006B7FB30B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iCourseStore.YFereidouni.WebAPI", "iCourseStore.YFereidouni\iCourseStore.YFereidouni.WebAPI\iCourseStore.YFereidouni.WebAPI.csproj", "{43E3CA25-49FA-4A6B-9D0E-FCB8617068CA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iCourseStore.YFereidouni.WebAPI", "iCourseStore.YFereidouni\iCourseStore.YFereidouni.WebAPI\iCourseStore.YFereidouni.WebAPI.csproj", "{43E3CA25-49FA-4A6B-9D0E-FCB8617068CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
