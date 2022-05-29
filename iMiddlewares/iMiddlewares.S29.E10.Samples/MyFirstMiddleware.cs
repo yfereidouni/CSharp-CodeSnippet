@@ -15,7 +15,10 @@ public class MyFirstMiddleware
         {
             await context.Response.WriteAsync("My-First-MiddleWare-Class Executing...  => ");
         }
-        await next(context);
+
+        // Short Circuit Middleware
+        if (!context.Request.Query.ContainsKey("Sh"))
+            await next(context);
 
         // In-Return-Way
         if (context.Request.Query.ContainsKey("AddText"))

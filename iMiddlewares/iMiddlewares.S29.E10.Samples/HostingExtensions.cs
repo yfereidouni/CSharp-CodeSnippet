@@ -9,6 +9,12 @@ public static class HostingExtensions
 
     public static WebApplication ConfigurePipeLine(this WebApplication app)
     {
+        app.Map("/admin", myapp =>
+        {
+            myapp.UseMiddleware<MySecondMiddleware>();
+            myapp.UseMiddleware<MyThirdMiddleware>();
+        });
+
         app.Use(async (httpcontext, next) =>
         {
             if (httpcontext.Request.Query.ContainsKey("AddText"))
@@ -16,6 +22,7 @@ public static class HostingExtensions
                 httpcontext.Response.ContentType = "text/html";
                 await httpcontext.Response.WriteAsync("1st-Middleware Executing... => ");
             }
+
             await next();
 
             // In-Return-Way
@@ -29,13 +36,13 @@ public static class HostingExtensions
             {
                 await httpcontext.Response.WriteAsync("2nd-Middleware Executing...  => ");
             }
+
             await next();
 
             // In-Return-Way
             if (httpcontext.Request.Query.ContainsKey("AddText"))
                 await httpcontext.Response.WriteAsync("2nd-Middleware Executed.  => ");
         });
-
 
         app.UseMiddleware<MyFirstMiddleware>();
 
