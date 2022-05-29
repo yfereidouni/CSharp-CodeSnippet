@@ -14,18 +14,26 @@ public static class HostingExtensions
             if (httpcontext.Request.Query.ContainsKey("AddText"))
             {
                 httpcontext.Response.ContentType = "text/html";
-                await httpcontext.Response.WriteAsync("Hello from 1st-Middleware -> ");
+                await httpcontext.Response.WriteAsync("1st-Middleware Executing... => ");
             }
             await next();
+
+            // In-Return-Way
+            if (httpcontext.Request.Query.ContainsKey("AddText"))
+                await httpcontext.Response.WriteAsync("1st-Middleware Executed.  => ");
         });
 
         app.Use(async (httpcontext, next) =>
         {
             if (httpcontext.Request.Query.ContainsKey("AddText"))
             {
-                await httpcontext.Response.WriteAsync("Hello from 2nd-Middleware -> ");
+                await httpcontext.Response.WriteAsync("2nd-Middleware Executing...  => ");
             }
             await next();
+
+            // In-Return-Way
+            if (httpcontext.Request.Query.ContainsKey("AddText"))
+                await httpcontext.Response.WriteAsync("2nd-Middleware Executed.  => ");
         });
 
 

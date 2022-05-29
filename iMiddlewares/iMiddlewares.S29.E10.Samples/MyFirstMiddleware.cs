@@ -13,8 +13,12 @@ public class MyFirstMiddleware
     {
         if (context.Request.Query.ContainsKey("AddText"))
         {
-            await context.Response.WriteAsync("Hello from My-First-MiddleWare-Class! -> ");
+            await context.Response.WriteAsync("My-First-MiddleWare-Class Executing...  => ");
         }
         await next(context);
+
+        // In-Return-Way
+        if (context.Request.Query.ContainsKey("AddText"))
+            await context.Response.WriteAsync("My-First-MiddleWare-Class Executed.  => ");
     }
 }
