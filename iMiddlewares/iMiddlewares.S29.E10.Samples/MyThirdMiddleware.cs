@@ -11,6 +11,8 @@ public class MyThirdMiddleware
 
     public async Task Invoke(HttpContext context)
     {
+        context.Response.ContentType = "text/html";
+
         await context.Response.WriteAsync("My-Third-MiddleWare-Class Executing...  => ");
 
         await next(context);

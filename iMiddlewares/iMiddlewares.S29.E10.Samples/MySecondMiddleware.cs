@@ -11,6 +11,8 @@ public class MySecondMiddleware
 
     public async Task Invoke(HttpContext context)
     {
+        context.Response.ContentType = "text/html";
+
         await context.Response.WriteAsync("My-Second-MiddleWare-Class Executing...  => ");
 
         await next(context);
