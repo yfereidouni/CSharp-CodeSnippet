@@ -319,7 +319,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iCourseStore.YFereidouni.We
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "iMiddlewares", "iMiddlewares", "{4DBFBA05-D198-4EAA-9A3E-256F51BDAE9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iMiddlewares.S29.E10.Samples", "iMiddlewares\iMiddlewares.S29.E10.Samples\iMiddlewares.S29.E10.Samples.csproj", "{0B7666CF-F4E7-4EEE-AB14-53485B97F33C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "iMiddlewares.S29.E10.Samples", "iMiddlewares\iMiddlewares.S29.E10.Samples\iMiddlewares.S29.E10.Samples.csproj", "{0B7666CF-F4E7-4EEE-AB14-53485B97F33C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "iSecurity", "iSecurity", "{53AB4219-3894-463F-8068-7C566EDED81A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iSecurity.SSL", "iSecurity\iSecurity.SSL\iSecurity.SSL.csproj", "{B89C1BC2-C279-4B96-A7A3-C3F5955A32F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1337,6 +1341,14 @@ Global
 		{0B7666CF-F4E7-4EEE-AB14-53485B97F33C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0B7666CF-F4E7-4EEE-AB14-53485B97F33C}.Release|x86.ActiveCfg = Release|Any CPU
 		{0B7666CF-F4E7-4EEE-AB14-53485B97F33C}.Release|x86.Build.0 = Release|Any CPU
+		{B89C1BC2-C279-4B96-A7A3-C3F5955A32F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B89C1BC2-C279-4B96-A7A3-C3F5955A32F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B89C1BC2-C279-4B96-A7A3-C3F5955A32F1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B89C1BC2-C279-4B96-A7A3-C3F5955A32F1}.Debug|x86.Build.0 = Debug|Any CPU
+		{B89C1BC2-C279-4B96-A7A3-C3F5955A32F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B89C1BC2-C279-4B96-A7A3-C3F5955A32F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B89C1BC2-C279-4B96-A7A3-C3F5955A32F1}.Release|x86.ActiveCfg = Release|Any CPU
+		{B89C1BC2-C279-4B96-A7A3-C3F5955A32F1}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1474,6 +1486,7 @@ Global
 		{76C824AE-A3F7-4B28-8036-3F006B7FB30B} = {9D60C5FE-53A8-458F-817E-93F7ECDC1FD8}
 		{43E3CA25-49FA-4A6B-9D0E-FCB8617068CA} = {9D60C5FE-53A8-458F-817E-93F7ECDC1FD8}
 		{0B7666CF-F4E7-4EEE-AB14-53485B97F33C} = {4DBFBA05-D198-4EAA-9A3E-256F51BDAE9A}
+		{B89C1BC2-C279-4B96-A7A3-C3F5955A32F1} = {53AB4219-3894-463F-8068-7C566EDED81A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B71D1B38-C041-4707-8E22-1E08D97D82D9}
