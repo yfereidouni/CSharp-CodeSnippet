@@ -5,20 +5,47 @@ namespace iSecurity.SqlInjection.Data
 {
     public class SeedData
     {
-        public static async Task Initialize(IServiceProvider serviceProvider, string password)
+        public static async Task Initialize(IServiceProvider serviceProvider)
         {
             using (var context = new ApplicationDbContext(
                 serviceProvider.GetRequiredService<DbContextOptions<ApplicationDbContext>>()))
             {
-                var customer = new Customer { FirstName = "Yasser", Lastname = "Fereidouni" };
-                
-                customer.save
+                if (context.Customers.Any())
+                {
+                    return;
+                }
 
+                var customers = new List<Customer>() 
+                {
+                    new Customer
+                    {
+                        FirstName = "Yasser",
+                        Lastname = "Fereidouni"
+                    },
+                    new Customer
+                    {
+                        FirstName = "Farid",
+                        Lastname = "Taheri"
+                    },
+                    new Customer
+                    {
+                        FirstName = "Masoud",
+                        Lastname = "Taheri"
+                    },
+                    new Customer
+                    {
+                        FirstName = "Meysam",
+                        Lastname = "Taghvaei"
+                    },
+                    new Customer
+                    {
+                        FirstName = "Shervin",
+                        Lastname = "Souri"
+                    },
+                };
 
-                // administrator
-                var adminUid = await EnsureUser(serviceProvider, "admin@test.com", password);
-                await EnsureRole(serviceProvider, adminUid, Constants.InvoiceAdminRole);
-
+                await context.Customers.AddRangeAsync(customers);
+                await context.SaveChangesAsync();
             }
 
         }

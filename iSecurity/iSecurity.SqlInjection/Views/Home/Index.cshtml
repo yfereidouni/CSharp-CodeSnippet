@@ -1,8 +1,61 @@
-﻿@{
+﻿@using Microsoft.Data.SqlClient
+@using iSecurity.SqlInjection.Entities
+@model List<Customer>
+@*@model SqlDataReader*@
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">SQL Injection</h1>
 </div>
+
+<div>
+    <h6>Using following Queries for SQL Injection:</h6>
+    <code>
+        a' or 1=1;--
+        <br />
+        a' OR 1=1 UNION ALL SELECT '1','1','1';--
+        <br />
+        a' OR 1=1 UNION ALL SELECT object_id, name, '1' from sys.tables;--
+        <br />
+        a' OR 1=1; DELETE customers;--
+        <br />
+        a' OR 1=1; DROP TABLE customers;--
+        <br />
+    </code>
+</div>
+
+<form asp-controller="Home" asp-action="Index" method="post">
+    <input type="text" name="searchTerm" class="form-control" />
+    <button class="btn btn-success" type="submit">Search</button>
+</form>
+
+<table class="table tabletable-bordered table-info table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>FirstName</th>
+            <th>LastName</th>
+        </tr>
+    </thead>
+    <tbody>
+        @*@while (Model.Read())
+            {
+            <tr>
+            <td>@Model[0]</td>
+            <td>@Model[1]</td>
+            <td>@Model[2]</td>
+            </tr>
+            }*@
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.FirstName</td>
+                <td>@item.Lastname</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
