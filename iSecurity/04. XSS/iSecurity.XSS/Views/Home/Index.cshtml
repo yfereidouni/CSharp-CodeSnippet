@@ -1,0 +1,26 @@
+﻿@model string
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="">
+    <h1 class="display-4">XSS</h1>
+    <p>XSS Scripts:</p>
+    <code>
+        @*Use following script for XSS: *@
+        @*<script>alert('HI');</script>*@
+        @*<style>header {display:none;}</style>*@
+        
+    </code>
+</div>
+
+<form>
+    <input type="text" class="form-control" name="term" />
+    <input type="submit" value="Send" />
+</form>
+
+<div>
+    @*@Html.Raw(Model)*@
+
+    @Model
+</div>

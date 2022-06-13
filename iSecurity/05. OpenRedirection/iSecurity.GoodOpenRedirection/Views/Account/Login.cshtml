@@ -1,0 +1,14 @@
+﻿@model iSecurity.GoodOpenRedirection.Controllers.LoginModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>Login</h1>
+
+<form method="post">
+    <input class="form-control mb-1" type="text" asp-for="Username" />
+    <input class="form-control mb-1" type="password" asp-for="Password" />
+    <input class="form-control" type="hidden" asp-for="ReturnUrl" />
+    <input class="btn btn-primary mb-1" type="submit" value="Login" />
+</form>
