@@ -7,17 +7,53 @@ namespace iSecurity.CSRF.GoodSite.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly ICustomerRepository customerRepository;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, ICustomerRepository customerRepository)
         {
             _logger = logger;
+            this.customerRepository = customerRepository;
         }
 
         public IActionResult Index()
         {
+            var customers = customerRepository.GetCustomers();
+            return View(customers);
+        }
+
+        public IActionResult Login()
+        {
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Login(int customerId)
+        {
+            Response.Cookies.Append("CustomerId", customerId.ToString());
+            return RedirectToAction("ViewEmtiaz");
+        }
+
+        public IActionResult ViewEmtiaz()
+        {
+            var customerId = int.Parse(Request.Cookies["CustomerId"]);
+            var customer = customerRepository.GetCustomer(customerId);
+            return View(customer);
+        }
+
+        [HttpPost]
+        public IActionResult Transfer(int destinationCustomerId)
+        {
+            var customerId = int.Parse(Request.Cookies["CustomerId"]);
+            var customer = customerRepository.GetCustomer(customerId);
+            var destinationCustomer = customerRepository.GetCustomer(destinationCustomerId);
+            var newEmtiaz = destinationCustomer.Emtiaz + customer.Emtiaz;
+
+            customerRepository.SetEmtiaz(customerId, 0);
+            customerRepository.SetEmtiaz(destinationCustomerId, newEmtiaz);
+
+            return RedirectToAction("ViewEmtiaz");
+
+        }
         public IActionResult Privacy()
         {
             return View();

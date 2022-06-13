@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="">
+    <h1 class="display-4">Login</h1>
+    <p>Enter Customer Id for login:</p>
+</div>
+
+<form asp-controller="Home" asp-action="Login" method="post" >
+    <input class="form-control" type="text" name="customerId" />
+    <br />
+    <input class="btn btn-primary" type="submit" value="Login" />
+    <br />
+
+</form>

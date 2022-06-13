@@ -1,7 +1,11 @@
+using iSecurity.CSRF.GoodSite.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddSingleton<ICustomerRepository, InMemoryCustomerRepository>();
 
 var app = builder.Build();
 

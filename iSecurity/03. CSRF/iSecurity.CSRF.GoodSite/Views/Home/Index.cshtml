@@ -1,8 +1,31 @@
-﻿@{
+﻿@model List<Customer>
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="">
+    <h1 class="display-4">Customers Information</h1>
+    <p>List of all Customers:</p>
 </div>
+
+
+<table class="table table-bordered table-info table-hover">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>FullName</td>
+            <td>Emtiaz</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.FullName</td>
+                <td>@item.Emtiaz</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

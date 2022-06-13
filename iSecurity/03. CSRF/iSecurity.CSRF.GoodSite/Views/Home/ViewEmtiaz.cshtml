@@ -1,0 +1,13 @@
+﻿@model iSecurity.CSRF.GoodSite.Models.Customer
+
+<div class="card card-info">
+    <h1>@Model.FullName</h1>
+    <h2>@Model.Emtiaz </h2>
+</div>
+<br />
+<form asp-action="Transfer" method="post" >
+    <input class="form-control" type="text" name="destinationCustomerId" />
+    <br />
+    <input class="btn btn-warning" type="submit" value="Transfer" />
+    <br />
+</form>
