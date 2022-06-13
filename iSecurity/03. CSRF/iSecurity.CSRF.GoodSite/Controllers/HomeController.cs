@@ -29,7 +29,13 @@ namespace iSecurity.CSRF.GoodSite.Controllers
         [HttpPost]
         public IActionResult Login(int customerId)
         {
-            Response.Cookies.Append("CustomerId", customerId.ToString());
+            Response.Cookies.Append("CustomerId", customerId.ToString(),new CookieOptions 
+            {
+                // LAX:
+                // if method was POST then coockie should not be transfer but
+                // if method was GET then cookie can be transfer.
+                SameSite = SameSiteMode.Strict
+            });
             return RedirectToAction("ViewEmtiaz");
         }
 
@@ -41,6 +47,7 @@ namespace iSecurity.CSRF.GoodSite.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Transfer(int destinationCustomerId)
         {
             var customerId = int.Parse(Request.Cookies["CustomerId"]);
