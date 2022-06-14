@@ -29,7 +29,10 @@ namespace iSecurity.BadOpenRedirection.Controllers
         {
             //Login User Process....
 
-            return Redirect(loginModel.ReturnUrl);
+            return Redirect("https://localhost:7038"); 
+
+            //Prevent from this attack with using "LocalRedirect"
+            //This ensure that your redirection perform locally in your domain not any other site.
             //return LocalRedirect(loginModel.ReturnUrl);
         }
 
