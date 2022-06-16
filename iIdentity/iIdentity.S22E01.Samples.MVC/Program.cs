@@ -1,4 +1,5 @@
 using iIdentity.S22E01.Samples.MVC.Models.AAA;
+using iIdentity.S22E01.Samples.MVC.Models.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,8 +12,25 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AAADbContext>(options => options
                 .UseSqlServer(builder.Configuration.GetConnectionString("AAACnn")));
 
-builder.Services.AddIdentity<IdentityUser, IdentityRole>()
-                .AddEntityFrameworkStores<AAADbContext>();
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(c => 
+{
+    c.Password.RequireDigit = false;
+    c.Password.RequireUppercase = false;
+    c.Password.RequireLowercase = false;
+    c.Password.RequiredLength = 3;
+
+}).AddEntityFrameworkStores<AAADbContext>();
+
+builder.Services.AddTransient<IPasswordValidator<IdentityUser>, UsernameNotInPasswordValidator>();
+
+// Way-2: configuration of IdentityOptions
+//builder.Services.Configure<IdentityOptions>(c => 
+//{
+//    c.Password.RequireDigit = false;
+//    c.Password.RequireUppercase = false;
+//    c.Password.RequireLowercase = false;
+//    c.Password.RequiredLength = 3;
+//});
 //-------------------------------------------------------------------------
 
 var app = builder.Build();
