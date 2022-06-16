@@ -27,24 +27,25 @@ namespace iIdentity.S22E01.Samples.MVC.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(CreateViewModel model)
         {
-            var user = new IdentityUser()
+            if (ModelState.IsValid)
             {
-                UserName = model.Username,
-                Email = model.Email,
-                //PasswordHash = model.Password,
-            };
-            var result = await userManager.CreateAsync(user,model.Password);
+                var user = new IdentityUser()
+                {
+                    UserName = model.Username,
+                    Email = model.Email,
+                };
+                var result = await userManager.CreateAsync(user, model.Password);
 
-            if (result.Succeeded)
-            {
-                return RedirectToAction("Index");
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("Index");
+                }
+
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError(error.Code, error.Description);
+                }
             }
-
-            foreach (var error in result.Errors)
-            {
-                ModelState.AddModelError(error.Code, error.Description);
-            }
-
             return View(model);
         }
     }
