@@ -2,7 +2,7 @@
 
 namespace iIdentity.S22E01.Samples.MVC.Models.AAA;
 
-public class UserViewModel
+public class CreateViewModel
 {
     [Required]
     public string Username { get; set; }

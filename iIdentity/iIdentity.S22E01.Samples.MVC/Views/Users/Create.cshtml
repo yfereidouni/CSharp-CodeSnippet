@@ -1,4 +1,4 @@
-﻿@model UserViewModel
+﻿@model CreateViewModel
 
 @{
     ViewData["Title"] = "Create User";
@@ -11,9 +11,23 @@
 <br />
 
 <form asp-controller="Users" asp-action="Create" method="post">
-    <input class="form-control mb-1" type="text" name="username" />
-    <input class="form-control mb-1" type="text" name="email" />
-    <input class="form-control mb-1" type="text" name="password" />
-    <input class="form-control mb-1 btn btn-primary" type="submit" value="Save" />
+    <div class="text-danger" asp-validation-summary="All"></div>
+    <div class="form-group">
+        <label asp-for="Username"></label>
+        <input class="form-control mb-1" type="text" name="username" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input class="form-control mb-1" type="text" name="email" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Password"></label>
+        <input class="form-control mb-1" type="password" name="password" />
+    </div>
+
+    <input type="submit" class="btn btn-primary mb-1" value="Create" />
+    <input type="reset" class="btn btn-danger mb-1" value="Reset" />
+
+
 </form>
 
