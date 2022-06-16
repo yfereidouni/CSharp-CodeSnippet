@@ -1,4 +1,5 @@
 using iIdentity.S22E01.Samples.MVC.Models.AAA;
+using iIdentity.S22E01.Samples.MVC.Models.Data;
 using iIdentity.S22E01.Samples.MVC.Models.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -18,10 +19,12 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(c =>
     c.Password.RequireUppercase = false;
     c.Password.RequireLowercase = false;
     c.Password.RequiredLength = 3;
+    c.Password.RequireNonAlphanumeric = false;
 
 }).AddEntityFrameworkStores<AAADbContext>();
 
 builder.Services.AddTransient<IPasswordValidator<IdentityUser>, UsernameNotInPasswordValidator>();
+builder.Services.AddTransient<IPasswordValidator<IdentityUser>, BadPasswordValidator>();
 
 // Way-2: configuration of IdentityOptions
 //builder.Services.Configure<IdentityOptions>(c => 
@@ -34,6 +37,14 @@ builder.Services.AddTransient<IPasswordValidator<IdentityUser>, UsernameNotInPas
 //-------------------------------------------------------------------------
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<AAADbContext>();
+    context.Database.Migrate();
+    SeedData.Initialize(services);
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
