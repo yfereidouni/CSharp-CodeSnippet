@@ -1,0 +1,19 @@
+﻿@model UserViewModel
+
+@{
+    ViewData["Title"] = "Create User";
+}
+
+<div class="">
+    <h1 class="display-4">Create User</h1>
+    <p>User Information:</p>
+</div>
+<br />
+
+<form asp-controller="Users" asp-action="Create" method="post">
+    <input class="form-control mb-1" type="text" name="username" />
+    <input class="form-control mb-1" type="text" name="email" />
+    <input class="form-control mb-1" type="text" name="password" />
+    <input class="form-control mb-1 btn btn-primary" type="submit" value="Save" />
+</form>
+
