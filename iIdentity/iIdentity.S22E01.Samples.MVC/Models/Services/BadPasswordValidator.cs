@@ -27,7 +27,9 @@ public class BadPasswordValidator : IPasswordValidator<IdentityUser>
             });
         }
     
-        return errors.Count == 0 ? IdentityResult.Success : IdentityResult.Failed(errors.ToArray());
+        return errors.Count == 0 ? 
+            IdentityResult.Success : 
+            IdentityResult.Failed(errors.ToArray());
     }
 }
 
