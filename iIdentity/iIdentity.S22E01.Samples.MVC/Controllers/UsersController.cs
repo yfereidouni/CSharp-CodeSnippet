@@ -8,11 +8,14 @@ namespace iIdentity.S22E01.Samples.MVC.Controllers
     {
         //private readonly UserManager<IdentityUser> userManager; 
         private readonly UserManager<ApplicationUser> userManager;
+        private readonly RoleManager<IdentityRole> roleManager;
 
         //public UsersController(UserManager<IdentityUser> userManager)
-        public UsersController(UserManager<ApplicationUser> userManager)
+        public UsersController(UserManager<ApplicationUser> userManager,
+            RoleManager<IdentityRole> roleManager)
         {
             this.userManager = userManager;
+            this.roleManager = roleManager;
         }
         public IActionResult Index()
         {
@@ -92,7 +95,7 @@ namespace iIdentity.S22E01.Samples.MVC.Controllers
                 dbUser.UserName = applicationUser.UserName;
                 dbUser.Email = applicationUser.Email;
                 dbUser.SSN = applicationUser.SSN;
-                
+
                 var result = await userManager.UpdateAsync(dbUser);
 
 
@@ -111,6 +114,46 @@ namespace iIdentity.S22E01.Samples.MVC.Controllers
             return View(applicationUser);
         }
 
+        public async Task<IActionResult> EditUserRoles(string id)
+        {
+            var user = await userManager.FindByIdAsync(id);
+            var userRoles = await userManager.GetRolesAsync(user);
+            var roles = roleManager.Roles.ToList();
 
+            var model = new EditUserRolesViewModel()
+            {
+                UserName = user.UserName,
+                UserId = user.Id,
+                Roles = roles,
+                UserRoles = userRoles.ToList()
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> EditUserRoles(string userId, List<string> roles)
+        {
+            var user = await userManager.FindByIdAsync(userId);
+            var currentRoles = await userManager.GetRolesAsync(user);
+
+            foreach (var role in currentRoles)
+            {
+                if (!roles.Any(c => c == role))
+                {
+                    var removeRoleResult = await userManager.RemoveFromRoleAsync(user, role);
+                }
+            }
+            foreach (var role in roles)
+            {
+                var isInRole = await userManager.IsInRoleAsync(user, role);
+                if (!isInRole)
+                {
+                    var addToRoleResult = await userManager.AddToRoleAsync(user, role);
+                }
+            }
+
+            return RedirectToAction("Index", "Users");
+        }
     }
 }
