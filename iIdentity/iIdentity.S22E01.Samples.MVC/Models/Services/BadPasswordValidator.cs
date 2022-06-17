@@ -14,21 +14,19 @@ public class BadPasswordValidator : IPasswordValidator<IdentityUser>
     public async Task<IdentityResult> ValidateAsync(
             UserManager<IdentityUser> manager, IdentityUser user, string password)
     {
-        var badPasswords = context.BadPasswords.ToList();
-
         var errors = new List<IdentityError>();
 
-        foreach (var item in badPasswords)
+        var isInBadPasswordList = context.BadPasswords.Any(c => c.BadPasswordText == password);
+
+        if (isInBadPasswordList)
         {
-            if (password.Equals(item.BadPasswordText))
+            errors.Add(new IdentityError
             {
-                errors.Add(new IdentityError
-                {
-                    Code = "BadPassword",
-                    Description = "Your Password was marked as BadPassword!"
-                });
-            }
+                Code = "BadPassword",
+                Description = "Your Password was marked as BadPassword!"
+            });
         }
+    
         return errors.Count == 0 ? IdentityResult.Success : IdentityResult.Failed(errors.ToArray());
     }
 }
