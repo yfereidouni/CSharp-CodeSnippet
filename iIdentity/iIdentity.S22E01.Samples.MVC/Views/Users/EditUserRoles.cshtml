@@ -9,7 +9,13 @@
     @foreach (var role in Model.Roles)
     {
         <div class="form-check">
-            <input class="form-check-input" id="@role.Id" type="checkbox" name="roles" value="@role.Name" checked="@Model.UserRoles.Any(c=>c==role.Name)" />
+            <input class="form-check-input" 
+                   id="@role.Id" 
+                   type="checkbox" 
+                   name="roles" 
+                   value="@role.Name" 
+                   checked="@Model.UserRoles.Any(c=>c==role.Name)" />
+
             <label class="form-check-label" for="@role.Id">@role.Name</label>
         </div>
     }
