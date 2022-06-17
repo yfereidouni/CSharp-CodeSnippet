@@ -1,0 +1,49 @@
+﻿@model List<IdentityRole>
+
+<a class="btn btn-success mb-1" asp-controller="Roles" asp-action="Create">Create Role</a>
+
+<table class="table table-responsive table-info table-bordered table-hover">
+
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>NormalizedName</th>
+            <th>ConcurrencyStamp</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Count <= 0)
+        {
+            <tr>
+                <td colspan="5">There is no role in database.</td>
+            </tr>
+        }
+        else
+        {
+            @foreach (var role in Model)
+            {
+                <tr>
+                    <td>@role.Id</td>
+                    <td>@role.Name</td>
+                    <td>@role.NormalizedName</td>
+                    <td>@role.ConcurrencyStamp</td>
+                    <td>
+                        @*<form class="d-inline" asp-controller="Users" asp-action="Edit" method="get">
+                            <input type="hidden" value="@user.Id" name="id">
+                            <input type="submit" value="Edit" class="btn btn-sm btn-primary m-1">
+                        </form>*@
+
+                        <a class="btn btn-sm btn-primary" asp-controller="Roles" asp-action="Edit" asp-route-Id="@role.Id">Edit</a>
+
+                        <form class="d-inline" asp-controller="Roles" asp-action="Delete" method="post">
+                            <input type="hidden" value="@role.Id" name="id">
+                            <input type="submit" value="Delete" class="btn btn-sm btn-danger">
+                        </form>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
