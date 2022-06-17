@@ -32,4 +32,3 @@ public class BadPasswordValidator : IPasswordValidator<IdentityUser>
             IdentityResult.Failed(errors.ToArray());
     }
 }
-

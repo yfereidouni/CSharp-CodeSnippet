@@ -13,18 +13,17 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AAADbContext>(options => options
                 .UseSqlServer(builder.Configuration.GetConnectionString("AAACnn")));
 
-builder.Services.AddIdentity<IdentityUser, IdentityRole>(c => 
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(c =>
 {
     c.Password.RequireDigit = false;
     c.Password.RequireUppercase = false;
     c.Password.RequireLowercase = false;
     c.Password.RequiredLength = 3;
     c.Password.RequireNonAlphanumeric = false;
+    c.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    c.User.RequireUniqueEmail = true;
 
 }).AddEntityFrameworkStores<AAADbContext>();
-
-builder.Services.AddTransient<IPasswordValidator<IdentityUser>, UsernameNotInPasswordValidator>();
-builder.Services.AddTransient<IPasswordValidator<IdentityUser>, BadPasswordValidator>();
 
 // Way-2: configuration of IdentityOptions
 //builder.Services.Configure<IdentityOptions>(c => 
@@ -34,7 +33,12 @@ builder.Services.AddTransient<IPasswordValidator<IdentityUser>, BadPasswordValid
 //    c.Password.RequireLowercase = false;
 //    c.Password.RequiredLength = 3;
 //});
-//-------------------------------------------------------------------------
+
+//Username & Password Custom validators
+builder.Services.AddTransient<IPasswordValidator<IdentityUser>, UsernameNotInPasswordValidator>();
+builder.Services.AddTransient<IPasswordValidator<IdentityUser>, BadPasswordValidator>();
+builder.Services.AddTransient<IUserValidator<IdentityUser>, CustomeUserValidator>();
+
 
 var app = builder.Build();
 
