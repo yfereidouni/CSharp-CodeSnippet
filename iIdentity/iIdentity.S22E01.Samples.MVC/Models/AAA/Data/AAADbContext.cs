@@ -1,9 +1,8 @@
-﻿using iIdentity.S22E01.Samples.MVC.Models.Data;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-namespace iIdentity.S22E01.Samples.MVC.Models.AAA;
+namespace iIdentity.S22E01.Samples.MVC.Models.AAA.Data;
 
 //public class AAADbContext : IdentityDbContext<IdentityUser>
 public class AAADbContext : IdentityDbContext<ApplicationUser>

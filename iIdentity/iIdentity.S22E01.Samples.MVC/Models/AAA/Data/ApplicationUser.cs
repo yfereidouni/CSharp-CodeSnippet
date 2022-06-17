@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 
-namespace iIdentity.S22E01.Samples.MVC.Models.Data;
+namespace iIdentity.S22E01.Samples.MVC.Models.AAA.Data;
 
 public class ApplicationUser : IdentityUser
 {

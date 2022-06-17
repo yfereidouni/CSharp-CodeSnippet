@@ -1,8 +1,7 @@
-﻿using iIdentity.S22E01.Samples.MVC.Models.AAA;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-namespace iIdentity.S22E01.Samples.MVC.Models.Data;
+namespace iIdentity.S22E01.Samples.MVC.Models.AAA.Data;
 
 public class SeedData
 {

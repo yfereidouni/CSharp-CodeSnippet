@@ -1,4 +1,4 @@
-﻿using iIdentity.S22E01.Samples.MVC.Models.Data;
+﻿using iIdentity.S22E01.Samples.MVC.Models.AAA.Data;
 using Microsoft.AspNetCore.Identity;
 
 namespace iIdentity.S22E01.Samples.MVC.Models.Services

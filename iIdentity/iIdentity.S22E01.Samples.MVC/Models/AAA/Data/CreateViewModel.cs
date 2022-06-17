@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace iIdentity.S22E01.Samples.MVC.Models.AAA;
+namespace iIdentity.S22E01.Samples.MVC.Models.AAA.Data;
 
 public class CreateViewModel
 {
