@@ -40,6 +40,7 @@ builder.Services.AddTransient<IPasswordValidator<IdentityUser>, BadPasswordValid
 builder.Services.AddTransient<IUserValidator<IdentityUser>, CustomeUserValidator>();
 
 
+
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
