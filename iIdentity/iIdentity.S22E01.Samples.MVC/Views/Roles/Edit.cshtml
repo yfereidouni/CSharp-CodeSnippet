@@ -1,0 +1,29 @@
+﻿@model IdentityRole
+
+@{
+    ViewData["Title"] = "Edit Role";
+}
+
+<div class="">
+    <h1 class="display-4">Edit User</h1>
+    <p>Role Information:</p>
+</div>
+<br />
+
+<form asp-controller="Roles" asp-action="Edit" method="post">
+    
+    <div class="text-danger" asp-validation-summary="All"></div>
+    
+    <div class="form-group">
+        <label asp-for="Id"></label>
+        <input class="form-control mb-1" type="text" name="id" value="@Model.Id" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input class="form-control mb-1" type="text" name="name" value="@Model.Name" />
+    </div>
+
+    <input class="btn btn-primary mb-1" type="submit" value="Save" />
+    <a class="btn btn-secondary mb-1" asp-controller="Roles" asp-action="Index">Cancel</a>
+
+</form>

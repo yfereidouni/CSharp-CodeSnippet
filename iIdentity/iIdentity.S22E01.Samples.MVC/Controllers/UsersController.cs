@@ -22,12 +22,12 @@ namespace iIdentity.S22E01.Samples.MVC.Controllers
 
         public IActionResult Create()
         {
-            var user = new CreateViewModel();
+            var user = new CreateUserModel();
             return View(user);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(CreateViewModel model)
+        public async Task<IActionResult> Create(CreateUserModel model)
         {
             if (ModelState.IsValid)
             {
