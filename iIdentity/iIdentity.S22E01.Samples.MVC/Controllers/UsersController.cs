@@ -39,12 +39,13 @@ namespace iIdentity.S22E01.Samples.MVC.Controllers
                     Email = model.Email,
                     SSN = model.SSN,
                 };
+
                 var result = await userManager.CreateAsync(user, model.Password);
 
                 if (result.Succeeded)
                 {
                     TempData["Message"] = "User Created!";
-                    return RedirectToAction("Index","Users");
+                    return RedirectToAction("Index", "Users");
                 }
 
                 foreach (var error in result.Errors)
@@ -72,7 +73,45 @@ namespace iIdentity.S22E01.Samples.MVC.Controllers
                 TempData["Message"] = "Action failed!";
             }
 
-            return RedirectToAction("Index","Users");
+            return RedirectToAction("Index", "Users");
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Edit(string id)
+        {
+            var user = await userManager.FindByIdAsync(id);
+            return View(user);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(ApplicationUser applicationUser)
+        {
+            if (ModelState.IsValid)
+            {
+                var dbUser = await userManager.FindByIdAsync(applicationUser.Id);
+
+                dbUser.UserName = applicationUser.UserName;
+                dbUser.Email = applicationUser.Email;
+                dbUser.SSN = applicationUser.SSN;
+                
+                var result = await userManager.UpdateAsync(dbUser);
+
+
+                if (result.Succeeded)
+                {
+                    TempData["Message"] = "User Updated!";
+                    return RedirectToAction("Index", "Users");
+                }
+
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError(error.Code, error.Description);
+                }
+            }
+
+            return View(applicationUser);
+        }
+
+
     }
 }

@@ -34,13 +34,16 @@
                     @*<td>@user.PasswordHash</td>*@
                     <td>@user.SSN</td>
                     <td>
-                        <form class="d-inline" asp-controller="Users" asp-action="Edit" method="post">
+                        @*<form class="d-inline" asp-controller="Users" asp-action="Edit" method="get">
                             <input type="hidden" value="@user.Id" name="id">
-                            <input type="submit" value="Edit" class="btn btn-sm btn-primary mr-1">
-                        </form>
+                            <input type="submit" value="Edit" class="btn btn-sm btn-primary m-1">
+                        </form>*@
+
+                        <a class="btn btn-sm btn-primary" asp-controller="Users" asp-action="Edit" asp-route-Id="@user.Id">Edit</a>
+
                         <form class="d-inline" asp-controller="Users" asp-action="Delete" method="post">
                             <input type="hidden" value="@user.Id" name="id">
-                            <input type="submit" value="Delete" class="btn btn-sm btn-danger mr-1">
+                            <input type="submit" value="Delete" class="btn btn-sm btn-danger">
                         </form>
                     </td>
                 </tr>
