@@ -8,18 +8,19 @@
 
     <thead>
         <tr>
-            <th>Id</th>
+            @*<th>Id</th>*@
             <th>Username</th>
             <th>Email</th>
-            <th>Password</th>
+            @*<th>Password</th>*@
             <th>SSN</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
         @if (Model.Count <= 0)
         {
             <tr>
-                <td colspan="5">There is no user in database.</td>
+                <td colspan="4">There is no user in database.</td>
             </tr>
         }
         else
@@ -27,14 +28,23 @@
             @foreach (var user in Model)
             {
                 <tr>
-                    <td>@user.Id</td>
+                    @*<td>@user.Id</td>*@
                     <td>@user.UserName</td>
                     <td>@user.Email</td>
-                    <td>@user.PasswordHash</td>
+                    @*<td>@user.PasswordHash</td>*@
                     <td>@user.SSN</td>
+                    <td>
+                        <form class="d-inline" asp-controller="Users" asp-action="Edit" method="post">
+                            <input type="hidden" value="@user.Id" name="id">
+                            <input type="submit" value="Edit" class="btn btn-sm btn-primary mr-1">
+                        </form>
+                        <form class="d-inline" asp-controller="Users" asp-action="Delete" method="post">
+                            <input type="hidden" value="@user.Id" name="id">
+                            <input type="submit" value="Delete" class="btn btn-sm btn-danger mr-1">
+                        </form>
+                    </td>
                 </tr>
             }
-
         }
     </tbody>
 </table>

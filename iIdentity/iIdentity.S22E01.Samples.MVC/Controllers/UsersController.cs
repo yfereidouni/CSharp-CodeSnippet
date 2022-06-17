@@ -43,7 +43,8 @@ namespace iIdentity.S22E01.Samples.MVC.Controllers
 
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Index");
+                    TempData["Message"] = "User Created!";
+                    return RedirectToAction("Index","Users");
                 }
 
                 foreach (var error in result.Errors)
@@ -52,6 +53,26 @@ namespace iIdentity.S22E01.Samples.MVC.Controllers
                 }
             }
             return View(model);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(string id)
+        {
+            var errors = new List<IdentityError>();
+
+            var user = await userManager.FindByIdAsync(id);
+            var result = await userManager.DeleteAsync(user);
+
+            if (result.Succeeded)
+            {
+                TempData["Message"] = "User Removed!";
+            }
+            else
+            {
+                TempData["Message"] = "Action failed!";
+            }
+
+            return RedirectToAction("Index","Users");
         }
     }
 }
