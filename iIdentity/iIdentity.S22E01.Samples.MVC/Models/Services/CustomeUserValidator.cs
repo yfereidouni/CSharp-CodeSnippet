@@ -1,10 +1,11 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using iIdentity.S22E01.Samples.MVC.Models.Data;
+using Microsoft.AspNetCore.Identity;
 
 namespace iIdentity.S22E01.Samples.MVC.Models.Services;
 
-public class CustomeUserValidator : IUserValidator<IdentityUser>
+public class CustomeUserValidator : IUserValidator<ApplicationUser>
 {
-    public async Task<IdentityResult> ValidateAsync(UserManager<IdentityUser> manager, IdentityUser user)
+    public async Task<IdentityResult> ValidateAsync(UserManager<ApplicationUser> manager, ApplicationUser user)
     {
         var errors = new List<IdentityError>();
         

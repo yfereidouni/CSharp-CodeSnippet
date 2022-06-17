@@ -13,7 +13,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AAADbContext>(options => options
                 .UseSqlServer(builder.Configuration.GetConnectionString("AAACnn")));
 
-builder.Services.AddIdentity<IdentityUser, IdentityRole>(c =>
+//builder.Services.AddIdentity<IdentityUser, IdentityRole>(c =>
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>(c =>
 {
     c.Password.RequireDigit = false;
     c.Password.RequireUppercase = false;
@@ -35,9 +36,12 @@ builder.Services.AddIdentity<IdentityUser, IdentityRole>(c =>
 //});
 
 //Username & Password Custom validators
-builder.Services.AddTransient<IPasswordValidator<IdentityUser>, UsernameNotInPasswordValidator>();
-builder.Services.AddTransient<IPasswordValidator<IdentityUser>, BadPasswordValidator>();
-builder.Services.AddTransient<IUserValidator<IdentityUser>, CustomeUserValidator>();
+builder.Services.AddTransient<IPasswordValidator<ApplicationUser>, UsernameNotInPasswordValidator>();
+builder.Services.AddTransient<IPasswordValidator<ApplicationUser>, BadPasswordValidator>();
+builder.Services.AddTransient<IUserValidator<ApplicationUser>, CustomeUserValidator>();
+//builder.Services.AddTransient<IPasswordValidator<IdentityUser>, UsernameNotInPasswordValidator>();
+//builder.Services.AddTransient<IPasswordValidator<IdentityUser>, BadPasswordValidator>();
+//builder.Services.AddTransient<IUserValidator<IdentityUser>, CustomeUserValidator>();
 
 
 

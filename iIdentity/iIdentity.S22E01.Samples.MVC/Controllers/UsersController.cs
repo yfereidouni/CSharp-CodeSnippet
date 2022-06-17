@@ -1,4 +1,5 @@
 ﻿using iIdentity.S22E01.Samples.MVC.Models.AAA;
+using iIdentity.S22E01.Samples.MVC.Models.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,9 +7,11 @@ namespace iIdentity.S22E01.Samples.MVC.Controllers
 {
     public class UsersController : Controller
     {
-        private readonly UserManager<IdentityUser> userManager;
+        //private readonly UserManager<IdentityUser> userManager; 
+        private readonly UserManager<ApplicationUser> userManager;
 
-        public UsersController(UserManager<IdentityUser> userManager)
+        //public UsersController(UserManager<IdentityUser> userManager)
+        public UsersController(UserManager<ApplicationUser> userManager)
         {
             this.userManager = userManager;
         }
@@ -29,10 +32,12 @@ namespace iIdentity.S22E01.Samples.MVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new IdentityUser()
+                //var user = new IdentityUser()
+                var user = new ApplicationUser()
                 {
                     UserName = model.Username,
                     Email = model.Email,
+                    SSN = model.SSN,
                 };
                 var result = await userManager.CreateAsync(user, model.Password);
 

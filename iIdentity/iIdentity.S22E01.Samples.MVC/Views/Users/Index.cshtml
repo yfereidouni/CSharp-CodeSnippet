@@ -1,4 +1,6 @@
-﻿@model List<IdentityUser>
+﻿@using iIdentity.S22E01.Samples.MVC.Models.Data
+@*@model List<IdentityUser>*@
+@model List<ApplicationUser>
 
 <a class="btn btn-success mb-1" asp-controller="Users" asp-action="Create">Create User</a>
 
@@ -10,6 +12,7 @@
             <th>Username</th>
             <th>Email</th>
             <th>Password</th>
+            <th>SSN</th>
         </tr>
     </thead>
     <tbody>
@@ -28,6 +31,7 @@
                     <td>@user.UserName</td>
                     <td>@user.Email</td>
                     <td>@user.PasswordHash</td>
+                    <td>@user.SSN</td>
                 </tr>
             }
 

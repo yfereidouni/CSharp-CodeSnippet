@@ -11,4 +11,7 @@ public class CreateViewModel
     public string Email { get; set; }
     [Required]
     public string Password { get; set; }
+
+    [Required]
+    public string SSN { get; set; }
 }

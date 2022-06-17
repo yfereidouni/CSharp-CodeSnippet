@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using iIdentity.S22E01.Samples.MVC.Models.AAA;
 
@@ -11,9 +12,10 @@ using iIdentity.S22E01.Samples.MVC.Models.AAA;
 namespace iIdentity.S22E01.Samples.MVC.Migrations
 {
     [DbContext(typeof(AAADbContext))]
-    partial class AAADbContextModelSnapshot : ModelSnapshot
+    [Migration("20220617074427_add_SSN_to_User")]
+    partial class add_SSN_to_User
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

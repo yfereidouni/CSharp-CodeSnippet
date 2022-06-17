@@ -1,11 +1,12 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using iIdentity.S22E01.Samples.MVC.Models.Data;
+using Microsoft.AspNetCore.Identity;
 
 namespace iIdentity.S22E01.Samples.MVC.Models.Services
 {
-    public class UsernameNotInPasswordValidator : IPasswordValidator<IdentityUser>
+    public class UsernameNotInPasswordValidator : IPasswordValidator<ApplicationUser>
     {
         public async Task<IdentityResult> ValidateAsync(
-            UserManager<IdentityUser> manager, IdentityUser user, string password)
+            UserManager<ApplicationUser> manager, ApplicationUser user, string password)
         {
             var errors = new List<IdentityError>();
 

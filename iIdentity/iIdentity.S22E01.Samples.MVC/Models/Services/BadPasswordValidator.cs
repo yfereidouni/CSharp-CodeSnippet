@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using iIdentity.S22E01.Samples.MVC.Models.AAA;
+using iIdentity.S22E01.Samples.MVC.Models.Data;
 
 namespace iIdentity.S22E01.Samples.MVC.Models.Services;
 
-public class BadPasswordValidator : IPasswordValidator<IdentityUser>
+//public class BadPasswordValidator : IPasswordValidator<IdentityUser>
+public class BadPasswordValidator : IPasswordValidator<ApplicationUser>
 {
     private readonly AAADbContext context;
 
@@ -12,7 +14,7 @@ public class BadPasswordValidator : IPasswordValidator<IdentityUser>
         this.context = context;
     }
     public async Task<IdentityResult> ValidateAsync(
-            UserManager<IdentityUser> manager, IdentityUser user, string password)
+            UserManager<ApplicationUser> manager, ApplicationUser user, string password)
     {
         var errors = new List<IdentityError>();
 
