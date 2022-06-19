@@ -18,8 +18,9 @@ namespace iIdentity.S23E06.AuthNAuthZ.Controllers
             return View();
         }
 
-        public IActionResult Login(string redirectUrl = "/")
+        public IActionResult Login()//string redirectUrl = "/")
         {
+            var redirectUrl = "/";
             var model = new LoginModel() { RedirectUrl = redirectUrl };
 
             return View(model);

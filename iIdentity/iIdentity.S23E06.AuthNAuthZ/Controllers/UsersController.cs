@@ -1,4 +1,5 @@
 ﻿using iIdentity.S23E06.AuthNAuthZ.Models.AAA.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
@@ -23,6 +24,7 @@ namespace iIdentity.S23E06.AuthNAuthZ.Controllers
             return View(users);
         }
 
+        [Authorize("AdminUsers")]
         public IActionResult Create()
         {
             var user = new CreateUserModel();

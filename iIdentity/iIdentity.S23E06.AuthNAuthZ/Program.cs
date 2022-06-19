@@ -1,9 +1,29 @@
 using iIdentity.S23E06.AuthNAuthZ.Models.AAA.Data;
 using iIdentity.S23E06.AuthNAuthZ.Models.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
+
+
 var builder = WebApplication.CreateBuilder(args);
+
+//Define Policy for Authorization ------------------------------------------------------
+builder.Services.AddAuthorization(c =>
+{
+    c.AddPolicy("AdminUsers", c =>
+    {
+        //c.RequireRole("admin");
+        c.Requirements.Add(new UserInRoleRequirement("admin"));
+        c.Requirements.Add(new UserInRoleRequirement("admin1"));
+        c.Requirements.Add(new UserInRoleRequirement("admin2"));
+    });
+});
+
+builder.Services.AddSingleton<IAuthorizationHandler, UserInRoleRequirementHandler2>();
+builder.Services.AddSingleton<IAuthorizationHandler, UserInRoleRequirementHandler1>();
+builder.Services.AddSingleton<IAuthorizationHandler, UserInRoleRequirementHandler>();
+//--------------------------------------------------------------------------------------
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -78,3 +98,50 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
+
+//Requirement & RequirementHandler for Add-Policy -------------------------
+public class UserInRoleRequirement : IAuthorizationRequirement
+{
+    public UserInRoleRequirement(string role)
+    {
+        Role = role;
+    }
+    public string Role { get; }
+}
+public class UserInRoleRequirementHandler : AuthorizationHandler<UserInRoleRequirement>
+{
+    protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, UserInRoleRequirement requirement)
+    {
+        //if (context.User.IsInRole(requirement.Role))
+        if (context.User.IsInRole("admin"))
+        {
+            context.Succeed(requirement);
+        }
+        return Task.CompletedTask;
+    }
+}
+public class UserInRoleRequirementHandler1 : AuthorizationHandler<UserInRoleRequirement>
+{
+    protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, UserInRoleRequirement requirement)
+    {
+        if (context.User.IsInRole("admin1"))
+        {
+            context.Succeed(requirement);
+        }
+        return Task.CompletedTask;
+    }
+}
+public class UserInRoleRequirementHandler2 : AuthorizationHandler<UserInRoleRequirement>
+{
+    protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, UserInRoleRequirement requirement)
+    {
+        //if (context.User.IsInRole(requirement.Role))
+        if (context.User.IsInRole("admin2"))
+        {
+            context.Succeed(requirement);
+        }
+        return Task.CompletedTask;
+    }
+}
+//-------------------------------------------------------------------------
