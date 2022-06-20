@@ -8,12 +8,13 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//Define Policy for Authorization ------------------------------------------------------
+//Define Requirments Policy for Authorization ------------------------------------------------------
 builder.Services.AddAuthorization(c =>
 {
     c.AddPolicy("AdminUsers", c =>
     {
         //c.RequireRole("admin");
+        c.Requirements.Add(new UserInRoleRequirement("Admin"));
         c.Requirements.Add(new UserInRoleRequirement("admin"));
         c.Requirements.Add(new UserInRoleRequirement("admin1"));
         c.Requirements.Add(new UserInRoleRequirement("admin2"));
@@ -34,6 +35,7 @@ builder.Services.AddAuthorization(c =>
 builder.Services.AddSingleton<IAuthorizationHandler, UserInRoleRequirementHandler1>();
 builder.Services.AddSingleton<IAuthorizationHandler, UserInRoleRequirementHandler2>();
 builder.Services.AddSingleton<IAuthorizationHandler, UserInRoleRequirementHandler3>();
+builder.Services.AddSingleton<IAuthorizationHandler, UserInRoleRequirementHandler4>();
 
 builder.Services.AddSingleton<IAuthorizationHandler, UserAgeGraterThan21RequirementHandler>();
 
@@ -148,7 +150,7 @@ public class UserInRoleRequirementHandler1 : AuthorizationHandler<UserInRoleRequ
     protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, UserInRoleRequirement requirement)
     {
         //if (context.User.IsInRole(requirement.Role))
-        if (context.User.IsInRole("admin"))
+        if (context.User.IsInRole("Admin"))
         {
             context.Succeed(requirement);
         }
@@ -159,7 +161,7 @@ public class UserInRoleRequirementHandler2 : AuthorizationHandler<UserInRoleRequ
 {
     protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, UserInRoleRequirement requirement)
     {
-        if (context.User.IsInRole("admin2"))
+        if (context.User.IsInRole("admin"))
         {
             context.Succeed(requirement);
         }
@@ -171,7 +173,19 @@ public class UserInRoleRequirementHandler3 : AuthorizationHandler<UserInRoleRequ
     protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, UserInRoleRequirement requirement)
     {
         //if (context.User.IsInRole(requirement.Role))
-        if (context.User.IsInRole("admin3"))
+        if (context.User.IsInRole("admin1"))
+        {
+            context.Succeed(requirement);
+        }
+        return Task.CompletedTask;
+    }
+}
+public class UserInRoleRequirementHandler4 : AuthorizationHandler<UserInRoleRequirement>
+{
+    protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, UserInRoleRequirement requirement)
+    {
+        //if (context.User.IsInRole(requirement.Role))
+        if (context.User.IsInRole("admin2"))
         {
             context.Succeed(requirement);
         }
