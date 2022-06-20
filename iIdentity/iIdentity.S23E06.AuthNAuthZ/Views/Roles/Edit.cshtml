@@ -5,10 +5,10 @@
 }
 
 <div class="">
-    <h1 class="display-4">Edit User</h1>
+    <h1 class="display-6">Edit User</h1>
     <p>Role Information:</p>
 </div>
-<br />
+@*<br />*@
 
 <form asp-controller="Roles" asp-action="Edit" method="post">
     
@@ -23,7 +23,7 @@
         <input class="form-control mb-1" type="text" name="name" value="@Model.Name" />
     </div>
 
-    <input class="btn btn-primary mb-1" type="submit" value="Save" />
+    <input class="btn btn-success mb-1" type="submit" value="Save" />
     <a class="btn btn-secondary mb-1" asp-controller="Roles" asp-action="Index">Cancel</a>
 
 </form>
