@@ -34,7 +34,9 @@
                         @if (!User.Identity.IsAuthenticated)
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login" asp-route-redirectUrl="/">Login</a>
+                                @*<a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login" asp-route-redirectUrl="/">Login</a>*@
+                                @*<a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login" asp-route-redirectUrl="/Users/Index">Login</a>*@
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Login">Login</a>
                             </li>
                         }
                         else
