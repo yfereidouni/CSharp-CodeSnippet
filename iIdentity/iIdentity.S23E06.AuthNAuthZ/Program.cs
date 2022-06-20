@@ -18,11 +18,28 @@ builder.Services.AddAuthorization(c =>
         c.Requirements.Add(new UserInRoleRequirement("admin1"));
         c.Requirements.Add(new UserInRoleRequirement("admin2"));
     });
+
+    c.AddPolicy("AgeGraterThan21", c =>
+    {
+        c.Requirements.Add(new UserAgeGraterThan21Requirement(22));
+    });
+
+    c.AddPolicy("GoldPartner", c =>
+    {
+        c.Requirements.Add(new UserInGoldRoleRequirement("goldpartner"));
+        c.Requirements.Add(new UserInGoldRoleRequirement("GoldPartner"));
+    });
 });
 
-builder.Services.AddSingleton<IAuthorizationHandler, UserInRoleRequirementHandler2>();
 builder.Services.AddSingleton<IAuthorizationHandler, UserInRoleRequirementHandler1>();
-builder.Services.AddSingleton<IAuthorizationHandler, UserInRoleRequirementHandler>();
+builder.Services.AddSingleton<IAuthorizationHandler, UserInRoleRequirementHandler2>();
+builder.Services.AddSingleton<IAuthorizationHandler, UserInRoleRequirementHandler3>();
+
+builder.Services.AddSingleton<IAuthorizationHandler, UserAgeGraterThan21RequirementHandler>();
+
+builder.Services.AddSingleton<IAuthorizationHandler, UserInGoldRoleRequirementHandler1>();
+builder.Services.AddSingleton<IAuthorizationHandler, UserInGoldRoleRequirementHandler2>();
+
 //--------------------------------------------------------------------------------------
 
 // Add services to the container.
@@ -109,7 +126,24 @@ public class UserInRoleRequirement : IAuthorizationRequirement
     }
     public string Role { get; }
 }
-public class UserInRoleRequirementHandler : AuthorizationHandler<UserInRoleRequirement>
+public class UserInGoldRoleRequirement : IAuthorizationRequirement
+{
+    public UserInGoldRoleRequirement(string role)
+    {
+        Role = role;
+    }
+    public string Role { get; }
+}
+public class UserAgeGraterThan21Requirement : IAuthorizationRequirement
+{
+    public UserAgeGraterThan21Requirement(int age)
+    {
+        Age = age;
+    }
+    public int Age { get; }
+}
+//Handlers:
+public class UserInRoleRequirementHandler1 : AuthorizationHandler<UserInRoleRequirement>
 {
     protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, UserInRoleRequirement requirement)
     {
@@ -121,23 +155,58 @@ public class UserInRoleRequirementHandler : AuthorizationHandler<UserInRoleRequi
         return Task.CompletedTask;
     }
 }
-public class UserInRoleRequirementHandler1 : AuthorizationHandler<UserInRoleRequirement>
+public class UserInRoleRequirementHandler2 : AuthorizationHandler<UserInRoleRequirement>
 {
     protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, UserInRoleRequirement requirement)
     {
-        if (context.User.IsInRole("admin1"))
+        if (context.User.IsInRole("admin2"))
         {
             context.Succeed(requirement);
         }
         return Task.CompletedTask;
     }
 }
-public class UserInRoleRequirementHandler2 : AuthorizationHandler<UserInRoleRequirement>
+public class UserInRoleRequirementHandler3 : AuthorizationHandler<UserInRoleRequirement>
 {
     protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, UserInRoleRequirement requirement)
     {
         //if (context.User.IsInRole(requirement.Role))
-        if (context.User.IsInRole("admin2"))
+        if (context.User.IsInRole("admin3"))
+        {
+            context.Succeed(requirement);
+        }
+        return Task.CompletedTask;
+    }
+}
+
+public class UserInGoldRoleRequirementHandler1 : AuthorizationHandler<UserInGoldRoleRequirement>
+{
+    protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, UserInGoldRoleRequirement requirement)
+    {
+        if (context.User.IsInRole("goldpartner"))
+        {
+            context.Succeed(requirement);
+        }
+        return Task.CompletedTask;
+    }
+}
+public class UserInGoldRoleRequirementHandler2 : AuthorizationHandler<UserInGoldRoleRequirement>
+{
+    protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, UserInGoldRoleRequirement requirement)
+    {
+        if (context.User.IsInRole("GoldPartner"))
+        {
+            context.Succeed(requirement);
+        }
+        return Task.CompletedTask;
+    }
+}
+
+public class UserAgeGraterThan21RequirementHandler : AuthorizationHandler<UserAgeGraterThan21Requirement>
+{
+    protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, UserAgeGraterThan21Requirement requirement)
+    {
+        if (requirement.Age >= 21)
         {
             context.Succeed(requirement);
         }

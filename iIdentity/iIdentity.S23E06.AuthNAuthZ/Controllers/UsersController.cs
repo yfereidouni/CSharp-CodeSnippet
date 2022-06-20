@@ -24,7 +24,9 @@ namespace iIdentity.S23E06.AuthNAuthZ.Controllers
             return View(users);
         }
 
+        [Authorize("AgeGraterThan21")]
         [Authorize("AdminUsers")]
+        [Authorize("GoldPartner")]
         public IActionResult Create()
         {
             var user = new CreateUserModel();
