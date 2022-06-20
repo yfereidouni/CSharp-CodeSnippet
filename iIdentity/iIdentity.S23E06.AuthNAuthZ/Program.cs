@@ -8,21 +8,40 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-//Define Policy for Authorization ------------------------------------------------------
+//Define Requirments Policy for Authorization ------------------------------------------------------
 builder.Services.AddAuthorization(c =>
 {
     c.AddPolicy("AdminUsers", c =>
     {
         //c.RequireRole("admin");
+        c.Requirements.Add(new UserInRoleRequirement("Admin"));
         c.Requirements.Add(new UserInRoleRequirement("admin"));
         c.Requirements.Add(new UserInRoleRequirement("admin1"));
         c.Requirements.Add(new UserInRoleRequirement("admin2"));
     });
+
+    c.AddPolicy("AgeGraterThan21", c =>
+    {
+        c.Requirements.Add(new UserAgeGraterThan21Requirement(22));
+    });
+
+    c.AddPolicy("GoldPartner", c =>
+    {
+        c.Requirements.Add(new UserInGoldRoleRequirement("goldpartner"));
+        c.Requirements.Add(new UserInGoldRoleRequirement("GoldPartner"));
+    });
 });
 
-builder.Services.AddSingleton<IAuthorizationHandler, UserInRoleRequirementHandler2>();
 builder.Services.AddSingleton<IAuthorizationHandler, UserInRoleRequirementHandler1>();
-builder.Services.AddSingleton<IAuthorizationHandler, UserInRoleRequirementHandler>();
+builder.Services.AddSingleton<IAuthorizationHandler, UserInRoleRequirementHandler2>();
+builder.Services.AddSingleton<IAuthorizationHandler, UserInRoleRequirementHandler3>();
+builder.Services.AddSingleton<IAuthorizationHandler, UserInRoleRequirementHandler4>();
+
+builder.Services.AddSingleton<IAuthorizationHandler, UserAgeGraterThan21RequirementHandler>();
+
+builder.Services.AddSingleton<IAuthorizationHandler, UserInGoldRoleRequirementHandler1>();
+builder.Services.AddSingleton<IAuthorizationHandler, UserInGoldRoleRequirementHandler2>();
+
 //--------------------------------------------------------------------------------------
 
 // Add services to the container.
@@ -109,23 +128,29 @@ public class UserInRoleRequirement : IAuthorizationRequirement
     }
     public string Role { get; }
 }
-public class UserInRoleRequirementHandler : AuthorizationHandler<UserInRoleRequirement>
+public class UserInGoldRoleRequirement : IAuthorizationRequirement
 {
-    protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, UserInRoleRequirement requirement)
+    public UserInGoldRoleRequirement(string role)
     {
-        //if (context.User.IsInRole(requirement.Role))
-        if (context.User.IsInRole("admin"))
-        {
-            context.Succeed(requirement);
-        }
-        return Task.CompletedTask;
+        Role = role;
     }
+    public string Role { get; }
 }
+public class UserAgeGraterThan21Requirement : IAuthorizationRequirement
+{
+    public UserAgeGraterThan21Requirement(int age)
+    {
+        Age = age;
+    }
+    public int Age { get; }
+}
+//Handlers:
 public class UserInRoleRequirementHandler1 : AuthorizationHandler<UserInRoleRequirement>
 {
     protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, UserInRoleRequirement requirement)
     {
-        if (context.User.IsInRole("admin1"))
+        //if (context.User.IsInRole(requirement.Role))
+        if (context.User.IsInRole("Admin"))
         {
             context.Succeed(requirement);
         }
@@ -136,8 +161,66 @@ public class UserInRoleRequirementHandler2 : AuthorizationHandler<UserInRoleRequ
 {
     protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, UserInRoleRequirement requirement)
     {
+        if (context.User.IsInRole("admin"))
+        {
+            context.Succeed(requirement);
+        }
+        return Task.CompletedTask;
+    }
+}
+public class UserInRoleRequirementHandler3 : AuthorizationHandler<UserInRoleRequirement>
+{
+    protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, UserInRoleRequirement requirement)
+    {
+        //if (context.User.IsInRole(requirement.Role))
+        if (context.User.IsInRole("admin1"))
+        {
+            context.Succeed(requirement);
+        }
+        return Task.CompletedTask;
+    }
+}
+public class UserInRoleRequirementHandler4 : AuthorizationHandler<UserInRoleRequirement>
+{
+    protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, UserInRoleRequirement requirement)
+    {
         //if (context.User.IsInRole(requirement.Role))
         if (context.User.IsInRole("admin2"))
+        {
+            context.Succeed(requirement);
+        }
+        return Task.CompletedTask;
+    }
+}
+
+public class UserInGoldRoleRequirementHandler1 : AuthorizationHandler<UserInGoldRoleRequirement>
+{
+    protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, UserInGoldRoleRequirement requirement)
+    {
+        if (context.User.IsInRole("goldpartner"))
+        {
+            context.Succeed(requirement);
+        }
+        return Task.CompletedTask;
+    }
+}
+public class UserInGoldRoleRequirementHandler2 : AuthorizationHandler<UserInGoldRoleRequirement>
+{
+    protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, UserInGoldRoleRequirement requirement)
+    {
+        if (context.User.IsInRole("GoldPartner"))
+        {
+            context.Succeed(requirement);
+        }
+        return Task.CompletedTask;
+    }
+}
+
+public class UserAgeGraterThan21RequirementHandler : AuthorizationHandler<UserAgeGraterThan21Requirement>
+{
+    protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, UserAgeGraterThan21Requirement requirement)
+    {
+        if (requirement.Age >= 21)
         {
             context.Succeed(requirement);
         }
