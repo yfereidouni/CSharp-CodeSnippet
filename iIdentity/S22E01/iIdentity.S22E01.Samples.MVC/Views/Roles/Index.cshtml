@@ -2,15 +2,15 @@
 
 <a class="btn btn-success mb-1" asp-controller="Roles" asp-action="Create">Create Role</a>
 
-<table class="table table-responsive table-info table-bordered table-hover">
+<table class="table table-responsive table-light table-bordered table-hover">
 
     <thead>
-        <tr>
+        <tr class="table-info">
             @*<th>Id</th>*@
             <th>Name</th>
             <th>NormalizedName</th>
             @*<th>ConcurrencyStamp</th>*@
-            <th>Actions</th>
+            <th class="text-center">Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -29,7 +29,7 @@
                     <td>@role.Name</td>
                     <td>@role.NormalizedName</td>
                     @*<td>@role.ConcurrencyStamp</td>*@
-                    <td>
+                    <td class="text-center">
                         @*<form class="d-inline" asp-controller="Users" asp-action="Edit" method="get">
                             <input type="hidden" value="@user.Id" name="id">
                             <input type="submit" value="Edit" class="btn btn-sm btn-primary m-1">

@@ -1,19 +1,19 @@
-﻿@using iIdentity.S22E01.Samples.MVC.Models.AAA.Data
+﻿@using iIdentity.S23E06.AuthNAuthZ.Models.AAA.Data
 @*@model List<IdentityUser>*@
 @model List<ApplicationUser>
 
 <a class="btn btn-success mb-1" asp-controller="Users" asp-action="Create">Create User</a>
 
-<table class="table table-responsive table-info table-bordered table-hover">
+<table class="table table-responsive table-light table-bordered table-hover">
 
-    <thead>
+    <thead class="table-primary">
         <tr>
             @*<th>Id</th>*@
             <th>Username</th>
             <th>Email</th>
             @*<th>Password</th>*@
             <th>SSN</th>
-            <th>Actions</th>
+            <th class="text-center">Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -33,7 +33,7 @@
                     <td>@user.Email</td>
                     @*<td>@user.PasswordHash</td>*@
                     <td>@user.SSN</td>
-                    <td>
+                    <td class="text-center">
                         @*<form class="d-inline" asp-controller="Users" asp-action="Edit" method="get">
                             <input type="hidden" value="@user.Id" name="id">
                             <input type="submit" value="Edit" class="btn btn-sm btn-primary m-1">
