@@ -1,5 +1,5 @@
 ﻿using IdentityModel.Client;
-
+using Newtonsoft.Json.Linq;
 
 Console.WriteLine("Press Enter to continue...");
 Console.ReadLine();
@@ -33,8 +33,17 @@ Console.ReadLine();
 ///Call API
 var apiClient = new HttpClient();
 apiClient.SetBearerToken(tokenResponse.AccessToken);
-var response = await apiClient.GetAsync("https://localhost:7166/");
+
+var response = await apiClient.GetAsync("https://localhost:7082/api/identity");
+
 if (!response.IsSuccessStatusCode)
 {
     Console.WriteLine(response.StatusCode);
 }
+else
+{
+    var content = await response.Content.ReadAsStringAsync();
+    Console.WriteLine(JArray.Parse(content));
+}
+
+Console.ReadLine();

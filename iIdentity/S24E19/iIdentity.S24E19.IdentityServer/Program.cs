@@ -5,6 +5,8 @@ using Serilog.Sinks.SystemConsole.Themes;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddControllersWithViews();
+
 //https://localhost:7166/.well-known/openid-configuration
 builder.Services.AddIdentityServer()
                 .AddInMemoryApiScopes(Config.ApiScopes)
@@ -40,9 +42,16 @@ finally
 
 var app = builder.Build();
 
+app.UseStaticFiles();
+app.UseRouting();
+
 app.UseIdentityServer();
 
-app.MapGet("/", () => "Duende-Identity-Server was running!");
+//app.MapGet("/", () => "Duende-Identity-Server was running!");
+app.UseEndpoints(c =>
+{
+    c.MapDefaultControllerRoute();
+});
 
 app.Run();
 
