@@ -4,7 +4,7 @@ using Newtonsoft.Json.Linq;
 Console.WriteLine("Press Enter to continue...");
 Console.ReadLine();
 var client = new HttpClient();
-var disco = await client.GetDiscoveryDocumentAsync("https://localhost:7166/");
+var disco = await client.GetDiscoveryDocumentAsync("https://localhost:5001/");
 
 if (disco.IsError)
 {
@@ -34,7 +34,7 @@ Console.ReadLine();
 var apiClient = new HttpClient();
 apiClient.SetBearerToken(tokenResponse.AccessToken);
 
-var response = await apiClient.GetAsync("https://localhost:7082/api/identity");
+var response = await apiClient.GetAsync("https://localhost:6001/api/Identity");
 
 if (!response.IsSuccessStatusCode)
 {

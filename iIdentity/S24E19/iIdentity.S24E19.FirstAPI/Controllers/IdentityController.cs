@@ -9,7 +9,8 @@ namespace iIdentity.S24E19.FirstAPI.Controllers;
 public class IdentityController : ControllerBase
 {
     [HttpGet]
-    [Authorize("ApiScope")]
+    [Authorize]
+    //[Authorize("ApiScope")]
     public IActionResult Get()
     {
         return Ok(User.Claims.Select(c => new

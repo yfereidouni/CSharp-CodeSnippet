@@ -28,8 +28,8 @@ public static class Config
 
                 AllowedGrantTypes= GrantTypes.Code,
 
-                RedirectUris = {"https://localhost:7082/sign-in-oidc"},
-                PostLogoutRedirectUris = { "https://localhost:7082/signout-callback-oidc"},
+                RedirectUris = {"https://localhost:5002/sign-in-oidc"},
+                PostLogoutRedirectUris = { "https://localhost:5002/signout-callback-oidc"},
 
                 AllowedScopes = new List<string>
                 {

@@ -12,7 +12,7 @@ builder.Services.AddAuthentication("Bearer")
     .AddJwtBearer("Bearer", options =>
     {
         //IdentityServer Address
-        options.Authority = "https://localhost:7166/";
+        options.Authority = "https://localhost:5001/";
         options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
         {
             ValidateAudience = false
