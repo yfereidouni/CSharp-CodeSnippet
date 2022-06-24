@@ -1,3 +1,5 @@
+using NWebsec.AspNetCore.Middleware;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -28,6 +30,16 @@ app.UseHttpsRedirection();
 ///---------------------------------------------------------
 
 app.UseStaticFiles();
+
+/// <summary>
+/// Way-5 : Settinh HSTS and preload with "using NWebsec.AspNetCore.Middleware;"
+/// Preload-in : https://hstspreload.org/
+/// </summary>
+app.UseHsts(c => 
+{
+    c.MaxAge(minutes: 5);
+    c.Preload();
+});
 
 app.UseRouting();
 
