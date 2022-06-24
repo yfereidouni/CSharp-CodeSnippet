@@ -28,7 +28,7 @@ public static class Config
 
                 AllowedGrantTypes= GrantTypes.Code,
 
-                RedirectUris = {"https://localhost:5002/sign-in-oidc"},
+                RedirectUris = {"https://localhost:5002/signin-oidc"},
                 PostLogoutRedirectUris = { "https://localhost:5002/signout-callback-oidc"},
 
                 AllowedScopes = new List<string>
@@ -39,4 +39,11 @@ public static class Config
                 }
             }
         };
+
+    public static IEnumerable<IdentityResource> IdentityResources =>
+    new List<IdentityResource>
+    {
+        new IdentityResources.OpenId(),
+        new IdentityResources.Profile(),
+    };
 }

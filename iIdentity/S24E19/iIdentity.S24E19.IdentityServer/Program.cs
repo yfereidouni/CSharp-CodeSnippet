@@ -5,12 +5,16 @@ using Serilog.Sinks.SystemConsole.Themes;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllersWithViews();
+//builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages();
 
 //https://localhost:7166/.well-known/openid-configuration
 builder.Services.AddIdentityServer()
+                .AddInMemoryIdentityResources(Config.IdentityResources)
                 .AddInMemoryApiScopes(Config.ApiScopes)
-                .AddInMemoryClients(Config.Clients);
+                .AddInMemoryClients(Config.Clients)
+                .AddTestUsers(TestUsers.Users);
+                
 
 
 Log.Logger = new LoggerConfiguration()
@@ -44,22 +48,16 @@ var app = builder.Build();
 
 app.UseStaticFiles();
 app.UseRouting();
-
+app.UseAuthentication();
+app.UseAuthorization();
 app.UseIdentityServer();
 
 //app.MapGet("/", () => "Duende-Identity-Server was running!");
+
 app.UseEndpoints(c =>
 {
-    c.MapDefaultControllerRoute();
+    c.MapRazorPages().RequireAuthorization();
 });
 
 app.Run();
 
-
-//public static IHostBuilder CreateHostBuilder(string[] args) =>
-//    Host.CreateDefaultBuilder(args)
-//    .UseSerilog()
-//    .ConfigureWebHostDefaults(webBuilder =>
-//    {
-//        webBuilder.UseStartup<Config>();
-//    });
