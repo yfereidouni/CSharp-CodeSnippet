@@ -29,13 +29,17 @@ namespace iSecurity.CSRF.GoodSite.Controllers
         [HttpPost]
         public IActionResult Login(int customerId)
         {
-            Response.Cookies.Append("CustomerId", customerId.ToString(),new CookieOptions 
-            {
-                // LAX:
-                // if method was POST then coockie should not be transfer but
-                // if method was GET then cookie can be transfer.
-                SameSite = SameSiteMode.Strict
-            });
+            ///Wrong
+            Response.Cookies.Append("CustomerId", customerId.ToString());
+
+            ///Correction-1
+            //Response.Cookies.Append("CustomerId", customerId.ToString(),new CookieOptions 
+            //{
+            //    // LAX:
+            //    // if method was POST then coockie should not be transfer but
+            //    // if method was GET then cookie can be transfer.
+            //    SameSite = SameSiteMode.Strict
+            //});
             return RedirectToAction("ViewEmtiaz");
         }
 
@@ -47,7 +51,7 @@ namespace iSecurity.CSRF.GoodSite.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken] ///Correction-2
         public IActionResult Transfer(int destinationCustomerId)
         {
             var customerId = int.Parse(Request.Cookies["CustomerId"]);
