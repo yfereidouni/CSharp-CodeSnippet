@@ -16,7 +16,9 @@ namespace iIdentity.S24E19.NET5.IdentityServer
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            //services.AddControllersWithViews();
+            services.AddRazorPages();
+
 
             services.AddIdentityServer()
                 .AddInMemoryApiScopes(Config.ApiScopes)
@@ -36,8 +38,11 @@ namespace iIdentity.S24E19.NET5.IdentityServer
 
             app.UseEndpoints(c =>
             {
-                c.MapDefaultControllerRoute();
+                //c.MapDefaultControllerRoute();
+                c.MapRazorPages();
+
             });
+
         }
     }
 }

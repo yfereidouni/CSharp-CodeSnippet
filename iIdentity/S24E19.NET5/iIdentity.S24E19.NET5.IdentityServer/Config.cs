@@ -28,8 +28,8 @@ namespace iIdentity.S24E19.NET5.IdentityServer
                     ClientSecrets = {new Secret ("secret".Sha256()) },
                     AllowedGrantTypes= GrantTypes.Code,
 
-                    RedirectUris = {"https://localhost:5001/sign-in-oidc"},
-                    PostLogoutRedirectUris = { "https://localhost:5001/signout-callback-oidc"},
+                    RedirectUris = {"https://localhost:5002/sign-in-oidc"},
+                    PostLogoutRedirectUris = { "https://localhost:5003/signout-callback-oidc"},
 
                     AllowedScopes = new List<string>
                     {
