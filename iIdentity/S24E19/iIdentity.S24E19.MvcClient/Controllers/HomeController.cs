@@ -1,6 +1,9 @@
 ﻿using iIdentity.S24E19.MvcClient.Models;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json.Linq;
 using System.Diagnostics;
+using System.Net.Http.Headers;
 
 namespace iIdentity.S24E19.MvcClient.Controllers
 {
@@ -27,6 +30,18 @@ namespace iIdentity.S24E19.MvcClient.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public async Task<IActionResult> CallAPI()
+        {
+            var accsessToken = await HttpContext.GetTokenAsync("access_token");
+
+            var client = new HttpClient();
+            client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accsessToken);
+            var content = await client.GetStringAsync("https://localhost:6001/api/identity");
+
+            ViewBag.Json = JArray.Parse(content).ToString();
+            return View("json");
         }
     }
 }
