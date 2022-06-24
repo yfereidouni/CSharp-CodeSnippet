@@ -28,8 +28,12 @@ namespace iSecurity.GoodOpenRedirection.Controllers
         public IActionResult Login(LoginModel loginModel)
         {
             //Login User Process....
-
+           
+            ///Incorrect-way
             return Redirect(loginModel.ReturnUrl);
+            
+            ///Correct-Way
+            //return LocalRedirect(loginModel.ReturnUrl);
         }
 
 
