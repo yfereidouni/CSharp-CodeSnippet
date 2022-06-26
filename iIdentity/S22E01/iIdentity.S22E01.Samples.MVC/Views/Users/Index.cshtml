@@ -2,7 +2,7 @@
 @*@model List<IdentityUser>*@
 @model List<ApplicationUser>
 
-<a class="btn btn-success mb-1" asp-controller="Users" asp-action="Create">Create User</a>
+<a class="btn btn-success btn-lg mb-1" asp-controller="Users" asp-action="Create">Create User</a>
 
 <table class="table table-responsive table-light table-bordered table-hover">
 
@@ -39,14 +39,10 @@
                             <input type="submit" value="Edit" class="btn btn-sm btn-primary m-1">
                         </form>*@
 
-                        <a class="btn btn-sm btn-primary m-1" asp-controller="Users" asp-action="Edit" asp-route-Id="@user.Id">Edit</a>
-
-                        <form class="d-inline" asp-controller="Users" asp-action="Delete" method="post">
-                            <input type="hidden" value="@user.Id" name="id">
-                            <input type="submit" value="Delete" class="btn btn-sm btn-danger m-1">
-                        </form>
-                        
-                        <a class="btn btn-sm btn-primary m-1" asp-controller="Users" asp-action="EditUserRoles" asp-route-Id="@user.Id">Edit User Role</a>
+                        <a class="btn btn-info btn-sm mb-1" asp-controller="Users" asp-action="Details" asp-route-Id="@user.Id">Details</a>
+                        <a class="btn btn-warning btn-sm mb-1" asp-controller="Users" asp-action="Edit" asp-route-Id="@user.Id">Edit</a>
+                        <a class="btn btn-danger btn-sm mb-1" asp-controller="Users" asp-action="Delete" asp-route-Id="@user.Id">Delete</a>
+                        <a class="btn btn-dark btn-sm mb-1" asp-controller="Users" asp-action="EditUserRoles" asp-route-Id="@user.Id">Edit Roles</a>
 
                     </td>
                 </tr>
