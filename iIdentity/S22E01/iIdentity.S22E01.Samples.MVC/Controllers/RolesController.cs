@@ -50,6 +50,13 @@ public class RolesController : Controller
         return View(model);
     }
 
+    public async Task<IActionResult> Details(string id)
+    {
+        var role = await roleManager.FindByIdAsync(id);
+
+        return View(role);
+    }
+
     [HttpPost]
     public async Task<IActionResult> Delete(string id)
     {
