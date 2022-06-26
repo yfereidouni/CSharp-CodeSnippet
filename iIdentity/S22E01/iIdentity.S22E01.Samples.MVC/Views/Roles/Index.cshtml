@@ -1,6 +1,6 @@
 ﻿@model List<IdentityRole>
 
-<a class="btn btn-success mb-1" asp-controller="Roles" asp-action="Create">Create Role</a>
+<a class="btn btn-success btn-lg mb-1" asp-controller="Roles" asp-action="Create">Create Role</a>
 
 <table class="table table-responsive table-light table-bordered table-hover">
 
@@ -35,12 +35,10 @@
                             <input type="submit" value="Edit" class="btn btn-sm btn-primary m-1">
                         </form>*@
 
-                        <a class="btn btn-sm btn-primary" asp-controller="Roles" asp-action="Edit" asp-route-Id="@role.Id">Edit</a>
+                        <a class="btn btn-info btn-sm mb-1" asp-controller="Roles" asp-action="Details" asp-route-Id="@role.Id">Details</a>
+                        <a class="btn btn-warning btn-sm mb-1" asp-controller="Roles" asp-action="Edit" asp-route-Id="@role.Id">Edit</a>
+                        <a class="btn btn-danger btn-sm mb-1" asp-controller="Roles" asp-action="Delete" asp-route-Id="@role.Id">Delete</a>
 
-                        <form class="d-inline" asp-controller="Roles" asp-action="Delete" method="post">
-                            <input type="hidden" value="@role.Id" name="id">
-                            <input type="submit" value="Delete" class="btn btn-sm btn-danger">
-                        </form>
                     </td>
                 </tr>
             }
