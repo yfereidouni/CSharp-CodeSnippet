@@ -2,7 +2,7 @@
 
 namespace iEFCore.ManyToMany.ManyToManySample;
 
-public class OneToManyDbContext : DbContext
+public class ManyToManyDbContext : DbContext
 {
     public DbSet<Product> Products { get; set; }
     public DbSet<Tag> Tags { get; set; }
