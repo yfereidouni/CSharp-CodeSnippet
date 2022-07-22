@@ -9,7 +9,7 @@ using iEFCore.ManyToMany.ManyToManySample;
 
 namespace iEFCore.ManyToMany.Migrations
 {
-    [DbContext(typeof(OneToManyDbContext))]
+    [DbContext(typeof(ManyToManyDbContext))]
     partial class OneToManyDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
